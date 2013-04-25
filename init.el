@@ -2,6 +2,9 @@
 ; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
 
+;; nxhtml
+(load "~/.emacs.d/lib/nxhtml/autostart.el")
+
 ;; emacs starter kit
 (add-to-list 'load-path "~/.emacs.d/lib/")
 (require 'package)
@@ -21,12 +24,16 @@
      (color-theme-initialize)
      (color-theme-zenburn)))
 
+;; disable different background coloring w/ nxhtml
+;; don't edit by hand! use:
+;; M-x customize-option RET mumamo-chunk-coloring RET
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(initial-buffer-choice t))
+ '(initial-buffer-choice t)
+ '(mumamo-chunk-coloring 900))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
