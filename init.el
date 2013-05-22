@@ -1,19 +1,87 @@
+;;; init.el --- Where all the magic begins
+;;
+;; Part of the Emacs Starter Kit
+;;
+;; This is the first thing to get loaded.
+;;
+;; "Emacs outshines all other editing software in approximately the
+;; same way that the noonday sun does the stars. It is not just bigger
+;; and brighter; it simply makes everything else vanish."
+;; -Neal Stephenson, "In the Beginning was the Command Line"
 
-; auto-complete
-(add-to-list 'load-path "~/.emacs.d/lib/auto-complete")
+;; Turn off mouse interface early in startup to avoid momentary display
+;; You really don't need these; trust me.
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+;; Load path etc.
+
+(setq dotfiles-dir (file-name-directory
+                    (or (buffer-file-name) load-file-name)))
+
+;; Load up ELPA, the package manager
+
+(add-to-list 'load-path dotfiles-dir)
+
+(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
+
+(setq autoload-file (concat dotfiles-dir "loaddefs.el"))
+(setq package-user-dir (concat dotfiles-dir "elpa"))
+(setq custom-file (concat dotfiles-dir "custom.el"))
+
+(require 'package)
+(dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
+                  ("elpa" . "http://tromey.com/elpa/")))
+  (add-to-list 'package-archives source t))
+(package-initialize)
+(require 'starter-kit-elpa)
+
+;; These should be loaded on startup rather than autoloaded on demand
+;; since they are likely to be used in every session
+
+(require 'cl)
+(require 'saveplace)
+(require 'ffap)
+(require 'uniquify)
+(require 'ansi-color)
+(require 'recentf)
+
+;; backport some functionality to Emacs 22 if needed
+(require 'dominating-file)
+
+;; Load up starter kit customizations
+
+(require 'starter-kit-defuns)
+(require 'starter-kit-bindings)
+(require 'starter-kit-misc)
+(require 'starter-kit-registers)
+(require 'starter-kit-eshell)
+(require 'starter-kit-lisp)
+(require 'starter-kit-perl)
+(require 'starter-kit-ruby)
+(require 'starter-kit-js)
+
+(regen-autoloads)
+(load custom-file 'noerror)
+
+;; You can keep system- or user-specific customizations here
+(setq system-specific-config (concat dotfiles-dir system-name ".el")
+      user-specific-config (concat dotfiles-dir user-login-name ".el")
+      user-specific-dir (concat dotfiles-dir user-login-name))
+(add-to-list 'load-path user-specific-dir)
+
+(if (file-exists-p system-specific-config) (load system-specific-config))
+(if (file-exists-p user-specific-dir)
+  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+(if (file-exists-p user-specific-config) (load user-specific-config))
+
+;;; init.el ends here
+
+;;; MAT init el
 ;; nxhtml
 (load "~/.emacs.d/lib/nxhtml/autostart.el")
-
-;; emacs starter kit
 (add-to-list 'load-path "~/.emacs.d/lib/")
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-; info+ - what does this do?
-;(eval-after-load "info" '(require 'info+))
 
 ;; zenburn theme
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme-6.6.0/")
@@ -41,7 +109,7 @@
   ;; If there is more than one, they won't work right.
  )
 
-; MAT: line numbers, etc
+; line numbers, etc
 ;; Show line-number in the mode line
 (line-number-mode 1)
 ;; Show column-number in the mode line
@@ -124,16 +192,6 @@
 ;; dired remote (tramp) default ssh
 (setq tramp-default-method "ssh")
 
-;; ;; load nxhtml mode
-;; ;(load "~/.emacs.d/libs/nxhtml/autostart.el")
-; using php-mode improved instead... nxhtml is buggy
-; below line should not be neccessary because libs is added to load path
-;(load "~/.emacs.d/libs/php-mode-improved.el")
-(require 'php-mode)
-;; ;; regular php mode
-;; (load "~/.emacs.d/libs/php-mode.el")
-;; (require 'php-mode)
-
 ; fix php/C {'s, http://stackoverflow.com/questions/168621/php-mode-for-emacs
 (setq c-default-style "bsd"
       c-basic-offset 4)
@@ -152,10 +210,6 @@
   kept-old-versions 2
   version-control t)
 
-;; completely disable flyspell
-(eval-after-load "flyspell"
-  '(defun flyspell-mode (&optional arg)))
-
 ;; comment/uncomment regions hotkey
 (global-set-key (kbd "M-_") 'comment-region)
 (global-set-key (kbd "M-:") 'uncomment-region)
@@ -163,49 +217,22 @@
 ;; indent hotkey
 (global-set-key (kbd "M-M") 'indent-region)
 
-;; navigate up/down line-by-line hotkeys
-(global-set-key (kbd "C-.") 'scroll-up-line)
-(global-set-key (kbd "C-,") 'scroll-down-line)
-
-;; replace double blank lines with single blank line
-(defun single-lines-only ()
-  "replace multiple blank lines with a single one"
-  (interactive)
-  (goto-char (point-min))
-  (while (re-search-forward "\\(^\\s-*$\\)\n" nil t)
-    (replace-match "\n")
-    (forward-char 1)))
-
-;; duplicate line hotkey
-(defun duplicate-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (open-line 1)
-  (next-line 1)
-  (yank)
-)
-(global-set-key (kbd "C-c C-d") 'duplicate-line)
-
-;; delete line without putting in kill ring hotkey
-(defun delete-line (&optional arg)
-  (interactive "P")
-  (flet ((kill-region (begin end)
-                      (delete-region begin end)))
-    (kill-line arg)))
-(global-set-key [(control shift ?k)] 'delete-line) 
-
 ;; truncate lines 
-(setq-default truncate-lines t)
-(global-set-key (kbd "<f6>") 'toggle-truncate-lines)
+(setq-default truncate-lines t) 
+(global-set-key (kbd "<f6>") 'toggle-truncate-lines) ; bind f6 to toggle
+(add-hook 'latex-mode-hook (lambda () (setq truncate-lines nil))) ; dont truncate in latex mode
+(add-hook 'compilation-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in compilation mode
+(add-hook 'buffer-menu-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in buffer menu
+(add-hook 'c-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in c-mode
+(add-hook 'lisp-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in lisp-mode
+(setq line-move-visual nil) ; C-e goes to *actual* end of line
 
 ;; bash autocompletion in emacs shell
 (require 'bash-completion)
 (bash-completion-setup)
 
 ;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-1.4")
+(add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
 (require 'auto-complete)
 ;(global-auto-complete-mode 1) ; (uncomment to enable by default)
 
@@ -227,12 +254,12 @@
 
 ;; breadcrumbs easier bookmarks
 (require 'breadcrumb)
-(global-set-key [(meta i)]              'bc-set)            ;; Shift-SPACE for set bookmark
-(global-set-key [(meta p)]              'bc-local-previous) ;; M-j for jump to previous
-(global-set-key [(meta n)]              'bc-local-next)     ;; Shift-M-j for jump to next
+(global-set-key [(meta I)]              'bc-set)            ;; Shift-SPACE for set bookmark
+(global-set-key [(meta P)]              'bc-local-previous) ;; M-j for jump to previous
+(global-set-key [(meta N)]              'bc-local-next)     ;; Shift-M-j for jump to next
 (global-set-key [(control c)(j)]        'bc-goto-current)   ;; C-c j for jump to current bookmark
 (global-set-key [(control x)(meta j)]   'bc-list)           ;; C-x M-j for the bookmark menu list
-(global-set-key [(meta c)]              'bc-clear)          ;; M-c to clear bookmarks
+(global-set-key [(meta C)]              'bc-clear)          ;; M-c to clear bookmarks
 ; also bc-previous, bc-next (can also jump between buffers)
 
 ;; indent comment to same column as previous line comment
@@ -271,23 +298,18 @@
 (setq mouse-wheel-progressive-speed nil)
 ;; smooth scrolling
 ;(require 'smooth-scrolling)
+;(require 'smooth-scroll)
+;(smooth-scroll-mode t)
 ;; dont scroll as much with M-v and C-v
 (setq next-screen-context-lines 10)
 ;; nicer scrolling behaviour
 ;(setq scroll-step 1)
-(setq scroll-conservatively 10000)
+;(setq scroll-conservatively 10000)
 (setq auto-window-vscroll nil)
 
+(show-paren-mode t)
+
 (put 'dired-find-alternate-file 'disabled nil)
-
-
-; (global-set-key (kbd "M-<up>") (lambda () (interactive) (move-line -1)))
-
-;; auto scroll compilation window
-(setq compilation-auto-scroll t)
-
-;; snippets
-;(require 'yasnippet-bundle)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; dired-fixups.el --- fixups for dired mode
@@ -520,5 +542,65 @@ It expects a properly indented CSS"
   (web/css-remove-semicolons))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Using generic mode for blackfin assembly
 
+(require 'generic-x)
+
+;; Bfin assembly mode
+(define-generic-mode 
+    'bfin-mode                      ; name of the mode to create
+  '("#")                            ; comments start with '!!'
+  '("LSETUP" "RTS")       ; some keywords
+  '(("=" . 'font-lock-operator)     ; '=' is an operator
+    (";" . 'font-lock-builtin)     ; ';' is a built-in
+    ("\\(^\s*\\.[a-zA-Z0-9]+:?\\)" . 'font-lock-keyword-face) ; labels: .something:
+    ("\\(\s+0[xX][0-9a-fA-F]+\\)" . 'font-lock-variable-name-face) ; hex numbers
+    ("\\(\s+[0-9a-f]+\\)" . 'font-lock-variable-name-face) ; decimal numbers
+    ("\\(^\s*_[a-zA-Z0-9]+:?\\)" . 'font-lock-function-name-face)) ; _something:
+  '("\\.s$")                        ; files for which to activate this mode 
+  nil                               ; other functions to call
+  "A mode for bfin assembly"        ; doc string for this mode
+  )
+(eval-after-load 'bfin 
+  '(define-key bfin-mode [(tab)] 'c-indent-line-or-region))
+
+;; Allow copying to system clipboard
+(setq x-select-enable-clipboard t)
+
+;; Semantic mode
+(add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-summary-mode 1)))
+(add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-completions-mode 1)))
+
+;; MATLAB mode http://www.emacswiki.org/MatlabMode
+(add-to-list 'load-path "~/.emacs.d/lib/matlab-emacs")
+(load-library "matlab-load")
+(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+(add-to-list
+ 'auto-mode-alist
+ '("\\.m$" . matlab-mode))
+(setq matlab-indent-function t)
+(setq matlab-shell-command "matlab")
+
+; for latex
+(setq-default TeX-master nil) ; Query for master file.
+
+;; auto scroll compilation window
+(setq compilation-auto-scroll t)
+(setq compilation-scroll-output t)
+
+;; svn for emacs23
+(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
+(require 'vc-svn17)
+
+;; swap C-x <left> and C-x <right> since its reversed in 23 vs 24
+;(setq Buffer-menu-sort-column nil)
+;(setq Buffer-menu-user-frame-buffer-list nil)
+
+; not working??
+
+;; completely disable flyspell
+(eval-after-load "flyspell"
+  '(defun flyspell-mode (&optional arg)))
+
+(add-to-list 'TeX-command-list'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf"))
 

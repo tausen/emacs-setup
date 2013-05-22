@@ -1,0 +1,389 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/13gr642/" . "drivers/")
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/minimum/" . "drivers/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/trash/" . "13gr642_asm/")
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/" . "13gr642/")
+ ("/home/tausen/Report/code/blackfin/subsystems/" . "ais2/")
+ ("/home/tausen/Report/code/blackfin/" . "subsystems/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/MM11/" . "HW/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/" . "MM11/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/old/htdocs/plugins/" . "content/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/old/htdocs/" . "plugins/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/old/" . "htdocs/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/plugins/" . "content/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/components/com_dbf/" . "assets/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/" . "com_dbf/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/components/" . "com_dbf/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/" . "components/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/payment/" . "tmpl/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/" . "cron/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/" . "controllers/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/" . "payment/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/" . "controllers/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/" . "com_dbf/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/active/" . "tmpl/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/user/" . "tmpl/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/dbf/" . "tmpl/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/" . "active/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/" . "views/")
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/" . "com_dbf/")
+ ("/home/tausen/Documents/Innowell/com_dbf/views/payment/" . "tmpl/")
+ ("/home/tausen/Documents/Innowell/com_dbf/views/cron/" . "tmpl/")
+ ("/home/tausen/Documents/Innowell/com_dbf/views/" . "payment/")
+ ("/home/tausen/Documents/Innowell/com_dbf/" . "views/")
+ ("/home/tausen/Documents/Innowell/" . "centos stuff/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/old/" . "htdocs/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/html/com_content/" . "featured/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/html/com_content.bak/" . "article/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/html/" . "com_content/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/html/com_content/" . "article/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/html/" . "com_content/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/" . "html/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/" . "theme394_25/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/" . "components/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/" . "css/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/" . "theme394_25/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/" . "plugins/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/" . "test/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/" . "htdocs/")
+ ("/ssh:mathias@innowell.net:/home/" . "sites/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/components/com_dbf/views/payment/" . "tmpl/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/components/com_dbf/views/" . "payment/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/components/com_dbf/" . "models/")
+ ("/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/components/com_dbf/" . "views/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/components/" . "com_dbf/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/" . "test/")
+ ("/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/" . "htdocs/")
+ ("/home/tausen/Desktop/" . "filtertest/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Introduction to Probability Theory   and Statistics/MM11/" . "assignments/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Introduction to Probability Theory   and Statistics/" . "MM11/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/" . "Matrix Computations and Convex Optimization/")
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/" . "P6/")
+ ("/home/tausen/Insync/" . "mathias.tausen@gmail.com/")
+ ("/run/user/tausen/gvfs/ftp:host=linux7.unoeuro.com/public_html/todolist/" . "phpscripts/")
+ ("/home/tausen/Report/code/c/" . "aisdecoder/")
+ ("/home/tausen/Report/code/matlab_cleanup/" . "helperfunctions/")
+ ("/ssh:mathias@innowell.net:/home/sites/www.danbeauty.dk/htdocs/admin/includes/" . "functions/")
+ ("/ssh:mathias@innowell.net:/home/sites/www.danbeauty.dk/htdocs/admin/" . "includes/")
+ ("/mathias@innowell.net:/home/sites/www.danbeauty.dk/htdocs/" . "admin/")
+ ("/mathias@innowell.net:/home/sites/www.danbeauty.dk/" . "htdocs/")
+ ("/mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/blocks/" . "subscriptionmanager/")
+ ("/tausen@tausen.org:/home/sites/test01/" . "htdocs/")
+ ("/tausen@tausen.org:/home/sites/" . "test01/")
+ ("/tausen@tausen.org:/home/" . "sites/")
+ ("/tausen@tausen.org:/" . "home/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/program/" . "dsp/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642/" . "drivers/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/program-ny/13gr642/" . "drivers/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/program-ny/" . "drivers/")
+ ("/home/tausen/aausat3/software/subsystems/" . "ais2/")
+ ("/home/tausen/aausat3/" . "software/")
+ ("/ssh:mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/enrol/" . "quickpay/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/matlab_decoder/" . "testdataplotter/")
+ ("/home/tausen/aausat3/software/subsystems/ais2/" . "13gr642_filter/")
+ ("/etc/" . "apt/")
+ ("/home/tausen/aausat3/software/lib/bin/bfin/csp/" . "build/")
+ ("/home/tausen/aausat3/software/lib/bin/bfin/" . "csp/")
+ ("/home/tausen/aausat3/software/lib/bin/" . "bfin/")
+ ("/home/tausen/aausat3/software/lib/" . "bin/")
+ ("/home/tausen/aausat3/software/" . "subsystems/")
+ ("/home/tausen/.emacs.d/" . "libs/")
+ ("/" . "home/")
+ ("/mathias@innowell.net:/" . "home/")
+ ("/ssh:mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/lib/" . "innowell/")
+ ("/ssh:mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/" . "enrol/")
+ ("/ssh:mathias@innowell.net:/home/sites/innowell.net/htdocs/" . "studie/")
+ ("/ssh:mathias@innowell.net:/home/sites/innowell.net/" . "htdocs/")
+ ("/ssh:mathias@innowell.net:/home/sites/" . "danskbehandlerforbund.dk/")
+ ("/ssh:mathias@innowell.net:/home/sites/test.innowell.net/htdocs/studie/lib/" . "innowell/")
+ ("/mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/lib/" . "innowell/")
+ ("/mathias@innowell.net:/home/sites/innowell.net/htdocs/studie/" . "lib/")
+ ("/mathias@innowell.net:/home/sites/innowell.net/htdocs/" . "studie/")
+ ("/mathias@innowell.net:/home/sites/innowell.net/" . "htdocs/")
+ ("/mathias@innowell.net:/home/sites/" . "danskbehandlerforbund.dk/")
+ ("/mathias@innowell.net:/home/" . "sites/")
+ ("/home/tausen/Documents/SVNp5/Report P5/code/" . "aisdecoder/")
+ ("/home/tausen/Documents/SVNp5/Report P5/" . "code/")
+ ("/home/tausen/Documents/SVNp5/" . "Report P5/")
+ ("/home/tausen/Documents/" . "Innowell/")
+ ("/home/tausen/Report/code/matlab/" . "gmskmod/")
+ ("/home/tausen/Report/code/" . "blackfin/")
+ ("/home/" . "tausen/")
+ ("/home/tausen/Report/" . "code/")
+ ("/tausen.org:/" . "home/")
+ ("/tausen.org:/home/sites/test01/" . "htdocs/")
+ ("/tausen.org:/home/sites/" . "test01/")
+ ("/tausen.org:/home/" . "sites/")
+ ("/home/tausen/" . "shellscripts/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/tausen/Desktop/filtertest/"
+ "/home/tausen/shellscripts/"
+ "/home/tausen/Report/code/blackfin/subsystems/ais2/13gr642/"
+ "/home/tausen/.emacs.d.24/"
+ "/home/tausen/.emacs.d/"
+ "/home/tausen/Report/ImplementationOnDSP/"
+ "/home/tausen/Report/code/matlab_cleanup/"
+ "/home/tausen/Report/"
+ "/home/tausen/"
+ "/home/tausen/Report/code/matlab_cleanup/helperfunctions/"
+ "/home/tausen/aausat3/software/subsystems/ais2/13gr642_filter/"
+ "/home/tausen/aausat3/software/subsystems/ais2/13gr642_bak/"
+ "/home/tausen/Report/code/blackfin/subsystems/ais2/13gr642/drivers/"
+ "/home/tausen/Report/code/c/aisdecoder/"
+ "/home/tausen/Report/code/blackfin/subsystems/ais2/minimum/"
+ "/home/tausen/Report/code/blackfin/subsystems/ais2/minimum/drivers/"
+ "/home/tausen/aausat3/software/subsystems/ais2/program/"
+ "/home/tausen/Report/code/blackfin/minimum/"
+ "/home/tausen/Report/code/blackfin/build/"
+ "/home/tausen/aausat3/software/subsystems/ais2/trash/13gr642_asm/"
+ "/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/MM11/HW/"
+ "/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/MM11/"
+ "/home/tausen/Report/FreqDiscriminationAndFiltering/"
+ "/home/tausen/Documents/Innowell/centos stuff/"
+ "/home/tausen/.xchat2/"
+ "/home/tausen/aausat3/software/subsystems/ais2/13gr642/drivers/"
+ "/home/tausen/aausat3/software/subsystems/ais2/13gr642/"
+ "/home/tausen/aausat3/software/subsystems/ais2/program-ny/"
+ "/home/tausen/Documents/Innowell/"
+ "/home/tausen/Documents/IPTSworkshop/"
+ "/home/tausen/Documents/IPTS workshop/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/plugins/content/displaylist/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/old/htdocs/plugins/content/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/controllers/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/components/com_dbf/assets/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/classes/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/components/com_dbf/classes/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/cron/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/models/"
+ "/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/controllers/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/administrator/components/com_dbf/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/payment/tmpl/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/payment/"
+ "/ssh:mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/templates/theme394_25/css/"
+ "/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/"
+ "/mathias@innowell.net:/home/sites/danskbehandlerforbund.dk/htdocs/test/components/com_dbf/views/payment/"
+ "/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/"
+ "/home/tausen/Documents/Innowell/com_dbf_client/"
+ "/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/active/tmpl/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "cf.m"
+ "pf.m"
+ "data2kml"
+ "sampler.c"
+ "pdetect.h"
+ "main.h"
+ "pdetect.c"
+ "chanfilter.c"
+ "main.c"
+ "config.c"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/tausen/Desktop/filtertest/" (20890 15076) "ft_pd2.raw" "ft_pd0.raw.17" "ft_all_I.raw" "ft_dfdhpQ.raw.3" "ft_lp21.raw.4" "ft_pd.raw.25" "ft_all0.raw.3" "ft_pdQ.raw" "iir_df2_bp2ndorderOK/" "aalborgais/" "ft_cf.raw.7" "ft_cfInf.raw.2" "ft_lp.raw.15" "ft_pd1.raw.7" "ft_pd1.raw.12" "ft_dfd0.raw.16" "ft_dfd1.raw.15" "ft_all_2pack9.raw" "ft_all0.raw.18" "ft_dfdlpI.raw" "ft_cf.raw.1" "ft_asd.raw" "ft_pd.raw.0" "ft_cf.raw.0" "ft_pd.raw.9" "ft_pdd.raw.16" "ft_all_I_unfiltered.raw" "ft_pd1.raw.8" "ft_pd5.raw" "ft_all0.raw.9" "ft_pfI.raw" "1PACKft_all_I.raw" "ft_all_1pack19_weak.raw" "ft_cf.raw.6" "ft_pdQ.raw.0" "ft_pd.raw.2" "ft_pd0.raw.13" "ft_asd4.raw" "ft_all_2pack2.raw" "ft_lp10.raw.1" "ft_all0.raw.10" "ft_lp21.raw" "ft_lp.raw.4" "ft_all_Q_unfiltered.raw" "ft_lp.raw.20" "ft_pd0" "ft_cf.raw" "ft_pd.raw.23" "ft_diff_9.raw" "ft_b4.raw" "ft_pd0.raw.1" "ft_dfdlpI.raw.9" "ft_all.raw.bak" "ft_cfoutQ_0.raw.1" "ft_lp_2.raw" "ft_pd_2.raw.0" "ft_dfd1.raw.5" "ft_all0.raw.4" "ft_dfd0.raw.17" "ft_lp21.raw.29" "ft_all0.raw.15" "ft_lp2.raw.2" "ft_dfd1.raw.12" "ft_pd0.raw.12" "ft_lp10.raw.3" "ft_pd0.raw.5" "ft_cfoutI_0.raw.1" "ft_sqrt1_8.raw.0" "ft_dfd0.raw" "ft_dfdlpI.raw.1" "ft_all0.raw.12" "ft_pd0.raw.21" "ft_pd1.raw.6" "ft_dfdlpI.raw.7" "ft_lp21.raw.8" "ft_lp20.raw.9" "ft_pd9.raw" "ft_lpI.raw" "ft_pd_6.raw" "ft_cf.raw.17" "ft_asd40.raw" "ft_pd1.raw.4" "ft_pdd.raw.11" "ft_all_1pack4.raw" "ft_dfd0.raw.7" "ft_cfInf.raw.1" "ft_dfdlpQ.raw.6" "ft_rawQ.raw" "ft_pd1.raw.3" "ft_cfoutQ_2.raw" "ft_dfdlpQ.raw.7" "ft_dfdlpQ.raw" "ft_pd1.raw" "ft_dfdhpQ.raw.4" "copy of ft_all_I.raw.hex" "ft_dfd1.raw.18" "ft_diff_3.raw.0" "ft.m" "ft_cf.raw.5" "1PACKUNFILTERED.raw" "ft_lp22.raw.3" "ft_cdr.raw" "ft_pd0.raw.6" "ft_dfd0.raw.2" "ft_all0.raw.14" "ft_lp21.raw.2" "ft_lp21.raw.12" "ft_dfd1.raw.2" "ft_lp10.raw.2" "ft_pd1.raw.15" "ft_lp0.raw.4" "ft_lp_1.raw" "outdata.bin" "ft_lp.raw.7" "ft_pd1.raw.19" "ft_lp21.raw.17" "ft_dfdlpI.raw.2" "ft_lp23.raw" "ft_pd.raw.5" "ft_pdnf.raw" "ft_all_2pack8.raw" "ft_pdd.raw.10" "ft_pd0.raw.9" "ft_pd_2.raw" "ft_all_.raw" "ft_all0.raw.29" "ft_cf.raw.2" "ft_pd13.raw" "ft_lp2.raw.1" "ft_all_1pack3.raw" "ft_env.raw" "ft_cfoutI_2.raw" "ft_all0.raw.24" "ft_all_dnow.raw" "ft_lp.raw.0" "ft_dfdlpQ.raw.2" "ft_all_2pack13_weak.raw" "ft_pd0.raw.22" "ft_diff_3.raw" "ft_pd0.raw.15" "ft_dfd0.raw.10" "ft_asd2_lolcfg.raw" "ft_all.raw.0" "ft_pd1.raw.20" "ft_lp.raw.8" "ft_dfdhpQ.raw.2" "dfdfilt.m" "ft_dfdinI_10.raw" "ft_lp0.raw.10" "ft_pd_7.raw.0" "ft_pd_4.raw" "ft_pdd.raw.15" "ft_dfd1.raw.13" "ft_all0.raw.26" "lpdslp.m" "ft_cfQ.raw" "ft_pd.raw.10" "ft_lp2.raw" "ft_dfd1.raw.3" "ft_dfd2.raw.2" "ft_dfd1.raw.1" "ft_pd.raw.28" "ft_pd.raw.17" "ft_dfd1.raw.4" "ft_lp.raw.18" "ft_lp20.raw.8" "ft_pdI.raw.1" "ft_all_2pack12.raw" "ft_lp.raw.17" "ft_all_1p5pack.raw" "ft_dfd0.raw.6" "ft_pd.raw.27" "ft_pfI.raw.1" "ft_lp21.raw.10" "ft_pd4.raw" "ft_pd0.raw.4" "ft_pd2.raw.4" "ft_pdI.raw" "ft_cf.raw.22" "ft_pdnf.raw.4" "ft_dfd1.raw.8" "ft_pd_3.raw" "ft_lp.raw.3" "ft_dfdhpQ.raw.0" "ft_pd.raw.21" "ft_cf.raw.3" "ft_pd3.raw" "ft_pdd1.raw.0" "ft_pdI.raw.3" "ft_pdd1.raw.3" "ft_rawI.raw" "ft_all.raw" "ft_pdd.raw" "ft_lp_3.raw" "ft_cfI.raw.3" "ft_tmp1.raw.4" "ft_pd0.raw.23" "ft_lp21.raw.7" "ft_lp20.raw.11" "ft_asd5.raw" "a.out" "ft_pd.raw.6" "ft_rawQ.raw.0" "ft_lp.raw.10" "ft_all0.raw.35" "ft_lp0.raw.6" "ft_lp_6.raw" "ft_pddw.raw" "ft_lp21.raw.6" "ft_all_2pack6.raw" "ft_dfdlpQ.raw.0" "ft_dfd1.raw.17" "ft_pd.raw.20" "ft_cf.raw.11" "ft_dfd.raw.bak" "ft_all0.raw.2" "ft_lp22.raw.4" "ft_psQ_7.raw" "ft_all_1pack20_weak.raw" "ft_pd1.raw.16" "ft_lp.raw.16" "ft_pd.raw.18" "ft_asd3.raw" "ft_lp.raw.14" "ft_dfd2.raw.1" "ft_pd2.raw.3" "ft_lp0.raw.7" "ft_lp2.raw.4" "ft_cf.raw.10" "ft_pfQ.raw" "ft_cf.raw.23" "ft_pd.raw.24" "ft_lp21.raw.25" "ft_cf_0.raw" "ft_pd0.raw.10" "ft_pd2.raw.2" "ft_pd0.raw.8" "ft_all0.raw.13" "ft_all.raw.4" "ft_all_clipping.raw" "ft_lp23.raw.1" "ft_lp21.raw.5" "ft_lp2.raw.0" "demodulated.bin" "ft_sqrt1_8.raw" "pfilter.m" "ft_pd10.raw" "ft_pd.raw.12" "ft_raw.raw" "ft_pd0.raw.14" "ft_all0.raw.30" "ft_all0.raw.19" "ft_b4_0.raw" "ft_pd.raw.3" "ft_lp21.raw.26" "ft_dfdinQ_4.raw" "ft_dfdhpQ.raw" "ft_pd.raw.29" "ft_pdd1.raw.1" "ft_lp21.raw.16" "ft_pdd.raw.9" "ft_all0.raw.23" "ft_pd14.raw" "ft_dfd0.raw.9" "ft_pd1.raw.0" "ft_lp21.raw.11" "ft_lp21.raw.28" "ft_pd1" "ft_pfQ.raw.1" "ft_cfI.raw.1" "ft_lp20.raw.2" "ft_dfd.raw.3" "ft_all_2pack11.raw" "ft_dfd1.raw.11" "ft_cfinI_2.raw" "ft_pd0.raw.16" "ft_pdd.raw.12" "ft_pdI.raw.2" "ft_all_2pack.raw" "ft_lp20.raw.6" "ft_lp22.raw.0" "ft_pdnf.raw.5" "ft_pd_7.raw" "ft_pd11.raw" "ft_y.raw" "ft_dfd0.raw.18" "ft_pd1.raw.22" "ft_lp.raw.28" "ft_cfinQ_0.raw" "ft_cfoutQ_0.raw" "ft_dfdlpI.raw.4" "ft_dfdlpQ.raw.3" "ft_y.txt" "ft_dfdlpI.raw.10" "ft_all_1pack16.raw" "ft_x.raw" "ft_cf.raw.21" "ft_tmp1.raw.5" "ft_dfdhpI.raw.4" "ft_pd8.raw" "ft_dfdhpI.raw.3" "ft_lp21.raw.3" "ft_pd6.raw" "ft_lp0.raw" "ft_pdnf.raw.2" "ft_pd.raw.30" "ft_lp21.raw.21" "ft_cfInf.raw.3" "ft_all0.raw.34" "ft_all0.raw.20" "iir_df1_bp6thorderOK/" "ft_tmp11_8.raw" "ft_pdd.raw.2" "ft_dfdhpenv.raw" "ft_cfoutI_0.raw" "ft_asd10.raw" "ft_dfd0.raw.11" "ft_cf_2.raw" "ft_dfd1.raw.7" "ft_pd.raw.4" "ft_pd1.raw.13" "ft_pd1.raw.2" "ft_lp21.raw.1" "ft_pd0.raw.11" "ft_cf.raw.16" "ft_lp_0.raw" "ft_cf.raw.15" "ft_lp10.raw.0" "ft_ds.raw" "quicktest.m" "ft_lp0.raw.0" "ft_pdd.raw.6" "ft_pd0.raw.3" "ft_pdd1.raw" "ft_all_2pack7_weak.raw" "ft_dfd0.raw.12" "ft_lp21.raw.27" "ft_pd.raw" "ft_dfdlpQ.raw.1" "ft_diff_8.raw" "ft_lp0.raw.1" "lp.m" "ft_tmp1_8.raw" "iir_df1_bp2ndorderOK/" "ft_all0.raw.32" "ft_asd11.raw" "ft_dfd0.raw.19" "ft_pdd.raw.0" "ft_all0.raw.16" "ft_dfdhpI.raw" "ft_pd_6.raw.0" "ft_all.raw.2" "ft_lp.raw.21" "ft_all_1pack2.raw" "ft_lp21.raw.23" "ft_dfdhp.raw" "ft_dfdlpenv.raw" "ft_lp21.raw.18" "ft_all_2pack10.raw" "ft_cfinQ_2.raw" "ft_pfQ.raw.0" "ft_cf.raw.4" "ft_dfdhpQ.raw.1" "ft_lp.raw.2" "ft_lp20.raw.3" "fe0.raw" "ft_lp20.raw" "ft_dfdlpI.raw.5" "ft_diffts_7.raw" "ft_wat.raw" "ft_pd1.raw.5" "ft_lp21.raw.24" "ft_lp20.raw.10" "ft_dfdlpenvraw" "ft_cfI.raw.5" "ft_lp20.raw.1" "ft_pdd.raw.7" "ft_pd.raw.15" "zeplot.m" "ft_pdd.raw.14" "ft_pdnf.raw.3" "ft_pdd.raw.3" "ft_dfd0.raw.20" "ft_cfinQ_3.raw" "ft_cf.raw.19" "ft_all_Q2.raw" "ft_dfd0.raw.1" "ft_lp24.raw.0" "ft_cf.raw.14" "ft_dfdlpI.raw.3" "ft_dfd.raw" "ft_lp_7.raw" "1PACKUNFILTERED2.raw" "ft_all_1.raw" "ft_all_1pack18.raw" "ft_lp.raw.5" "ft_all_1pack.raw" "ft_dfd0.raw.4" "ft_diff_5.raw" "ft_pdnf.raw.0" "ft_all_Q.raw" "ft_diff_0.raw" "ft_lp20.raw.5" "ft_cfinI_3.raw" "ft_lp.raw.11" "ft_pdnf.raw.6" "ft_all.raw.3" "ft_lp0.raw.9" "ft_lp20.raw.0" "ft_all0.raw.11" "ft_dfd.raw.4" "ft_lp21.raw.14" "ft_pdI.raw.0" "ft_pd.raw.26" "ft_dfd0.raw.5" "ft_dfd.raw.2" "ft_lp22.raw.1" "ft_rawI.raw.0" "ft_pd00.raw" "ft_cfoutQ_0.raw.0" "ft_lp_4.raw" "ft_lp21.raw.9" "ft_dfdlpQ.raw.5" "ft_pd.raw.13" "ft_cf.raw.13" "ft_pd0.raw.2" "ft_all0.raw.31" "ft_dfd1.raw" "ft_pdd.raw.4" "ft_pdd1.raw.2" "ft_pd.raw.16" "ft_dfdinQ_10.raw" "ft_pdd1.raw.5" "ft_dfdhpI.raw.1" "ft_lp2.raw.3" "ft_dfd1.raw.10" "ft_cf.raw.20" "ft_lp.raw.1" "ft_all1.raw" "ft_dfd.raw.1" "ft_all0.raw.21" "ft_dfd2.raw.0" "ft_lp20.raw.4" "ft_pd.raw.11" "ft_rawI.raw.1" "ft_lp21.raw.0" "ft/" "ft_pd2.raw.1" "ft_lpQ.raw" "ft_lp22.raw" "ft_cfI.raw.4" "ft_cfI.raw" "ft_all2.raw" "ft_dfd0.raw.3" "ft_asd12.raw" "ft_lp21.raw.13" "ft_pd.raw.1" "ft_all_2pack4_weak.raw" "ft_all0.raw.6" "ft_lp0.raw.3" "ft_all_1pack15_half.raw" "ft_dfd0.raw.0" "ft_lp20.raw.7" "ft_dfdlpI.raw.6" "ft_pd0.raw.0" "ft_pd1.raw.17" "ft_lp22.raw.5" "ft_lp0.raw.8" "ft_pfI.raw.0" "ft_lp20.raw.12" "ft_lp21.raw.22" "ft_lp.raw.9" "ft_diff_4.raw" "ft_pd0.raw.19" "ft_cf_2.raw.0" "ft_lp0.raw.5" "ft_lp0.raw.2" "ft_all0.raw" "ft_pdd.raw.5" "ft_all0.raw.17" "ft_all_I.raw.hex" "ft_lp20.raw.14" "ft_lp24.raw" "ft_all_1pack21_weak.raw" "ft_pd0.raw.18" "ft_cfQ.raw.1" "ft_cfInf.raw" "ft_all0.raw.27" "ft_all_1pack17.raw" "ft_lp22.raw.2" "ft_cdr0.raw" "ft_lp.raw.12" "ft_pdd.raw.1" "ft_pdd.raw.8" "ft_cfoutI_0.raw.0" "ft_pd2.raw.0" "ft_lp.raw" "ft_dfdhpI.raw.0" "ft_all0.raw.7" "ft_pd15.raw" "ft_dfdlpI.raw.8" "ft_all0.raw.33" "ft_cf.raw.18" "ft_all_1p5pack2.raw" "ft_all0.raw.5" "ft_dfd2.raw" "ft_pd1.raw.21" "ft_dfdhpI.raw.2" "ft_all_ftest.raw" "ft_dfd2.raw.4" "ft_cfI.raw.2" "ft_lp21.raw.15" "ft_unfilt.raw" "ft_all0.raw.37" "ft_lp21.raw.20" "ft_pd.raw.14" "ft_pd0.raw" "ft_lp20.raw.13" "ft_pd1.raw.9" "ft_all.raw.1" "ft_cf_1.raw" "cf.m" "ft_all_1pack5.raw" "datafile.bin" "ft_all0.raw.0" "ft_asd20.raw" "ft_cf.raw.12" "ft_diff_8.raw.1" "ft_dfd1.raw.6" "ft_pd.raw.19" "ft_pd0.raw.7" "ft_dfd1.raw.9" "ft_pd12.raw" "ft_dfdlp.raw" "ft_dfdlpQ.raw.4" "ft_lp.raw.6" "ft_cf.raw.9" "ft_dfd.raw.0" "ft_cfInf.raw.0" "ft_pd7.raw" "ft_all0.raw.36" "tomastest.raw" "ft_psI_7.raw" "ft_lp10.raw" "ft_pd.raw.7" "ft_pddw.raw.0" "ft_pd1.raw.11" "ft_lp21.raw.19" "ft_pd.raw.22" "ft_pd.raw.8" "ft_dfd00.raw" "ft_all_I2.raw" "ft_asd2_precfg.raw" "ft_dfdlpI.raw.0" "ft_pdnf.raw.1" "ft_asd41.raw" "ft_lp_20.raw" "ft_pd0.raw.20" "ft.c" "ft_dfd2.raw.3" "ft_cfQ.raw.0" "ft_pd1.raw.14" "ft_dfd1.raw.14" "ft_pd0.raw.24" "ft_dfdinI_4.raw" "ft_dfd1.raw.16" "ft_dfd1.raw.0" "ft_lp.raw.13" "ft_lp23.raw.0" "ft_cf.raw.8" "pf.m" "ft_envlp.raw" "ft_pd1.raw.10" "ft_all_2pack5.raw" "ft_crc0.0.raw" "ft_pdd.raw.13" "ft_cfinI_0.raw" "ft_all0.raw.8" "ft_pd_11.raw" "ft_all_agc.raw" "ft_dfd_unreal.raw" "ft_dfd0.raw.8" "ft_pd1.raw.1" "ft_pd1.raw.18" "ft_all_2pack3.raw" "ft_tmp11_8.raw.0" "ft_asd2.raw" "../" "./")
+
+ ("/home/tausen/shellscripts/" (20887 58251) "reportcopy.sh" "quicktest.sh" "checkmail.sh" "checksms/" "lxcf" "lxc" "sendsms" "reportcpy.sh" "figascripts.tgz" "lxcr" "monitorbig.sh" "startup-settings.sh" "draw_bg.lua" "volup.sh" "a.out" "monitorsmall.sh" "getsub" "aiscrc.m" "charsplit.sh" "./" "splitais" "checksms.sh" "data2kml_header.kml" "test/" "ignorelist" "monitordual.sh" "baseconv/" "openpdf" "ais2up" "importantcommands" "checktnb.sh" "test.kml" "svndiff" "getreportlabels.sh" "data2kml" "lxclean" "battery.sh" "getsms" "p6reportcpy.sh" "../" "devtag" "setcontacts" "dualmonitor" "hex2bin.c" "wifi.sh" "ais2download" "rmt" "srun" "opn" "voldown.sh" "setwallpaper.sh" "formatgcalcli" "getvol.sh" "randstr.php" "setignorelist" "asdf.txt" "p5reportcpy.sh")
+
+ ("/home/tausen/" (20889 63100) ".bitcoin/" ".gtk-bookmarks" ".dhexrc" "matlab_crash_dump.21480-3" ".VirtualBox/" ".bash_logout" "error.png" "Insync/" "Pretty awesome.png" "apt.key" ".xdvirc" "matlab_crash_dump.21480-1" ".oldautostart/" ".pam_environment" ".oces2/" ".sabnzbd/" "Insync.new/" ".local/" "code/" ".kchmviewer/" "blackfin/" ".emacs.d.checkout/" ".dbus/" ".bash_history" "outdata.txt" "vis/" ".face" ".ssh/" ".goutputstream-IQ3JTW" "poclbm/" "apt.key.1" "esa_data_hp.eps" ".xsession-errors" ".emacs.d.23bak/" "decodeddata.txt" ".macromedia/" "gtile/" "subs/" ".java/" ".Skype/" "Fra SanDisk USB/" "dbfhacked/" "reportcpylog.txt" "testy" ".xscreensaver" "centos/" ".signon/" ".cache.bak/" ".profile" "Games/" "13gr642.bak/" ".enc/" ".gstreamer-0.10/" "Screen Shot 2013-04-04 at 2.46.33 PM.png" ".steampid" ".breadcrumb" ".calc_history" ".goutputstream-HS68SW" "sub-2807-1363215722.pdf" ".steam/" "RemoteLocations/" "matlab_crash_dump.9235-2" "danid.log" ".gconf/" "emacs.prelude/" ".selected_editor" "./" "EsaFileNo3_Demodulated.bin" "examples.desktop" "PDF/" ".vim/" "matlab_crash_dump.21480-2" ".emacs.d.bak/" "C:\\nppdf32Log\\debuglog.txt" "test" ".subversion/" "test~" ".purple/" ".mozilla/" ".gtkevemon/" "sqlresults.pdf" ".emacs~" ".emacs.d.pre-prelude.tar" ".pulse-cookie" "envelope.s" ".gnome/" ".cache/" ".killingfloor/" "EsaFileNo2_Demodulated.bin" ".emacs.d.old/" ".hplip/" ".goutputstream-91Q9SW" ".erc/" ".etwolf/" ".goutputstream-M82BTW" ".gnome2_private/" ".mission-control/" "sqlresult2.pdf" ".ICEauthority" "dbf_faktura_110-8-1365964489.pdf" ".steampath" "IMG_13052013_115856.png" ".emacs.d/" "shared/" ".speech-dispatcher/" "matlab_crash_dump.9235-1" ".PlayOnLinux/" "esa_data.eps" ".bashrc" ".gitconfig" ".matlab/" "AdobeReader/" ".dmrc" "Templates/" ".cvspass" ".xinput.d/" "VirtualBox VMs/" "missfont.log" "GMSK Co-Channel Demodulation" ".xchat2/" "amdnote" "emacs-prelude/" ".recentf" "aausat3/" "Music/" "IMG_16042013_150506.png" ".config/" "shellscripts/" "outdata.kml" "quicktile/" "Videos/" ".gksu.lock" "../" ".Valley/" "tmp/" "minicom.log" "Documents/" ".pulse/" ".gphoto/" "EsaFileNo1_Demodulated.bin" ".esd_auth" "Downloads/" ".gimp-2.8/" "15" ".adobe/" ".emacs_backups/" "Report/" ".icons/" ".lesshst" "sqlresult.pdf" "note" "emacs-starter-kit/" ".viminfo" "Desktop/" ".xsession-errors.old" "Pictures/" ".emacs.d.24/" ".eshell/" ".wine/" ".thumbnails/" "sub-2984-1363251726.pdf" ".ido.last" ".Xauthority" "P6.bak/" ".compiz/" "awesome.jpg" ".emacs.bak" "PlayOnLinux's virtual drives/" ".kde/" ".gnome2/" "untitled.jpg" ".pki/" "Public/" "decodeddata.bin")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/13gr642/" (20889 14371) "sqrt.h" "config.h.~293~" "pfilter.h" "main1.lst" "cdr.c" "config.c" "chanfilter.c.scaled" "envelope.s.~383~" "main.c.tmp" "pdetect.c" "pdetect.h" "chanfilter.c" "crc16_ccitt.h" "crc.h" "main.c.~394~" "chanfilter.h" "drivers/" "lp2.c" "main.c.bak" "sampler.c" "main0.lst" "lp.c.bak" "Makefile.bak" "pfilter.c" ".lst" "a.out" "chanfilter.c.~343~" "cdr.h" "./" "main.h.largersamblock" "lp.c" "note.txt" "cdr.c.newflagthing" "dfd.c.~383~" "filtertest" "Makefile" "envelope.s" "crc16_ccitt.c" "dfd.h" "crc.c" "config.c.bak" "trash/" "main.c" "sqrt.c" "dfd.c" "chanfilter.c.~422~" "main.c.oldprocess" "working.hex" "broken.hex" "../" "lp.h" "main.h" "main.c.~425~" "sampler.h" "drivers.bak/" "pdetect.c.~433~" "config.h" "cdr.c.~337~")
+
+ ("//" (20884 47154) "boot/" "root/" "usr/" "initrd.img" "opt/" "var/" "lib64/" "media/" "./" "sys/" "lost+found/" "C:\\nppdf32Log\\debuglog.txt" "afs/" "lib/" "vmlinuz.old" "lib32/" "home/" "dev/" "vmlinuz" "etc/" "proc/" "srv/" "sbin/" "../" "tmp/" "cdrom/" "initrd.img.old" "mnt/" "run/" "selinux/" "bin/")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/" (20888 51587) "minimum/" "13gr642/" "13gr642.bak/" "./" "program/" "minimum2.zip" "../" "minimum.zip")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/" (20888 51587) "ais2/" "./" "Makefile" "../")
+
+ ("/home/tausen/Report/code/blackfin/" (20888 51587) "minimum/" "./" "subsystems/" "lib/" "build/" "README" "../")
+
+ ("/home/tausen/Report/code/" (20888 51587) "blackfin.master/" "blackfin.working/" "blackfin/" "matlab/" "./" "c/" "blackfin.bak/" "../" "matlab_cleanup/")
+
+ ("/home/tausen/Report/" (20889 917) "#frontpage.tex#" "frontpage.tex" "appendix.tex" "datasheets.bib" "AcceptanceTest/" "synopsis.tex" "PreliminaryAnalysis/" "main.tex" "code/" "main2.aux" "FreqDiscriminationAndFiltering/" "Introduction/" "main3.bbl" "littliste.bib" "tdefinitions.tex" "preamble.tex" "images/" "Conclusion/" "preface.aux" "titlepage.tex" "appendix.aux" "main.log" "main.out" "./" "Requirements/" "btaux.aux" "ignorelist" "main1.bbl" "main.ps" "btbbl.aux" "Makefile" "main2.blg" "Appendix/" "ImplementationInMatlab/" ".svn/" "main3.aux" "main.pdf" "main.dvi" "preface.tex" "ImplementationOnDSP/" "runbibtex.bat" "appendixoverview.aux" "trash/" "references.tex" "Demodulator/" "articles.bib" "main.lot" "main3.blg" "books.bib" "DataRecovAndDecoding/" "../" "data/" "main.toc" "userprefs.tmp" "Futureposibilities/" "PreProcessFilterAndDetection/" "main.aux" "main1.blg" "references.aux" "main.lof" "setignorelist" "main2.bbl" "main1.aux" "appendixoverview.tex")
+
+ ("/home/tausen/Desktop/" (20886 32081) "diff.png" "bqs_nearest2.png" "Screenshot - 05172013 - 08:55:49 PM.png" "bqs_nearest.png" "GR642_0905.pdf" "./" "filtertest/" "a3raw.png" "sadf.png" "loltest/" "m.m" "Chapter 7 - Quantization Noise in DSP.pdf" "awgntest/" "../" "untitled.png" "Screenshot - 05172013 - 08:56:14 PM.png")
+
+ ("/home/tausen/Documents/blackfin/libdsp/" (20886 600) "normfl16.S" "f32ftoi64.asm" "f64tou32z.asm" "conv2dasm.asm" "cvecvmltf.c" "twiddle_fr16.c" "fpmult.asm" "log10.c" "cvecsaddd.c" "flteq.asm" "twidfftrad2_fr16.c" "cvecvaddd.c" "matmmltd.c" "acosd.c" "cabs.c" "cmpfl64f.asm" "i64tof64.asm" "minll.c" "alogf.c" "log10d.c" "vvsub.asm" "zero_crossf.asm" "tan.c" "cfftf_fr16.asm" "sinhd.c" "tanhd.c" "divfl32.S" "vecmaxlocd.c" "ifft_fr16.asm" "arg16.c" "cos_fr16.asm" "vecssubd.c" "cos.c" "ltfl64.asm" "alog10d.c" "atan2_fr16.asm" "gen_vonh.c" "pow.c" "cartesian16.c" "cmp_fl16.S" "fl322fl.S" "trncr4u8.asm" "sqrt_fr16.asm" "powd.c" "urem32.asm" "vecminlocd.c" "modf.c" "conjd.c" "fl162fl.S" "mean.c" "divfl64f.asm" "csub16.c" "min16.c" "vecmaxd.c" "iir_fr16.asm" "add_fl16.S" "remu64.asm" "fl2fl32.S" "vvmlt.asm" "fir_decima16.asm" "negfl16.S" "u64tof32f.asm" "ALLFILES" "cadd16.c" "csubd.c" "acos_fr16.asm" "fltcmp.asm" "floatdiuf.asm" "f64tof32.asm" "vecsaddf.c" "muli64.asm" "vecvsubd.c" "fabsd.c" "fmaxd.c" "cdiv.c" "mulfl64f.asm" "signf.c" "cvecdot_fr16.asm" "caddd.c" "gen_gauss.c" "sign_fr16.asm" "gteqfl64.asm" "polar16.c" "ashfti64.asm" "argd.c" "f64toi32.asm" "cexpd.c" "matmmlt_fr16.asm" "ifft2d_fr16.asm" "arg.c" "alogd.c" "divfract32.asm" "logd.c" "mulfl16.S" "absfl16.S" "sqrtd.asm" "sinh.c" "atan.c" "div16.asm" "csadd.asm" "transpmd.asm" "cosd.c" "asind.c" "divfl64.asm" "udiv64.asm" "fl32max.c" "histogram.c" "f64toi64.asm" "lshfti64.asm" "vecvsubf.c" "trncr4i8.asm" "addfl32.S" "cabsd.c" "u64tof64.asm" "f64toi64z.asm" "vecdotd.c" "fract28_4mul.asm" "ceil.c" "cfir_fr16.asm" "vssub.asm" "exp.c" "fpadd.asm" "fltlteq.asm" "isnan.asm" "countll.c" "sin.c" "mu_compress16.asm" "vecminf.c" "sin_fr16.asm" "twidfftf_fr16.c" "cdivd.c" "vvadd.asm" "floord.c" "transpm_fr16.asm" "floor.c" "tand.c" "rms_fr16.asm" "cmatmmlt.c" "cvecdotf.c" "counti.asm" "ldexpd.c" "f32ftof64f.asm" "mulfl32.S" "i32tof64f.asm" "cmatmmltd.c" "rfft2d_fr16.asm" "cvecvmult_fr16.asm" "clip_fr16.asm" "acos.c" "max16.c" "mulfl64.asm" "cmltd.c" "cmpfl16.S" "cvecvsubd.c" "autocorr_fr16.asm" "cfft2d_fr16.asm" "gen_bart.c" "u64tof64f.asm" "tan_fr16.asm" "gen_kaiser.c" "fltsif.asm" "clipll.c" "absfl32.S" "f64toi32z.asm" "modfd.c" "crosscorr.c" "Makefile" "f32tou32z.asm" "tanh.c" "mul_fl16.S" "vecsmltd.c" "rfft_fr16.asm" "subfl64f.asm" "gen_hann.c" "lteqfl64.asm" "crosscoh_fr16.asm" "vminlocf.c" "crosscohd.c" "fmod.c" "autocorrd.c" "isinfd.c" "fir_fr16.asm" "fir_interp16.asm" "addfl64.asm" "var_fr16.asm" "rsqrtd.asm" "autocorr.c" "cfft_fr16.asm" "cssub.asm" "normfl32.S" "floatdisf.asm" "i32tof32f.asm" "meand.c" "conv2d3x3_asm.asm" "trncr4u4.c" "matmmltf.c" "subfl64.asm" "mean_fr16.asm" "vecvaddd.c" "a_compress16.asm" "cmpfl32.S" "rms.c" "cmpfl64.asm" "cot.c" "fltgt.asm" "vecssubf.c" "convolve_asm.asm" "vecdotf.c" "eqfl64.asm" "ceild.c" "atan2d.c" "crosscoh.c" "cvecsmlt.c" "min.c" "fr162fl16.S" "fltuif.asm" "f32ftoi32.asm" "twidfft2d_fr16.c" "remi64.asm" "addfl16.S" "vmaxlocf.c" "vmin.asm" "frexpd.c" "asin.c" "norm.c" "atan2.c" "i64tof32f.asm" "testsuite/" "negfl32.S" "lib_sqrt_seeds.asm" "a_expand16.asm" "subfl32.S" "asin_fr16.asm" "vecvmltf.c" "cmatmmlt_asm.asm" "fclipf.c" "crosscorrd.c" "clip_asm.asm" "vmax.asm" "sind.c" "u32tof64f.asm" "dfr2fl.asm" "fpdiv.asm" "cvecvmltd.c" "f64ftoi64.asm" "fmaxf.c" "roundflti.asm" "isnand.c" "Lib_cos16_2PIx.c" "vsmlt.asm" "cmlt16.c" "isinf.asm" "zerocross.asm" "atan_fr16.asm" "div_fl16.S" "srem32.asm" "sqrtf.asm" "divfl16.S" "fl2dfr.asm" "gtfl64.asm" "log.c" "fltgteq.asm" "fltlt.asm" "vecmind.c" "f32toi32z.asm" "transpm.asm" "mulu64.asm" "vard.c" "cvecssubd.c" "fract24_8mul.asm" "polard.c" "coshd.c" "maxll.c" "mu_expand16.asm" "gen_rect.c" "f64ftoi32.asm" "f64tou64z.asm" "cabfr16.asm" "subfl16.S" "gen_trian.c" "sdiv32.asm" "cdiv_fr16.asm" "vecvaddf.c" "fr2fl.asm" "max.c" "fl162fr16.S" "fl32min.c" "u32tof64.asm" "fl2fl16.S" "cvvsub.asm" "Lib_cos16_2PIx.h" "cvecvsubf.c" "expd.c" "lib_mult64.asm" "mult64_32x32.asm" "fminf.c" "abs16.c" "i32tof64.asm" "twidfftrad4_fr16.c" "autocoh_fr16.asm" "cmul_fr32.c" "frexp.c" "cosh.c" "fitsfl16.S" "fmind.c" "normd.c" "udiv32.asm" "polar.c" "cexp.c" "vecmaxf.c" "autocoh.c" "means.c" "cvecvaddf.c" "sub_fl16.S" "gen_harris.c" "cvecdotd.c" "histogramd.c" "histogram_fr16.asm" "cartesiand.c" "rsqrtf.asm" "cvecsaddf.c" "multu64_32x32.asm" "cvecssubf.c" "autocohd.c" "gen_black.c" "u32tof32f.asm" "vecdot.asm" "vsadd.asm" "cvecsmltd.c" "f32tof64.asm" "f64ftof32f.asm" "conj16.c" "cvecsmult_fr16.asm" "vecsmltf.c" "sdiv64.asm" "cotd.c" "rmsd.c" "copysignd.c" "iirdf1_fr16.asm" "alog10f.c" "gen_hamm.c" "vminloc.asm" "vmaxloc.asm" "crosscorr_fr16.asm" "cvvadd.asm" "atand.c" "fclipd.c" "cartesian.c" "vecsaddd.c" "coeff_iirdf1_fr16.c" "fr322fl32.S" "zero_crossd.asm" "fl2fr.asm" "fl322fr32.S" "vecvmltd.c" "var.c" "i64tof64f.asm" "ChangeLog" "../" "./")
+
+ ("/home/tausen/.emacs.d.24/" (20882 48895) "backups/" "session.1056fdf69588c0a58c136429048033693000000024570049" "init.el" "places" "./" "libs/" "ac-comphist.dat" "tramp" "url/" "elpa/" "semanticdb/" "themes/" ".smex-items" "../" ".git/" "bookmarks" ".gitignore" "#places#" "auto-save-list/")
+
+ ("/home/tausen/.emacs.d/" (20887 21911) "elpa-to-submit/" "dominating-file.el" "starter-kit-elpa.elc" "starter-kit-perl.elc" "COPYING" "backups/" "var/" "init.el" "starter-kit-defuns.el" "places" "starter-kit-eshell.elc" "starter-kit-defuns.elc" "./" "starter-kit-bindings.elc" "starter-kit-ruby.el" "lib/" "loaddefs.el" "starter-kit-misc.elc" "starter-kit-lisp.el" "elpa/" "starter-kit-js.elc" "semanticdb/" "README.markdown" "starter-kit-registers.el" "TODO" "starter-kit-misc.el" "package.elc" "starter-kit-ruby.elc" "../" ".git/" "starter-kit-js.el" "starter-kit-registers.elc" ".gitignore" "starter-kit-elpa.el" "starter-kit-perl.el" "dominating-file.elc" "starter-kit-lisp.elc" "auto-save-list/" "starter-kit-eshell.el" "package.el" "starter-kit-bindings.el")
+
+ ("/home/tausen/Report/ImplementationOnDSP/" (20887 24301) "ImplementationOnDSP.log" "./" "ImplementationOnDSP.tex" "../" "ImplementationOnDSP.aux")
+
+ ("/home/tausen/Report/code/matlab_cleanup/" (20886 2708) "config.m" "helperfunctions/" "cdr.m.~230~" "dfd.m.~231~" "extractdata.m" "T3.wav" "newdemodulator.m" "meanest.m" "./" "pfilter.m" "dfd.m.~323~" "dfd.m" "pdetecttest.m" "cdr.m" "T2.wav" "pdetect.m" "chanfilter.m" "cdr.m.~399~" "config.m.~399~" "../" "T1.wav" "config.m.~413~" "testsignal2.wav" "config.m.~414~" "cdr.m.~398~" "extractesadata.m" "pdetectsystest.m")
+
+ ("/home/tausen/Documents/IPTSworkshop/" (20843 52873) "ex1.m" "./" "election_votes.mat" "ex2.m" "ex3.m" "../" "statisticsWorkshop.pdf" "measurementsMeters.mat" "exercise3.m")
+
+ ("/home/tausen/Documents/Innowell/" (20857 31116) "cron-0104132349.pdf/" "cron-1903131640.pdf/" "DBF/" "./" "redmine/" "gittest/" "../" "cure.innowell.net/" "danskbehandlerforbund/" "centos stuff/")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642/" (20849 18407) "config.c" "pdetect.c" "pdetect.h" "chanfilter.c" "chanfilter.h" "drivers/" "main.c.bak" "sampler.c" "Makefile.bak" "ais21" "./" "lp.c" "demodunow" "Makefile" "chanfilter.o" "dfd.h" "main.o" "chanfilter.c.bak" "ais22" "main.c" "chanfilter.h.bak" "dfd.c" "../" "lp.h" "main.h" "config.o" "sampler.c.bak" "sampler.h" "sampler.o" "config.h")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642/drivers/" (20849 18407) "adf7020.c" "led.h" "adf7020.h" "./" "led.c" "adf7020.o" "adc.c" "adc.o" "led.o" "gpio.c" "../" "gpio.h" "bfin_sport.h" "adc.h" "gpio.o")
+
+ ("/home/tausen/.xchat2/" (20874 187) "downloads/" "sound.conf" "./" "notify.conf" "xchatlogs/" "ignore.conf" "scrollback/" "keybindings.conf" "../" "servlist_.conf" "chanopt.conf" "xchat.conf" "colors.conf")
+
+ ("/home/tausen/Documents/Innowell/centos stuff/" (20852 24685) "prepuser.sh" "prepcentos.sh" "./" "../" "INNOWELL_README.txt")
+
+ ("/home/tausen/Report/FreqDiscriminationAndFiltering/" (20884 60729) "FreqDiscriminationAndFiltering.tex" "FreqDiscriminationAndFiltering.aux" "./" "../")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/MM11/" (20854 47158) "poynomialFit_alsoRegularized.m" "Agenda MM11.odt" "example9_1.m" "./" "note.txt" "assignment_vanilla.m" "example7_1.m" "HW/" "../" "cvxIntro.m" "cvx_lecture.pdf" "view_layout.m" "HW_assingment.pdf" "matrix_hw_13gr642.m")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/MM11/HW/" (20854 47139) "main.tex" "preamble.tex" "images/" "main.log" "main.out" "./" "main.ps" "Makefile" "main.dvi" "../" "matrix_hw_13gr642.pdf" "main.aux")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/trash/13gr642_asm/" (20864 1341) "addition.s" "drivers/" "#main.c#" "testy" "ais2" "./" "Makefile" "main.o" "main.c" "../")
+
+ ("/home/tausen/Report/code/blackfin/build/" (20884 60638) "libgeneric.mk" "x86.mk" "./" "arm.mk" "avr.mk" "../" "bfin.mk" "generic.mk")
+
+ ("/home/tausen/Report/code/blackfin/minimum/" (20872 46331) "drivers/" "./" "Makefile" "main.c" "../" "main.h")
+
+ ("/home/tausen/Report/code/c/aisdecoder/" (20872 63764) "ft_bits.raw" "sl.bin" "helperfunctions.c" "aisdecoder.out" "outdata.bin" "rawdecoding.c" "demodulated.bin" "./" "Makefile" "decoding.h" "helperfunctions.h" "encoding.c" "encoding.h" "../" "decoding.c" "rawdecoding.h" "aisdecode.c" "vessel.c" "vessel.h")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/13gr642/drivers/" (20881 25942) "adf7020.c" "led.h" "adf7020.h" "./" "led.c" "adc.c" "temperature.h" "temperature.c" "gpio.c" "../" "gpio.h" "bfin_sport.h" "adc.h")
+
+ ("/home/tausen/Report/code/matlab_cleanup/helperfunctions/" (20882 36977) "simplefft.m" "aisdecode.m" "WaterfallPlot2.m" "./" "WaterfallPlot.m" "waterfall_fft.m" "vector2binfile.m" "../")
+
+ ("/home/tausen/shared/" (20849 59200) "./" "../")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642_filter/" (20845 16888) "main.s" "drivers/" "adfilter_working.c" "./" "filtertest" "Makefile" "main.lst" "main.o" "main.c" "../" "main.h" "note" "adfilter_df1_working.c")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642_bak/" (20849 17308) "config.c" "pdetect.c" "chanfilter.c" "chanfilter.h" "drivers/" "sampler.c" "filtertest_" "./" "filtertest" "Makefile" "chanfilter.o" "dfd.h" "main.lst" "main.o" "main.c" "dfd.c" "../" "main.h" "config.o" "sampler.h" "sampler.o" "config.h")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/minimum/" (20872 46021) "config.c" "chanfilter.c" "broken.lst" "chanfilter.h" "drivers/" "a.out" "filtertest.lst" "./" "filtertest" "Makefile" "min.c" "main.c" "working.hex" "broken.hex" "../" "main.h" "notworking.lst" "drivers.bak/" "config.h" "working.lst")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program/" (20872 46021) "bootcount.h" "config.c" ".cproject" "ais_misc.o" "ais2.o" "fileconf.c" "drivers/" "ais_misc.h" ".project" "sampler.c" "ais2.h" "ais2" "server.o" "ais2.c" "./" "common.h" "Makefile" "fileconf.o" "filterconf.c" "crc32.h" "server.h" "bootcount.c" "postprocessing/" "ais_misc.c" "common.c" "complexity/" "dsp/" "../" "server.c" "main.h" "config.o" "crc32.o" "sampler.h" "filterconf.h" "bootcount.o" "sampler.o" "config.h" "fileconf.h" "filterconf.o" "crc32.c")
+
+ ("/home/tausen/Report/code/blackfin/subsystems/ais2/minimum/drivers/" (20872 45865) "temperature.o" "adf7020.c" "led.h" "adf7020.h" "./" "led.c" "adf7020.o" "adc.c" "temperature.h" "temperature.c" "adc.o" "led.o" "gpio.c" "../" "gpio.h" "bfin_sport.h" "adc.h" "gpio.o")
+
+ ("/home/tausen/aausat3/software/subsystems/" (20872 6940) "doxygen_objdb_11543.tmp" "mcc/" "doxygen_objdb_23777.tmp" "com/" "adcs1/" "ais1-gen/" "latex/" "ais2/" "ais1/" "doxygen_objdb_23761.tmp" "Doxyfile" "./" "Makefile" "adcs2/" "swiss/" "munchhausen/" "make.log" "doxygen_objdb_11540.tmp" "html/" "ctp/" "../" "eps/" "basisadcs1/" "sdrgnd/")
+
+ ("/mnt/" (20596 15559) "./" "../")
+
+ ("/home/tausen/RemoteLocations/" (20870 10664) "../" "./")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/trash/" (20845 4601) "program-ny.min/" "13gr642_asm/" "program-ny.test01/" "minimum/" "13gr642/" "program-ny.bak/" "./" "13gr642.meh/" "program_retry/" "../")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/" (20849 17242) "program-ny/" "README.txt" "latex/" "snippets/" "doxygen_objdb_23746.tmp" "13gr642/" "13gr642_bak/" "Doxyfile" "./" "13gr642_filter/" "program/" "test/" "utils/" "matlab_decoder/" "trash/" "bootcount/" "html/" "../" "doxygen_objdb_23848.tmp" "program-esa/" "loader/")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Matrix Computations and Convex Optimization/" (20852 22862) "mm8-1.JPG" "MM8/" "MM3/" "MM4/" "CourseDescription.pdf" "Matrix repetition.odt" "./" "SVD - pseudo inverse and least square stuff.pdf" "MM6/" "books/" "MM9/" "MM7/" "../" "MM2/" "MM11/" "MM1/")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/" (20830 41287) "Communication Systems/" "Introduction to Probability Theory   and Statistics/" "zomglolsnippets.tar.gz" "Matrix Computations and Convex Optimization/" "Signal processing course/" "Jesper diagram.jpg" "./" "ganttchart.pdf" "snr Thomas .JPG" "satellitescript.m" "../" "blackboards/" "Appendices/" "Referater fra vejledermøder/" "p6reading/")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/" (20852 23397) "2.2 d-e, 2.3 a-b.JPG" "Lønark Januar.ods" "P1/" "Cours_2.1.jpg" "P4 Bilag.zip" "GT- Game Theory- Games of Strategy- Avinash Dixit & Susan Skeath- 2e Norton 2004.pdf" "Cours_2.3.jpg" "February 2009 - Solutions Analog (2).pdf" "Cours_2.2.jpg" "Lønark Maj.ods" "Unistuff/" "mod-reg-diskret-3.pptx" "SUV - feb  13.ods" "P6/" "DBF timer.ods" "Essay Writing.ppt" "ares.png" "Kirsten.svg" "lab_3_psd.doc" "Lønark December.ods" "emacs-refcard-a4.pdf" "Lønark November.ods" "contrib/" "Random backups/" "DFH 18.rvt" "./" "Wallpapers/" "Root docs/" "Lønark April.ods" "MT_KT penge.ods" "src.tgz" "P3 Bilag.zip" "Lønark template.ods" "Ares coords.ods" "Rasmus projects/" "Arbejdsblad: AWGN og SNR.odt" "Documents and code/" "2.2 a-b.JPG" "P2/" "tomboy/" "424766DE5-1-analog-ex090218sol-1.pdf" "shellscripts/" "CRC shit.odt" "ex_36.asv" ".insync/" "Socket_programming_examples/" "../" "Worksheet: ADF7021 input filter.odt" "innodev-tmpl.tar.gz" "Cours_2.4.jpg" "Freelance electronics/" "Lønark Februar.ods" "Chivalry Weapon Values.ods" "Lønark Marts.ods")
+
+ ("/home/tausen/Documents/" (20849 25024) "blackfin/" "SVNp5/" "Innowell/" "SVN/" "MumbleAutomaticCertificateBackup.p12" "IPTSworkshop/" "SVN.bak/" "./" "SVN.bak2/" "MATLAB/" "../" "gmskarticles/" "cron1403131200.pdf")
+
+ ("/home/tausen/aausat3/software/" (20805 60977) "images/" "./" "qm_utils/" "cleanroom_utils/" "subsystems/" "lib/" "build/" ".svn/" "../" "openocd/")
+
+ ("/home/tausen/aausat3/" (20813 40160) "outfile.raw.1" "software/" "./" "outfile.raw" "soren/" "../" "onecrcok.raw")
+
+ ("/home/tausen/Documents/IPTS workshop/" (20843 43094) "./" "election_votes.mat" "../" "statisticsWorkshop.pdf" "measurementsMeters.mat" "exercise3.m")
+
+ ("/home/" (20795 11246) "./" "../" "tausen/")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_client/" (19867 2100) "controllers/" "views/" "models/" "assets/" "./" "index.html" "dbf.php" "classes/" "../" "controller.php")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/" (20842 46735) "./" "com_dbf/" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/" (20842 46521) "controllers/" "views/" "models/" "uninstall.sql" "assets/" "./" "dbf.xml" "install.sql" "index.html" "dbf.php" "../" "controller.php")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/active/tmpl/" (20842 46395) "default.php" "./" "../" "confirmsubmit.js")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/active/" (20842 45779) "tmpl/" "./" "view.html.php" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/user/tmpl/" (20842 46375) "default.php" "./" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/user/" (20842 45779) "tmpl/" "./" "view.html.php" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/dbf/tmpl/" (20842 46353) "default.php" "./" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/dbf/" (20842 45780) "tmpl/" "./" "view.html.php" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf_admin/com_dbf/views/" (20842 45779) "active/" "user/" "membership/" "./" "../" "dbf/")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/views/payment/tmpl/" (20842 44609) "callback.php" "./" "index.html" "payment.xml" "payment.php" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/views/payment/" (20842 44893) "tmpl/" "./" "view.html.php" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/controllers/" (20842 44394) "mymembership.php" "./" "cron.php" "index.html" "payment.php" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/models/" (20842 44336) "cronold.php" "./" "cron.php" "index.html" "payment.php" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/views/cron/" (20842 44263) "tmpl/" "./" "view.html.php" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/views/cron/tmpl/" (19867 2100) "default.php" "./" "index.html" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/views/" (20654 10346) "cron/" "./" "index.html" "payment/" "../")
+
+ ("/home/tausen/Documents/Innowell/com_dbf/" (19867 2100) "controllers/" "views/" "models/" "assets/" "./" "index.html" "dbf.php" "classes/" "../" "controller.php")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642_filter/drivers/" (20839 55718) "adf7020.c" "led.h" "adf7020.h" "./" "led.c" "adf7020.o" "adc.c" "adc.o" "led.o" "gpio.c" "../" "gpio.h" "bfin_sport.h" "adc.h" "gpio.o")
+
+ ("/home/tausen/Report/code/matlab/" (20838 48262) "config.m" "helperfunctions/" "classic.pdf" "adc.m" "aispacket.m" "demodulatorversionwramberg.m" "demodulator.m" "adfsim.m" "T224.wav" "packetdetection.m" "demodulatorversiontausen.m" "filterbank.m" "gausspulse.pdf" "1bit.pdf" "filterbank/" "extractESAdata.m" "bandpassfiltercode.m.bak" "./" "T226.wav" "T227.wav" "cdr.m~" "T225.wav" "23.pdf" "T223.wav" "#deleteme.m#" "T229.wav" "filterchooser.m" "T221.wav" "gmskmod/" "#filterchooser.m#" "trash/" "cdr.m.bak" "demodulator_oldstuff.bak" "2bit.pdf" "gmskmod.m" "1525.pdf" "W1337.wav" "demodulator.m.bak" "T222.wav" "../" "T220.wav" "T228.wav" "cdrecov.m" "T230.wav" "modulator.m")
+
+ ("/home/tausen/code/" (20828 29466) "quicktest.c" "a.out" "getsub/" "simple-truth-table/" "./" "../")
+
+ ("/home/tausen/Report/PreliminaryAnalysis/" (20838 44552) "hwanalysis.tex" "ais.tex" "./" "preanalysis.aux" "wireless.tex" "wireless.tex~" "preanalysis.tex" "wireless.log" "../" "aisinspace.tex" "gmsk.tex")
+
+ ("/home/tausen/Report/images/" (20835 63570) "gmskmodinput.eps" "front.eps" "CDRsamplingdiff.eps" "modulatorimg.m.bak" "modulatorimg.m" "CDRdiffcomp.eps" "gmskmod-trainseq.eps" "esa_data_hp.eps" "gmskmodphase.eps" "CDRsamplingcomp.eps" "gmskmodfft-ais-awgn.eps" "gmskphase.eps" "gmskmodcomplete.eps" "gmskmodfft-ais.eps" "dopplershift.eps" "./" "dopplershift.m" "gaussianresp.m" "collisionaisdata.eps" "savetoeps.m" "gmskmodfft.eps" "CDRsamplingpoints.eps" "gmskphase.m" "gmskmodfft.m" "CDReyediff.eps" "nrzigauss.m" "gmskmodtranssig.eps" "nrzigauss.eps" "CDRerrorsig.eps" "cdrimg.m" "esa_data.eps" "CDRenvolope.eps" "gmskspectrogram.m" "CDRdifferentiator.eps" "helleogtonne.eps" "esa_data/" "front2.eps" "../" "CDReyecomp.eps" "gmskmodquad.eps" "aau_logo.eps" "gaussianresp.eps" "esa_data.m")
+
+ ("/home/tausen/Desktop/awgntest/" (20830 56069) "awgntest.m" "test.m" "./" "../")
+
+ ("/home/tausen/Desktop/loltest/" (20829 17545) "10.raw" "outfile_old.raw" "testplot.m" "testoutfile1.raw" "ZOMG2.raw" "zomg.raw" "./" "outfile.raw" "after.raw" "14.raw" "testoutfile.raw" "ft_signal.raw" "before.raw" "../" "ZOMG3.raw" "readme.txt" "ZOMG.raw")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program_retry/" (20828 9886) "bootcount.h" "config.c" ".cproject" "ais_misc.o" "ais2.o" "fileconf.c" "drivers/" "ais_misc.h" ".project" "sampler.c" "ais2.h" "ais2" "server.o" "ais2.c" "./" "common.h" "Makefile" "fileconf.o" "filterconf.c" "crc32.h" "server.h" "bootcount.c" "postprocessing/" "ais_misc.c" "common.c" "complexity/" "dsp/" "../" "server.c" "main.h" "config.o" "crc32.o" "sampler.h" "filterconf.h" "bootcount.o" "sampler.o" "config.h" "fileconf.h" "filterconf.o" "crc32.c")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program_retry/dsp/" (20828 8809) "crc16_ccitt.h" "ais_decode.h" "ais_filter.o" "magic.h" "ais_demod.c" "ais_filter.h" "./" "ais_filter.c" "crc16_ccitt.c" "more_magic.h" "ais_decode.c" "ais_decode.o" "ais_demod.o" "ais_demod.h" "../" "crc16_ccitt.o")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program-ny/" (20828 7277) "ais2.c~" "bootcount.h" "config.c" "ais_misc.o" "ais2.o" "fileconf.c" "drivers/" "ais_misc.h" "sampler.c" "ais2.h" "ais2" "server.o" "ais2.c" "./" "common.h" "Makefile" "fileconf.o" "filterconf.c" "crc32.h" "server.h" "bootcount.c" "postprocessing/" "ais_misc.c" "common.c" "complexity/" "dsp/" "../" "server.c" "main.h" "config.o" "crc32.o" "sampler.h" "filterconf.h" "bootcount.o" "sampler.o" "config.h" "fileconf.h" "filterconf.o" "crc32.c")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program_min/" (20828 6338) "bootcount.h" "config.c" ".cproject" "ais_misc.o" "ais2.o" "fileconf.c" "drivers/" "ais_misc.h" ".project" "sampler.c" "ais2.h" "ais2" "server.o" "ais2.c" "./" "common.h" "Makefile" "fileconf.o" "filterconf.c" "crc32.h" "server.h" "bootcount.c" "postprocessing/" "ais_misc.c" "common.c" "complexity/" "dsp/" "../" "server.c" "main.h" "config.o" "crc32.o" "sampler.h" "filterconf.h" "bootcount.o" "sampler.o" "config.h" "fileconf.h" "filterconf.o" "crc32.c")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program_min/dsp/" (20828 5971) "crc16_ccitt.h" "ais_decode.h" "ais_filter.o" "magic.h" "ais_demod.c" "ais_filter.h" "./" "ais_filter.c" "crc16_ccitt.c" "more_magic.h" "ais_decode.c" "ais_decode.o" "ais_demod.o" "ais_demod.h" "../" "crc16_ccitt.o")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Introduction to Probability Theory   and Statistics/MM11/assignments/" (20827 62725) "ass3.m" "ass1_2.m" "./" "../")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Introduction to Probability Theory   and Statistics/MM11/" (20827 58441) "mm11_slides.pdf" "mm11_problems.pdf" "./" "assignments/" "../")
+
+ ("/home/tausen/Insync/mathias.tausen@gmail.com/P6/Introduction to Probability Theory   and Statistics/" (20827 54962) "Introduction to Probability and Statistics for Engineers and Scientists 3rd ed - S. Ross (Elsevier, 2004) WW.pdf" "MM10/" "MM8/" "MM3/" "MM4/" "./" "MM5Workshop/" "MM6/" "MM9/" "MM7/" "../" "MM2/" "MM11/" "MM1/")
+
+ ("/home/tausen/Insync/" (20795 24504) "./" "mathias.tausen@gmail.com/" "../" ".insync-cache/")
+
+ ("/home/tausen/Report/code/matlab/gmskmod/" (20825 60596) "gauss_rectpulse.m" "./" "ramp.m" "gauss_pulsetrain.m" "../" "quadrature.m" "simpleawgn.m")
+
+ ("/home/tausen/Report/code/matlab/helperfunctions/" (20822 9779) "simplefft.m" "./" "vector2binfile.m" "../")
+
+ ("/run/user/tausen/gvfs/ftp:host=linux7.unoeuro.com/public_html/todolist/phpscripts/" (20825 53320) "editlist.php" "shortenurl.php" "savetext.php" "saveobject.php" "deletebox.php" ".htaccess.bak" "saveuserbox.php" "deletenote.php" "refreshnotes.php" "addnotes.php" "addboxes.php" "#savetext.php#" "getlists.php" "mysql_connect.php" "sendinvite.php" "refreshuserboxes.php" "../" "./")
+
+ ("/run/user/tausen/gvfs/ftp:host=linux7.unoeuro.com/public_html/todolist/" (20367 18288) "style.css" "classes/" "images/" "lib/" "jquery.hotkeys.js" "favicon.ico" "login_style.css" "jquery.corner.js" "jHtmlArea/" "functions/" "globalfunctions.php" "oldlogin.php" "login.php" "jquery.infieldlabel.min.js" "config.php" "jquery-lightness.css" "phpscripts/" "old/" "index.php" ".htaccess" "../" "./")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/13gr642_asm/" (20824 15505) "addition.s" "ais2" "./" "Makefile" "main.o" "main.c" "../")
+
+ ("/home/tausen/aausat3/software/build/" (20813 61693) "libgeneric.mk" "x86.mk" "./" "arm.mk" "avr.mk" "../" "bfin.mk" "generic.mk")
+
+ ("/tmp/" (20824 14386) ".winbindd/" ".xfsm-ICE-XRITUW" "tmplbhq12" "tracker-tausen/" "sni-qt_skype_4521-7e6lQa/" "pulse-2L9K88eMlGn7/" ".org.chromium.Chromium.2uIRAy/" "tmp71cc1d0.tmp" "pulse-PKdhtXMmr18n/" "pulse-FfYxkUjOw40S/" "qtsingleapp-hometa-a44c-3e8" ".ICE-unix/" "qtsingleapp-hometa-a44c-3e8-lockfile" "ssh-jm4DO2qr36EM/" "insync1000.sock" ".X0-lock" ".X11-unix/" "../" "./")
+
+ ("/home/tausen/.config/autostart/" (20822 57653) "ubuntuone-launch.desktop" "evolution-alarm-notify.desktop" "./" "gnome-do.desktop" "tomboy.desktop" "insync.desktop" "xchat.desktop" "../" "#gnome-do.desktop#")
+
+ ("/home/tausen/Documents/SVNp5/Report P5/code/aisdecoder/" (20820 30983) "EsaFileNo8_Demodulated.bin" "helperfunctions.c" "aisdecoder.out" "Doxyfile" "rawdecoding.c" "./" "EsaFileNo3_Demodulated.bin" "Makefile" "EsaFileNo2_Demodulated.bin" "decoding.h" "helperfunctions.h" "encoding.c" "encoding.h" "../" "decoding.c" "rawdecoding.h" "aisdecode.c" "vessel.c" "vessel.h" "decodeddata.bin")
+
+ ("/home/tausen/Report/code/c/" (20821 33248) "./" "aisdecoder/" "../")
+
+ ("/home/tausen/.emacs.d/libs/" (20821 30254) "bash-completion.el" "./" "php-mode.el" "../" "matlab-emacs/" "php-mode-improved.el" "breadcrumb.el" "nxhtml/" "smooth-scrolling.el")
+
+ ("/home/tausen/Report/code/matlab/filterbank/" (20816 4857) "matchedfilter.m.bak" "./" "matchedfilter.m" "envelope.m" "../")
+
+ ("/home/tausen/aausat3/software/subsystems/ais2/program/dsp/" (20813 36328) "crc16_ccitt.h" "ais_decode.h" "ais_filter.o" "magic.h" "ais_demod.c" "ais_filter.h" "./" "ais_filter.c" "crc16_ccitt.c" "more_magic.h" "ais_decode.c" "ais_decode.o" "ais_demod.o" "ais_demod.h" "../" "crc16_ccitt.o")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
