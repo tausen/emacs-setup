@@ -3,3 +3,4 @@ tramp
 *.elc
 elpa/
 backups/
+places
