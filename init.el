@@ -137,6 +137,7 @@
 
 ;; ===== Set standard indent ====
 (setq standard-indent 4)
+(setq-default tab-width 4)
 
 ;; ===== Turn off tab character =====
 ;; Emacs normally uses both tabs and spaces to indent lines. If you
@@ -608,7 +609,17 @@ It expects a properly indented CSS"
 (eval-after-load "flyspell"
   '(defun flyspell-mode (&optional arg)))
 
-;(add-to-list 'TeX-command-list'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf"))
+;; (require 'tex-site) ; invoke the AUCTeX package (LaTeX support)
+
+;; ;; (eval-after-load "tex"
+;; ;;   (add-to-list 'TeX-command-list'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf"))
+;; ;;   )
+
+;; (eval-after-load "tex"
+;;   '(add-to-list 'TeX-command-list
+;; 		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
+
+
 
 ;; git plugin
 (require 'magit)
