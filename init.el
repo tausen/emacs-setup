@@ -83,6 +83,12 @@
 (load "~/.emacs.d/lib/nxhtml/autostart.el")
 (add-to-list 'load-path "~/.emacs.d/lib/")
 
+;; php-nxml 4 tab width
+(defun tab-width-4 ()
+  (setq tab-width 4))
+(add-hook 'mumamo-after-change-major-mode-hook 'tab-width-4 t)
+(setq-default nxml-child-indent 4)
+
 ;; zenburn theme
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme-6.6.0/")
 (require 'color-theme)
@@ -604,4 +610,6 @@ It expects a properly indented CSS"
 
 ;(add-to-list 'TeX-command-list'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf"))
 
-
+;; git plugin
+(require 'magit)
+(global-set-key (kbd "C-c g") 'magit-status)
