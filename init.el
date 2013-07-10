@@ -589,6 +589,9 @@ It expects a properly indented CSS"
 (eval-after-load 'bfin 
   '(define-key bfin-mode [(tab)] 'c-indent-line-or-region))
 
+;; bind tab to proper indent globally
+(global-set-key (kbd "C-i") 'c-indent-line-or-region)
+
 ;; Allow copying to system clipboard
 (setq x-select-enable-clipboard t)
 
@@ -597,17 +600,17 @@ It expects a properly indented CSS"
 (add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-completions-mode 1)))
 
 ;; MATLAB mode http://www.emacswiki.org/MatlabMode
-;(add-to-list 'load-path "~/.emacs.d/lib/matlab-emacs")
-;(load-library "matlab-load")
-;(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
-;(add-to-list
-; 'auto-mode-alist
-; '("\\.m$" . matlab-mode))
-;(setq matlab-indent-function t)
-;(setq matlab-shell-command "matlab")
+(add-to-list 'load-path "~/.emacs.d/lib/matlab-emacs")
+(load-library "matlab-load")
+(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+(add-to-list
+ 'auto-mode-alist
+ '("\\.m$" . matlab-mode))
+(setq matlab-indent-function t)
+(setq matlab-shell-command "matlab")
 
 ; for latex
-;(setq-default TeX-master nil) ; Query for master file.
+(setq-default TeX-master nil) ; Query for master file.
 
 ;; auto scroll compilation window
 (setq compilation-auto-scroll t)
@@ -627,15 +630,9 @@ It expects a properly indented CSS"
 (eval-after-load "flyspell"
   '(defun flyspell-mode (&optional arg)))
 
-;; (require 'tex-site) ; invoke the AUCTeX package (LaTeX support)
-
-;; ;; (eval-after-load "tex"
-;; ;;   (add-to-list 'TeX-command-list'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf"))
-;; ;;   )
-
-;; (eval-after-load "tex"
-;;   '(add-to-list 'TeX-command-list
-;; 		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list
+		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
 
 
 
