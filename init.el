@@ -80,8 +80,26 @@
 
 ;;; MAT init el
 ;; nxhtml
-(load "~/.emacs.d/lib/nxhtml/autostart.el")
+;(load "~/.emacs.d/lib/nxhtml/autostart.el")
 (add-to-list 'load-path "~/.emacs.d/lib/")
+
+;; fgallina/multi-web-mode - https://github.com/fgallina/multi-web-mode
+(add-to-list 'load-path "~/.emacs.d/lib/multi-web-mode")
+(require 'multi-web-mode)
+   (setq mweb-default-major-mode 'html-mode)
+   (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+                      (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
+                      (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
+   (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+   (multi-web-global-mode 1)
+
+;; developer notes
+;; (require 'devel-notes)
+;; (require 'grep)
+;; (global-set-key "\C-cza" 'develnotes-add-annotation)
+;; (global-set-key "\C-czv" 'develnotes-visit-file)
+;; (global-set-key "\C-czt" 'develnotes-add-TODO)
+;; (global-set-key "\C-czf" 'develnotes-add-FIXME)
 
 ;; php-nxml 4 tab width
 (defun tab-width-4 ()
