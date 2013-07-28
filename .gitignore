@@ -4,3 +4,4 @@ tramp
 elpa/
 backups/
 places
+custom.el
