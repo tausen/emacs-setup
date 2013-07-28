@@ -80,18 +80,41 @@
 
 ;;; MAT init el
 ;; nxhtml
-;(load "~/.emacs.d/lib/nxhtml/autostart.el")
+(load "~/.emacs.d/lib/nxhtml/autostart.el")
 (add-to-list 'load-path "~/.emacs.d/lib/")
 
+(add-hook 'php-mode-hook 'my-php-mode-hook)
+(defun my-php-mode-hook ()   "My PHP mode configuration."
+  (setq indent-tabs-mode nil
+        tab-width 4
+        c-basic-offset 4)
+  )
+
+(add-hook 'php-mode-hook
+          '(lambda ()
+             (local-set-key ";" 'self-insert-command)
+             (local-set-key "{" 'self-insert-command)))
+
+
 ;; fgallina/multi-web-mode - https://github.com/fgallina/multi-web-mode
-(add-to-list 'load-path "~/.emacs.d/lib/multi-web-mode")
-(require 'multi-web-mode)
-   (setq mweb-default-major-mode 'html-mode)
-   (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
-                      (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
-                      (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
-   (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
-   (multi-web-global-mode 1)
+;; (add-to-list 'load-path "~/.emacs.d/lib/multi-web-mode")
+;; (require 'multi-web-mode)
+;;    (setq mweb-default-major-mode 'html-mode)
+;;    (setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
+;;                       (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
+;;                       (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
+;;    (setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
+;;    (multi-web-global-mode 1)
+
+;; (require 'web-mode)
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; developer notes
 ;; (require 'devel-notes)
@@ -102,10 +125,10 @@
 ;; (global-set-key "\C-czf" 'develnotes-add-FIXME)
 
 ;; php-nxml 4 tab width
-(defun tab-width-4 ()
-  (setq tab-width 4))
-(add-hook 'mumamo-after-change-major-mode-hook 'tab-width-4 t)
-(setq-default nxml-child-indent 4)
+;; (defun tab-width-4 ()
+;;   (setq tab-width 4))
+;; (add-hook 'mumamo-after-change-major-mode-hook 'tab-width-4 t)
+;; (setq-default nxml-child-indent 4)
 
 ;; zenburn theme
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme-6.6.0/")
@@ -644,4 +667,3 @@ It expects a properly indented CSS"
 (add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-
