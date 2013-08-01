@@ -82,6 +82,7 @@
 ;; nxhtml
 (load "~/.emacs.d/lib/nxhtml/autostart.el")
 (add-to-list 'load-path "~/.emacs.d/lib/")
+;(add-to-list 'load-path "~/.emacs.d/lib/web-mode")
 
 (add-hook 'php-mode-hook 'my-php-mode-hook)
 (defun my-php-mode-hook ()   "My PHP mode configuration."
@@ -90,6 +91,7 @@
         c-basic-offset 4)
   )
 
+; NEEDED IN NXHTML MODE
 (add-hook 'php-mode-hook
           '(lambda ()
              (local-set-key ";" 'self-insert-command)
@@ -667,3 +669,12 @@ It expects a properly indented CSS"
 (add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;; emacs-w3m
+; requires w3m: sudo yum -y install w3m
+(add-to-list 'load-path "~/.emacs.d/lib/emacs-w3m/")
+ (setq browse-url-browser-function 'w3m-browse-url)
+ (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+ ;; optional keyboard short-cut
+ (global-set-key "\C-xm" 'browse-url-at-point)
+(setq w3m-use-cookies t)
