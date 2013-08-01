@@ -91,11 +91,24 @@
         c-basic-offset 4)
   )
 
+;; auto-insert closing brace
+; http://stackoverflow.com/questions/3801147/how-can-can-i-get-emacs-to-insert-closing-braces-automatically
+(defun my-c-mode-insert-lcurly ()
+  (interactive)
+  (insert "{")
+  (let ((pps (syntax-ppss)))
+    (when (and (eolp) (not (or (nth 3 pps) (nth 4 pps)))) ;; EOL and not in string or comment
+      (c-indent-line)
+      (insert "\n\n}")
+      (c-indent-line)
+      (forward-line -1)
+      (c-indent-line))))
+
 ; NEEDED IN NXHTML MODE
 (add-hook 'php-mode-hook
           '(lambda ()
              (local-set-key ";" 'self-insert-command)
-             (local-set-key "{" 'self-insert-command)))
+             (local-set-key "{" 'my-c-mode-insert-lcurly)))
 
 
 ;; fgallina/multi-web-mode - https://github.com/fgallina/multi-web-mode
@@ -678,3 +691,4 @@ It expects a properly indented CSS"
  ;; optional keyboard short-cut
  (global-set-key "\C-xm" 'browse-url-at-point)
 (setq w3m-use-cookies t)
+
