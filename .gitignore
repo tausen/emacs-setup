@@ -4,3 +4,5 @@ tramp
 elpa/
 backups/
 places
+semanticdb/
+backups.bak/
