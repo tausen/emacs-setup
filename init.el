@@ -82,12 +82,63 @@
 ;; nxhtml
 (load "~/.emacs.d/lib/nxhtml/autostart.el")
 (add-to-list 'load-path "~/.emacs.d/lib/")
+;(add-to-list 'load-path "~/.emacs.d/lib/web-mode")
+
+(add-hook 'php-mode-hook 'my-php-mode-hook)
+(defun my-php-mode-hook ()   "My PHP mode configuration."
+  (setq indent-tabs-mode nil
+        tab-width 4
+        c-basic-offset 4)
+  )
+
+;; auto-insert closing brace
+; http://stackoverflow.com/questions/3801147/how-can-can-i-get-emacs-to-insert-closing-braces-automatically
+(defun my-c-mode-insert-lcurly ()
+  (interactive)
+  (insert "{")
+  (let ((pps (syntax-ppss)))
+    (when (and (eolp) (not (or (nth 3 pps) (nth 4 pps)))) ;; EOL and not in string or comment
+      (c-indent-line)
+      (insert "\n\n}")
+      (c-indent-line)
+      (forward-line -1)
+      (c-indent-line))))
+
+(define-key global-map (kbd "C-{") 'my-c-mode-insert-lcurly)
+
+; NEEDED IN NXHTML MODE
+(add-hook 'php-mode-hook
+          '(lambda ()
+             (local-set-key ";" 'self-insert-command)
+             (local-set-key "{" 'self-insert-command)))
+
+
+; web-mode
+;; ; https://github.com/fxbois/web-mode
+;; (add-to-list 'load-path "~/.emacs.d/lib/web-mode/")
+;; (require 'web-mode)
+;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; developer notes
+;; (require 'devel-notes)
+;; (require 'grep)
+;; (global-set-key "\C-cza" 'develnotes-add-annotation)
+;; (global-set-key "\C-czv" 'develnotes-visit-file)
+;; (global-set-key "\C-czt" 'develnotes-add-TODO)
+;; (global-set-key "\C-czf" 'develnotes-add-FIXME)
 
 ;; php-nxml 4 tab width
-(defun tab-width-4 ()
-  (setq tab-width 4))
-(add-hook 'mumamo-after-change-major-mode-hook 'tab-width-4 t)
-(setq-default nxml-child-indent 4)
+;; (defun tab-width-4 ()
+;;   (setq tab-width 4))
+;; (add-hook 'mumamo-after-change-major-mode-hook 'tab-width-4 t)
+;; (setq-default nxml-child-indent 4)
 
 ;; zenburn theme
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme-6.6.0/")
@@ -622,3 +673,173 @@ It expects a properly indented CSS"
 ;; git plugin
 (require 'magit)
 (global-set-key (kbd "C-c g") 'magit-status)
+
+;; js2 mode
+(add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;; emacs-w3m
+; requires w3m: sudo yum -y install w3m
+(add-to-list 'load-path "~/.emacs.d/lib/emacs-w3m/")
+ (setq browse-url-browser-function 'w3m-browse-url)
+ (autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+ ;; optional keyboard short-cut
+ (global-set-key "\C-xm" 'browse-url-at-point)
+(setq w3m-use-cookies t)
+
+;; rename ansi-term buffer
+(require 'term)
+(defun visit-ansi-term ()
+  "If the current buffer is:
+     1) a running ansi-term named *ansi-term*, rename it.
+     2) a stopped ansi-term, kill it and create a new one.
+     3) a non ansi-term, go to an already running ansi-term
+        or start a new one while killing a defunt one"
+  (interactive)
+  (let ((is-term (string= "term-mode" major-mode))
+        (is-running (term-check-proc (buffer-name)))
+        (term-cmd "/bin/bash")
+        (anon-term (get-buffer "*ansi-term*")))
+    (if is-term
+        (if is-running
+            (if (string= "*ansi-term*" (buffer-name))
+                (call-interactively 'rename-buffer)
+              (if anon-term
+                  (switch-to-buffer "*ansi-term*")
+                (ansi-term term-cmd)))
+          (kill-buffer (buffer-name))
+          (ansi-term term-cmd))
+      (if anon-term
+          (if (term-check-proc "*ansi-term*")
+              (switch-to-buffer "*ansi-term*")
+            (kill-buffer "*ansi-term*")
+            (ansi-term term-cmd))
+        (ansi-term term-cmd)))))
+(global-set-key (kbd "<f2>") 'visit-ansi-term)
+
+;; Align with spaces only
+(defadvice align-regexp (around align-regexp-with-spaces)
+  "Never use tabs for alignment."
+  (let ((indent-tabs-mode nil))
+    ad-do-it))
+(ad-activate 'align-regexp)
+
+;; EXAMPLE:
+(defun insert-this ()
+  (interactive)
+  (insert "$this->"))
+
+(global-set-key (kbd "C-x t") 'insert-this)
+
+;; Load CEDET.
+;; See cedet/common/cedet.info for configuration details.
+;; IMPORTANT: For Emacs >= 23.2, you must place this *before* any
+;; CEDET component (including EIEIO) gets activated by another 
+;; package (Gnus, auth-source, ...).
+;(load-file "~/.emacs.d/lib/cedet-1.1/common/cedet.el")
+
+;; Enable EDE (Project Management) features
+;(global-ede-mode 1)
+
+;; Enable EDE for a pre-existing C++ project
+;; (ede-cpp-root-project "NAME" :file "~/myproject/Makefile")
+
+
+;; Enabling Semantic (code-parsing, smart completion) features
+;; Select one of the following:
+
+;; * This enables the database and idle reparse engines
+;(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode,
+;;   imenu support, and the semantic navigator
+;(semantic-load-enable-code-helpers)
+
+
+;; * This enables even more coding tools such as intellisense mode,
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; * This enables the use of Exuberant ctags if you have it installed.
+;;   If you use C++ templates or boost, you should NOT enable it.
+;; (semantic-load-enable-all-exuberent-ctags-support)
+;;   Or, use one of these two types of support.
+;;   Add support for new languages only via ctags.
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+;;   Add support for using ctags as a backup parser.
+;; (semantic-load-enable-secondary-exuberent-ctags-support)
+
+;; Enable SRecode (Template management) minor-mode.
+;; (global-srecode-minor-mode 1)
+
+;; ERC NOTIFY
+;;; Notify me when a keyword is matched (someone wants to reach me)
+
+(defvar my-erc-page-message "%s is calling your name."
+  "Format of message to display in dialog box")
+
+(defvar my-erc-page-nick-alist nil
+  "Alist of nicks and the last time they tried to trigger a
+notification")
+
+(defvar my-erc-page-timeout 30
+  "Number of seconds that must elapse between notifications from
+the same person.")
+
+(defun my-erc-page-popup-notification (nick)
+  (when window-system
+    ;; must set default directory, otherwise start-process is unhappy
+    ;; when this is something remote or nonexistent
+    (let ((default-directory "~/"))
+      ;; 8640000 milliseconds = 1 day
+      (start-process "page-me" nil "notify-send"
+                     "-u" "normal" "-t" "8640000" "ERC"
+                     (format my-erc-page-message nick)))))
+
+(defun my-erc-page-allowed (nick &optional delay)
+  "Return non-nil if a notification should be made for NICK.
+If DELAY is specified, it will be the minimum time in seconds
+that can occur between two notifications.  The default is
+`my-erc-page-timeout'."
+  (unless delay (setq delay my-erc-page-timeout))
+  (let ((cur-time (time-to-seconds (current-time)))
+        (cur-assoc (assoc nick my-erc-page-nick-alist))
+        (last-time))
+    (if cur-assoc
+        (progn
+          (setq last-time (cdr cur-assoc))
+          (setcdr cur-assoc cur-time)
+          (> (abs (- cur-time last-time)) delay))
+      (push (cons nick cur-time) my-erc-page-nick-alist)
+      t)))
+
+(defun my-erc-page-me (match-type nick message)
+  "Notify the current user when someone sends a message that
+matches a regexp in `erc-keywords'."
+  (interactive)
+  (when (and (eq match-type 'keyword)
+             ;; I don't want to see anything from the erc server
+             (null (string-match "\\`\\([sS]erver\\|localhost\\)" nick))
+             ;; or bots
+             (null (string-match "\\(bot\\|serv\\)!" nick))
+             ;; or from those who abuse the system
+             (my-erc-page-allowed nick))
+    (my-erc-page-popup-notification nick)))
+(add-hook 'erc-text-matched-hook 'my-erc-page-me)
+
+(defun my-erc-page-me-PRIVMSG (proc parsed)
+  (let ((nick (car (erc-parse-user (erc-response.sender parsed))))
+        (target (car (erc-response.command-args parsed)))
+        (msg (erc-response.contents parsed)))
+    (when (and (erc-current-nick-p target)
+               (not (erc-is-message-ctcp-and-not-action-p msg))
+               (my-erc-page-allowed nick))
+      (my-erc-page-popup-notification nick)
+      nil)))
+(add-hook 'erc-server-PRIVMSG-functions 'my-erc-page-me-PRIVMSG)
+
+;(setq erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen"))
+; set erc-keywords to ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
+
+(erc-match-mode 1)
