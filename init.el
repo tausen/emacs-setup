@@ -730,6 +730,19 @@ It expects a properly indented CSS"
   (insert "$this->"))
 
 (global-set-key (kbd "C-x t") 'insert-this)
+(global-set-key (kbd "C-x ½") 'winsav-rotate) ; flip buffers
+
+(defun insert-php-comment ()
+  (interactive)
+  (insert "/**
+     * Short description.
+     * Longer description.
+     *
+     * @param type $param description of param
+     * @return type description of return value
+     */"))
+
+(global-set-key (kbd "C-M-,") 'insert-php-comment)
 
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
@@ -840,5 +853,6 @@ matches a regexp in `erc-keywords'."
 
 ;(setq erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen"))
 ; set erc-keywords to ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
+; M-x set-variable erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
 
 (erc-match-mode 1)
