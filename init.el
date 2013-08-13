@@ -180,8 +180,13 @@
 
 ;; disable auto-fill behaviour
 (setq auto-fill-mode -1)
-(setq-default fill-column 99999)
-(setq fill-column 99999)
+
+;; set fill columns
+(setq-default fill-column 100)
+(setq fill-column 100)
+
+;; highlight current line
+(global-hl-line-mode 1)
 
 ;; bind return to newline and indent (turn on autoindentation)
 (define-key global-map (kbd "RET") 'newline-and-indent)
@@ -857,3 +862,5 @@ matches a regexp in `erc-keywords'."
 ; M-x set-variable erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
 
 (erc-match-mode 1)
+
+(require 'fill-column-indicator)
