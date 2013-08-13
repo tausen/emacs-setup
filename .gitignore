@@ -4,4 +4,6 @@ tramp
 elpa/
 backups/
 places
+semanticdb/
+backups.bak/
 custom.el
