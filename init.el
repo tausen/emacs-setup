@@ -632,7 +632,7 @@ It expects a properly indented CSS"
   '(define-key bfin-mode [(tab)] 'c-indent-line-or-region))
 
 ;; bind tab to proper indent globally
-(global-set-key (kbd "C-i") 'c-indent-line-or-region)
+;(global-set-key (kbd "C-i") 'c-indent-line-or-region)
 
 ;; Allow copying to system clipboard
 (setq x-select-enable-clipboard t)
