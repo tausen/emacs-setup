@@ -185,6 +185,9 @@
 (setq-default fill-column 100)
 (setq fill-column 100)
 
+;; don't use comment column by default
+(setq-default comment-column 0)
+
 ;; highlight current line
 (global-hl-line-mode 1)
 
