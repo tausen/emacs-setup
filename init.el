@@ -877,13 +877,3 @@ matches a regexp in `erc-keywords'."
 
 (erc-match-mode 1)
 
-(require 'fill-column-indicator)
-
-;; Change the default eshell prompt
-(setq eshell-prompt-function
-      (lambda ()
-        (concat "[" (getenv "USER") "@"
-                (car (split-string (getenv "HOSTNAME") "[.]"))
-                " " (car (last (split-string (eshell/pwd) "/"))) "]"
-                (if (= (user-uid) 0) "# " "$ "))))
-
