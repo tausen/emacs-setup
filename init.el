@@ -175,8 +175,13 @@
 (global-visual-line-mode t)
 ;; Set the fill column 
 ;(setq-default fill-column 72)
-;; Show line numbers left of each line
-(global-linum-mode t)
+;; Enable line numbers with exceptions
+(global-linum-mode nil)
+(setq linum-disabled-modes-list
+      '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode))
+(defun linum-on ()
+  (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
+    (linum-mode 1)))
 
 ;; disable auto-fill behaviour
 (setq auto-fill-mode -1)
