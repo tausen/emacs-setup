@@ -797,6 +797,14 @@ It expects a properly indented CSS"
 
 (require 'fill-column-indicator)
 
+;; Change the default eshell prompt
+(setq eshell-prompt-function
+      (lambda ()
+        (concat "[" (getenv "USER") "@"
+                (car (split-string (getenv "HOSTNAME") "[.]"))
+                " " (car (last (split-string (eshell/pwd) "/"))) "]"
+                (if (= (user-uid) 0) "# " "$ "))))
+
 ;; ERC NOTIFY
 ;;; Notify me when a keyword is matched (someone wants to reach me)
 
