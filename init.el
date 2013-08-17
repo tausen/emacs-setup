@@ -805,9 +805,48 @@ It expects a properly indented CSS"
                 " " (car (last (split-string (eshell/pwd) "/"))) "]"
                 (if (= (user-uid) 0) "# " "$ "))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; IRC ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Set up with M-x customize-group znc RET
+;; Then launch znc-erc with C-c x e
+(global-set-key (kbd "C-c x e") 'znc-erc)
+
+;; You should probably customize these..
+(setq erc-keywords '("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen"))
+
+;; ZNC
+(add-to-list 'load-path "~/.emacs.d/lib/znc/")
+(require 'znc)
+
+;;; Sample ERC configuration from
+;; http://www.gnu.org/software/emacs/manual/html_node/erc/Sample-Configuration.html#Sample-Configuration
+;; Load ERC
+(require 'erc)
+
+;;; Should try this out!
+;; This causes ERC to connect to the IRC server on your own machine (if
+;; you have one) upon hitting C-c e b.  Replace MYNICK with your IRC
+;; nick.  Often, people like to run bitlbee (http://bitlbee.org/) as an
+;; AIM/Jabber/MSN to IRC gateway, so that they can use ERC to chat with
+;; people on those networks.
+;; (global-set-key "\C-ceb" (lambda () (interactive)
+;;                            (erc :server "localhost" :port "6667"
+;;                                 :nick "MYNICK")))
+
+;;; Options
+(setq erc-autojoin-channels-alist '(("tausen.org" "#innowell")))
+
+;; Interpret mIRC-style color commands in IRC chats
+(setq erc-interpret-mirc-color t)
+
+;; Kill buffers for channels after /part
+(setq erc-kill-buffer-on-part t)
+;; Kill buffers for private queries after quitting the server
+(setq erc-kill-queries-on-quit t)
+;; Kill buffers for server messages after quitting the server
+(setq erc-kill-server-buffer-on-quit t)
+
 ;; ERC NOTIFY
 ;;; Notify me when a keyword is matched (someone wants to reach me)
-
 (defvar my-erc-page-message "%s is calling your name."
   "Format of message to display in dialog box")
 
@@ -826,7 +865,7 @@ the same person.")
     (let ((default-directory "~/"))
       ;; 8640000 milliseconds = 1 day
       (start-process "page-me" nil "notify-send"
-                     "-u" "normal" "-t" "8640000" "ERC"
+                     "-u" "normal" "-t" "3000" "ERC"
                      (format my-erc-page-message nick)))))
 
 (defun my-erc-page-allowed (nick &optional delay)
@@ -870,10 +909,6 @@ matches a regexp in `erc-keywords'."
       (my-erc-page-popup-notification nick)
       nil)))
 (add-hook 'erc-server-PRIVMSG-functions 'my-erc-page-me-PRIVMSG)
-
-;(setq erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen"))
-; set erc-keywords to ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
-; M-x set-variable erc-keywords ("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen")
 
 (erc-match-mode 1)
 
