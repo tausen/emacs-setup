@@ -794,6 +794,9 @@ It expects a properly indented CSS"
 ;; Enable SRecode (Template management) minor-mode.
 ;; (global-srecode-minor-mode 1)
 
+
+(require 'fill-column-indicator)
+
 ;; ERC NOTIFY
 ;;; Notify me when a keyword is matched (someone wants to reach me)
 
