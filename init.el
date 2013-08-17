@@ -178,7 +178,7 @@
 ;; Enable line numbers with exceptions
 (global-linum-mode nil)
 (setq linum-disabled-modes-list
-      '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode))
+      '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
 (defun linum-on ()
   (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
     (linum-mode 1)))
@@ -198,6 +198,12 @@
 
 ;; bind return to newline and indent (turn on autoindentation)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; ===== Define which-mode ====
+; returns the major mode of a buffer
+(defun which-mode ()
+  (interactive)
+  (message "%s" major-mode))
 
 ;; ===== Set standard indent ====
 (setq standard-indent 4)
