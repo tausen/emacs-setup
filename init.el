@@ -171,22 +171,26 @@
 (line-number-mode 1)
 ;; Show column-number in the mode line
 (column-number-mode 1)
+
 ;; Dont split words across lines with exceptions
-(global-visual-line-mode nil)
-(setq visual-disabled-modes-list
-      '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
-(defun visual-line-on ()
-  (unless (or (minibufferp) (member major-mode visual-disabled-modes-list))
-    (visual-line-mode 1)))
+(global-visual-line-mode t)
+;;(global-visual-line-mode nil)
+;; (setq visual-disabled-modes-list
+;;       '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
+;; (defun visual-line-on ()
+;;   (unless (or (minibufferp) (member major-mode visual-disabled-modes-list))
+;;     (visual-line-mode 1)))
+
 ;; Set the fill column 
 ;(setq-default fill-column 72)
 ;; Enable line numbers with exceptions
-(global-linum-mode nil)
-(setq linum-disabled-modes-list
-      '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
-(defun linum-on ()
-  (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
-    (linum-mode 1)))
+(global-linum-mode t)
+;; (global-linum-mode nil)
+;; (setq linum-disabled-modes-list
+;;       '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
+;; (defun linum-on ()
+;;   (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
+;;     (linum-mode 1)))
 
 ;; disable auto-fill behaviour
 (setq auto-fill-mode -1)
