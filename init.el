@@ -670,6 +670,7 @@ It expects a properly indented CSS"
  '("\\.m$" . matlab-mode))
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
+(setq matlab-shell-command-switches (quote ("-nodesktop" "-nosplash")))
 
 ; for latex
 (setq-default TeX-master nil) ; Query for master file.
