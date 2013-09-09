@@ -1,6 +1,7 @@
 auto-save-list
 tramp
 *.elc
+*.rnc
 elpa/
 backups/
 places
