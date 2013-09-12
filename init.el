@@ -933,3 +933,5 @@ matches a regexp in `erc-keywords'."
 
 (erc-match-mode 1)
 
+(setenv "EDITOR" "emacsclient")
+
