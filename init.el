@@ -696,8 +696,9 @@ It expects a properly indented CSS"
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
 		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
-
-
+; C-c C-c Make full RET to compile
+; NOTE: to use latex properly, do package-install auctex
+; query for master file: M-x TeX-master-file-ask
 
 ;; git plugin
 (require 'magit)
@@ -761,6 +762,7 @@ It expects a properly indented CSS"
 
 (global-set-key (kbd "C-x t") 'insert-this)
 (global-set-key (kbd "C-x ½") 'winsav-rotate) ; flip buffers
+(global-set-key (kbd "C-x 9") 'winsav-rotate) ; flip buffers
 
 (defun insert-php-comment ()
   (interactive)
