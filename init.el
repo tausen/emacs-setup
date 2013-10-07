@@ -696,7 +696,7 @@ It expects a properly indented CSS"
 
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
-		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
+		'("Make full" "make full" TeX-run-TeX t t :help "Make full") t))
 ; C-c C-c Make full RET to compile
 ; NOTE: to use latex properly, do package-install auctex or
 ; download, compile and install it yourself (very easy):
