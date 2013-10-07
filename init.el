@@ -196,8 +196,8 @@
 (setq auto-fill-mode -1)
 
 ;; set fill columns
-(setq-default fill-column 100)
-(setq fill-column 100)
+(setq-default fill-column 99999999999999)
+(setq fill-column 99999999999999)
 
 ;; don't use comment column by default
 (setq-default comment-column 0)
@@ -674,6 +674,7 @@ It expects a properly indented CSS"
 
 ; for latex
 (setq-default TeX-master nil) ; Query for master file.
+(add-hook 'latex-mode-hook (lambda () (setq fill-column 9999999)))
 
 ;; auto scroll compilation window
 (setq compilation-auto-scroll t)
@@ -697,8 +698,18 @@ It expects a properly indented CSS"
   '(add-to-list 'TeX-command-list
 		'("Make full" "%`%l%(mode)%' %t; dvips -o %s.ps %s.dvi && ps2pdf %s.ps" TeX-run-TeX t t :help "Run latex dvips ps2pdf") t))
 ; C-c C-c Make full RET to compile
-; NOTE: to use latex properly, do package-install auctex
+; NOTE: to use latex properly, do package-install auctex or
+; download, compile and install it yourself (very easy):
+; http://www.gnu.org/software/auctex/download.html
 ; query for master file: M-x TeX-master-file-ask
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+
+; use reftex
+(add-hook 'latex-mode-hook 'turn-on-reftex)
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-auctex t)
 
 ;; git plugin
 (require 'magit)
