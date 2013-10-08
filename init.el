@@ -702,6 +702,7 @@ It expects a properly indented CSS"
 ; download, compile and install it yourself (very easy):
 ; http://www.gnu.org/software/auctex/download.html
 ; query for master file: M-x TeX-master-file-ask
+; this is where auctex is installed in my system, adjust accordingly:
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
