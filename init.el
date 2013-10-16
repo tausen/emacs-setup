@@ -149,6 +149,18 @@
      (color-theme-initialize)
      (color-theme-zenburn)))
 
+;; Highlight active buffer
+(set-face-attribute  'mode-line
+                 nil 
+                 :foreground "gray50"
+                 :background "gray15" 
+                 :box '(:line-width 1 :style released-button))
+(set-face-attribute  'mode-line-inactive
+                 nil 
+                 :foreground "gray80"
+                 :background "gray25"
+                 :box '(:line-width 1 :style released-button))
+
 ;; disable different background coloring w/ nxhtml
 ;; don't edit by hand! use:
 ;; M-x customize-option RET mumamo-chunk-coloring RET
