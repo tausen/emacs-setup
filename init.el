@@ -351,6 +351,14 @@
     (replace-match "" nil nil)))
 (global-set-key (kbd "M-K") 'whack-whitespace)
 
+;; delete all trailing whitespace in buffer
+(defun my-delete-trailing-whitespace ()
+  "..."
+  (interactive)
+  (delete-trailing-whitespace)
+  (message "Deleted all trailing whitespace"))
+(global-set-key (kbd "C-c w") 'my-delete-trailing-whitespace)
+
 ;; breadcrumbs easier bookmarks
 (require 'breadcrumb)
 (global-set-key [(meta I)]              'bc-set)            ;; Shift-SPACE for set bookmark
