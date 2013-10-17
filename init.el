@@ -60,7 +60,7 @@
 (require 'starter-kit-lisp)
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
-(require 'starter-kit-js)
+;(require 'starter-kit-js)
 
 (regen-autoloads)
 (load custom-file 'noerror)
@@ -740,7 +740,9 @@ It expects a properly indented CSS"
 ;; js2 mode
 (add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
 (autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;; because nxhtml-mode forces loading .js files with javascript-mode (http://goo.gl/uc9aCl)
+(defalias 'javascript-mode 'js2-mode)
 
 ;; emacs-w3m
 ; requires w3m: sudo yum -y install w3m
