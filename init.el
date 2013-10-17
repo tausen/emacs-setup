@@ -195,14 +195,15 @@
 
 ;; Set the fill column 
 ;(setq-default fill-column 72)
-;; Enable line numbers with exceptions
+;; Enable line numbers with exceptions (buffers with * in name don't have linum)
 (global-linum-mode t)
-;; (global-linum-mode nil)
-;; (setq linum-disabled-modes-list
-;;       '(term-mode eshell-mode wl-summary-mode compilation-mode erc-mode magit-status-mode))
-;; (defun linum-on ()
-;;   (unless (or (minibufferp) (member major-mode linum-disabled-modes-list))
-;;     (linum-mode 1)))
+(require 'linum-off)
+;(global-linum-mode nil)
+
+; linum spacing
+;(setq linum-format "%d ")
+;If you want a solid line separator, try something like this:
+;(setq linum-format “%4d \u2502 “)
 
 ;; disable auto-fill behaviour
 (setq auto-fill-mode -1)
