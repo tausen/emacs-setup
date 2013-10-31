@@ -1,3 +1,12 @@
 [submodule "lib/znc"]
 	path = lib/znc
 	url = https://github.com/sshirokov/ZNC.el
+[submodule "lib/emacs-for-python"]
+	path = lib/emacs-for-python
+	url = git://github.com/gabrielelanaro/emacs-for-python
+[submodule "lib/emacs-flymake"]
+	path = lib/emacs-flymake
+	url = https://github.com/illusori/emacs-flymake.git
+[submodule "lib/autopair"]
+	path = lib/autopair
+	url = https://github.com/capitaomorte/autopair.git
