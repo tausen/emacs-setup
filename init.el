@@ -142,8 +142,10 @@
 
 ;; zenburn theme
 (add-to-list 'load-path "~/.emacs.d/lib/color-theme-6.6.0/")
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;(load-theme 'zenburn t)
 (require 'color-theme)
-(load-theme 'zenburn)  ;; requires that zenburn.el is in your load path
+;(load-theme 'zenburn)  ;; requires that zenburn.el is in your load path
 (eval-after-load "color-theme"
   '(progn
      (color-theme-initialize)
