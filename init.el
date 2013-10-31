@@ -242,10 +242,10 @@
 (setq-default indent-tabs-mode nil) 
 
 ;; switch between windows hotkeys
-(global-set-key [M-left] 'windmove-left)          ; move to left windnow
-(global-set-key [M-right] 'windmove-right)        ; move to right window
-(global-set-key [M-up] 'windmove-up)              ; move to upper window
-(global-set-key [M-down] 'windmove-down)          ; move to downer window
+(global-set-key [M-S-left] 'windmove-left)          ; move to left windnow
+(global-set-key [M-S-right] 'windmove-right)        ; move to right window
+(global-set-key [M-S-up] 'windmove-up)              ; move to upper window
+(global-set-key [M-S-down] 'windmove-down)          ; move to downer window
 
 ; dired+
 (add-to-list 'load-path "~/.emacs.d/libs")
@@ -692,6 +692,7 @@ It expects a properly indented CSS"
 (setq matlab-indent-function t)
 (setq matlab-shell-command "matlab")
 (setq matlab-shell-command-switches (quote ("-nodesktop" "-nosplash")))
+(define-key global-map (kbd "C-c M") 'matlab-shell)
 
 ; for latex
 (setq-default TeX-master nil) ; Query for master file.
@@ -712,8 +713,8 @@ It expects a properly indented CSS"
 ; not working??
 
 ;; completely disable flyspell
-(eval-after-load "flyspell"
-  '(defun flyspell-mode (&optional arg)))
+;; (eval-after-load "flyspell"
+;;   '(defun flyspell-mode (&optional arg)))
 
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
@@ -727,15 +728,21 @@ It expects a properly indented CSS"
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
+; hotkey for prompting for master file
+(define-key global-map (kbd "C-c t") 'TeX-master-file-ask)
+
+;; may be required?
+; (require 'tex-site)
+; (setq TeX-auto-save t)
+; (setq TeX-parse-self t)
+; (setq-default TeX-master nil)
+
 
 ; use reftex
 (add-hook 'latex-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-auctex t)
 
-;; git plugin
-(require 'magit)
-(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; js2 mode
 (add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
@@ -868,7 +875,7 @@ It expects a properly indented CSS"
 ;; Then launch znc-erc with C-c x e
 (global-set-key (kbd "C-c x e") 'znc-erc)
 
-;; You should probably customize these..
+;; You should probably customize these - CUSTOMIZE ME
 (setq erc-keywords '("Tausen *[,:;]" "\\bTausen[!?.]+$" "Tausen"))
 
 ;; ZNC
@@ -890,7 +897,7 @@ It expects a properly indented CSS"
 ;;                            (erc :server "localhost" :port "6667"
 ;;                                 :nick "MYNICK")))
 
-;;; Options
+;;; Options - CUSTOMIZE ME
 (setq erc-autojoin-channels-alist '(("tausen.org" "#innowell")))
 
 ;; Interpret mIRC-style color commands in IRC chats
@@ -971,4 +978,66 @@ matches a regexp in `erc-keywords'."
 (erc-match-mode 1)
 
 (setenv "EDITOR" "emacsclient")
+
+; error highligthing
+; hrmm, not working?
+;(add-to-list 'load-path "~/.emacs.d/lib/emacs-flymake/")
+;(require 'flymake)
+
+;; Python
+; first: sudo apt-get install pyflakes pymacs
+(require 'yasnippet)
+(load-file "~/.emacs.d/lib/emacs-for-python/epy-init.el")
+(setq skeleton-pair nil) ; disable the auto-close parenthesis from emacs-for-python
+
+;; Hmm, something (probably emacs-for-python) overwrote C-o (insert line below point)
+;; lets go ahead and redefine that one.
+(define-key global-map (kbd "C-o") 'open-line)
+
+;; git plugin
+(require 'magit)
+(global-set-key (kbd "C-c g") 'magit-status)
+; (magit-status-buffer-switch-function (quote switch-to-buffer))
+; (magit-status-buffer-switch-function (quote pop-to-buffer))
+
+;; mark word under cursor
+;; http://www.emacswiki.org/emacs/MarkCommands
+(defun my-mark-current-word (&optional arg allow-extend)
+  "Put point at beginning of current word, set mark at end."
+  (interactive "p\np")
+  (setq arg (if arg arg 1))
+  (if (and allow-extend
+           (or (and (eq last-command this-command) (mark t))
+               (region-active-p)))
+      (set-mark
+       (save-excursion
+         (when (< (mark) (point))
+           (setq arg (- arg)))
+         (goto-char (mark))
+         (forward-word arg)
+         (point)))
+    (let ((wbounds (bounds-of-thing-at-point 'word)))
+      (unless (consp wbounds)
+        (error "No word at point"))
+      (if (>= arg 0)
+          (goto-char (car wbounds))
+        (goto-char (cdr wbounds)))
+      (push-mark (save-excursion
+                   (forward-word arg)
+                   (point)))
+      (activate-mark))))
+(define-key global-map (kbd "C-x w") 'my-mark-current-word)
+
+;; Proper autopair/autoclose parenthesis
+(add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers
+
+;; mode toggle hotkeys
+(define-key global-map (kbd "C-c m a") 'auto-complete-mode)
+(define-key global-map (kbd "C-c m p") 'autopair-mode)
+(define-key global-map (kbd "C-c m f") 'flyspell-mode)
+
+;; flyspell hotkeys
+(define-key global-map (kbd "C-c f b") 'flyspell-buffer)
 
