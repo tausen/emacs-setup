@@ -8,3 +8,6 @@ places
 semanticdb/
 backups.bak/
 custom.el
+*.dat
+*.lst
+*.cfg
