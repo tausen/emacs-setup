@@ -4,6 +4,7 @@
 (load "~/.emacs.d/lib/better-defaults/better-defaults.el")
 
 ;;; MAT init el
+(require 'yasnippet)
 (load "~/.emacs.d/init-web.el")
 (load "~/.emacs.d/init-looks.el")
 (load "~/.emacs.d/init-basics.el")
