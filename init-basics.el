@@ -134,3 +134,6 @@
 
 ;; Allow copying to system clipboard
 (setq x-select-enable-clipboard t)
+
+;; Disable blinking cursor
+(blink-cursor-mode 0)
