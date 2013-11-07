@@ -1,6 +1,7 @@
 
-(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
-(load "~/.emacs.d/init-starter-kit.el")
+;(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
+;(load "~/.emacs.d/init-starter-kit.el")
+(load "~/.emacs.d/lib/better-defaults/better-defaults.el")
 
 ;;; MAT init el
 (load "~/.emacs.d/init-web.el")

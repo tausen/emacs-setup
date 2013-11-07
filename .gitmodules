@@ -19,3 +19,6 @@
 [submodule "lib/smex"]
 	path = lib/smex
 	url = git@github.com:nonsequitur/smex.git
+[submodule "lib/better-defaults"]
+	path = lib/better-defaults
+	url = git@github.com:technomancy/better-defaults.git
