@@ -22,6 +22,3 @@
 [submodule "lib/better-defaults"]
 	path = lib/better-defaults
 	url = git@github.com:technomancy/better-defaults.git
-[submodule "lib/js2-mode"]
-	path = lib/js2-mode
-	url = git@github.com:mooz/js2-mode.git
