@@ -1,4 +1,5 @@
 
+(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
 (load "~/.emacs.d/init-starter-kit.el")
 
 ;;; MAT init el

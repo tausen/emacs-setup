@@ -10,3 +10,6 @@
 [submodule "lib/autopair"]
 	path = lib/autopair
 	url = https://github.com/capitaomorte/autopair.git
+[submodule "lib/starter-kit"]
+	path = lib/starter-kit
+	url = git@github.com:technomancy/emacs-starter-kit.git
