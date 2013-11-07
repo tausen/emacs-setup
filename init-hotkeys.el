@@ -41,3 +41,6 @@
 
 ;; flyspell hotkeys
 (define-key global-map (kbd "C-c f b") 'flyspell-buffer)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)

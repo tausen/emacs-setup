@@ -18,6 +18,9 @@
 (load "~/.emacs.d/init-cedet.el")
 (load "~/.emacs.d/init-ido.el")
 
+(add-to-list 'load-path "~/.emacs.d/lib/magit-1.2.0/")
+(require 'magit)
+
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
 (require 'auto-complete)
