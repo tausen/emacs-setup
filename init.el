@@ -31,8 +31,8 @@
 (add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-completions-mode 1)))
 
 ;; svn for emacs23
-(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
-(require 'vc-svn17)
+;(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
+;(require 'vc-svn17)
 
 (require 'fill-column-indicator)
 
