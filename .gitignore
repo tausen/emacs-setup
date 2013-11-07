@@ -11,3 +11,4 @@ custom.el
 *.dat
 *.lst
 *.cfg
+session.*
