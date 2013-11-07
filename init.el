@@ -15,7 +15,7 @@
 (load "~/.emacs.d/init-python.el")
 (load "~/.emacs.d/init-irc.el")
 (load "~/.emacs.d/init-cedet.el")
-
+(load "~/.emacs.d/init-ido.el")
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")

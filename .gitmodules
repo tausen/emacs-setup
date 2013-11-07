@@ -13,3 +13,9 @@
 [submodule "lib/starter-kit"]
 	path = lib/starter-kit
 	url = git@github.com:technomancy/emacs-starter-kit.git
+[submodule "lib/ido-hacks"]
+	path = lib/ido-hacks
+	url = git@github.com:scottjad/ido-hacks.git
+[submodule "lib/smex"]
+	path = lib/smex
+	url = git@github.com:nonsequitur/smex.git
