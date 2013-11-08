@@ -18,9 +18,8 @@
 (load "~/.emacs.d/init-irc.el")
 (load "~/.emacs.d/init-cedet.el")
 (load "~/.emacs.d/init-ido.el")
-
-(add-to-list 'load-path "~/.emacs.d/lib/magit-1.2.0/")
-(require 'magit)
+(load "~/.emacs.d/init-latex.el")
+(load "~/.emacs.d/init-git.el")
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
@@ -42,4 +41,4 @@
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
 
-
+(load "~/.emacs.d/custom.el")
