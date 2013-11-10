@@ -43,7 +43,6 @@
 (add-to-list 'load-path
               "~/.emacs.d/lib/yasnippet")
 (require 'yasnippet)
-(yas-global-mode 1)
-
+(yas/global-mode 1)
 
 (load "~/.emacs.d/custom.el")
