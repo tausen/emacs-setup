@@ -4,11 +4,6 @@
 (load "~/.emacs.d/lib/better-defaults/better-defaults.el")
 
 ;;; MAT init el
-(add-to-list 'load-path
-              "~/.emacs.d/lib/yasnippet")
-(require 'yasnippet)
-(yas-global-mode 1)
-
 (load "~/.emacs.d/init-web.el")
 (load "~/.emacs.d/init-looks.el")
 (load "~/.emacs.d/init-basics.el")
@@ -44,5 +39,11 @@
 (add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
+
+(add-to-list 'load-path
+              "~/.emacs.d/lib/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
 
 (load "~/.emacs.d/custom.el")
