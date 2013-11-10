@@ -29,3 +29,6 @@
 [submodule "lib/yasnippet"]
 	path = lib/yasnippet
 	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "lib/auctex"]
+	path = lib/auctex
+	url = https://github.com/jwiegley/auctex.git

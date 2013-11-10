@@ -23,8 +23,8 @@
 (setq auto-fill-mode -1)
 
 ;; set fill columns
-(setq-default fill-column 99999999999999)
-(setq fill-column 99999999999999)
+(setq-default fill-column 99999999)
+(setq fill-column 99999999)
 
 ;; don't use comment column by default
 (setq-default comment-column 0)
