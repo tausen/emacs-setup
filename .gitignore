@@ -12,3 +12,4 @@ custom.el
 *.lst
 *.cfg
 session.*
+abbrev_defs
