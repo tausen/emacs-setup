@@ -39,10 +39,22 @@
 (add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
+;(add-hook 'term-mode-hook #'(lambda () (setq autopair-dont-activate t))) ;; except term modes
+
+; https://code.google.com/p/autopair/issues/detail?id=54
+(add-hook 'term-mode-hook
+           #'(lambda () 
+               (setq autopair-dont-activate t) ;; for emacsen < 24
+               (autopair-mode -1))             ;; for emacsen >= 24
+)
 
 (add-to-list 'load-path
               "~/.emacs.d/lib/yasnippet")
 (require 'yasnippet)
 (yas/global-mode 1)
+
+; Fix yasnippets ansi-term compatibility
+(add-hook 'term-mode-hook (lambda()
+                            (setq yas-dont-activate t)))
 
 (load "~/.emacs.d/custom.el")
