@@ -3,7 +3,7 @@
 	url = https://github.com/sshirokov/ZNC.el
 [submodule "lib/emacs-for-python"]
 	path = lib/emacs-for-python
-	url = git://github.com/gabrielelanaro/emacs-for-python
+	url = https://github.com/gabrielelanaro/emacs-for-python.git
 [submodule "lib/emacs-flymake"]
 	path = lib/emacs-flymake
 	url = https://github.com/illusori/emacs-flymake.git
@@ -12,19 +12,19 @@
 	url = https://github.com/capitaomorte/autopair.git
 [submodule "lib/starter-kit"]
 	path = lib/starter-kit
-	url = git@github.com:technomancy/emacs-starter-kit.git
+	url = https://github.com/technomancy/emacs-starter-kit.git
 [submodule "lib/ido-hacks"]
 	path = lib/ido-hacks
-	url = git@github.com:scottjad/ido-hacks.git
+	url = https://github.com/scottjad/ido-hacks.git
 [submodule "lib/smex"]
 	path = lib/smex
-	url = git@github.com:nonsequitur/smex.git
+	url = https://github.com/nonsequitur/smex.git
 [submodule "lib/better-defaults"]
 	path = lib/better-defaults
-	url = git@github.com:technomancy/better-defaults.git
+	url = https://github.com/technomancy/better-defaults.git
 [submodule "lib/js2-mode"]
         path = lib/js2-mode
-        url = git@github.com:mooz/js2-mode.git
+        url = https://github.com/mooz/js2-mode.git
 
 [submodule "lib/yasnippet"]
 	path = lib/yasnippet
