@@ -54,3 +54,4 @@
 [submodule "lib/popup"]
 	path = lib/popup
 	url = https://github.com/auto-complete/popup-el.git
+	ignore = dirty
