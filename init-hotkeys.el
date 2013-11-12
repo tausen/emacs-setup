@@ -30,6 +30,8 @@
 ;; bind tab to proper indent globally
 ;(global-set-key (kbd "C-i") 'c-indent-line-or-region)
 
+(global-set-key (kbd "C-x \\") 'align-regexp)
+
 (global-set-key (kbd "C-x t") 'insert-this)
 (global-set-key (kbd "C-x ½") 'winsav-rotate) ; flip buffers
 (global-set-key (kbd "C-x 9") 'winsav-rotate) ; flip buffers
@@ -38,6 +40,7 @@
 (define-key global-map (kbd "C-c m a") 'auto-complete-mode)
 (define-key global-map (kbd "C-c m p") 'autopair-mode)
 (define-key global-map (kbd "C-c m f") 'flyspell-mode)
+(define-key global-map (kbd "C-c m s") 'semantic-mode)
 
 ;; flyspell hotkeys
 (define-key global-map (kbd "C-c f b") 'flyspell-buffer)

@@ -75,4 +75,8 @@
 (add-hook 'term-mode-hook (lambda()
                             (setq yas-dont-activate t)))
 
+; Testing out EDE
+(global-ede-mode t)
+
 (load "~/.emacs.d/custom.el")
+
