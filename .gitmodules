@@ -51,3 +51,6 @@
 	path = lib/emacs-ipython-notebook
 	url = https://github.com/tkf/emacs-ipython-notebook.git
 	ignore = dirty
+[submodule "lib/popup"]
+	path = lib/popup
+	url = https://github.com/auto-complete/popup-el.git
