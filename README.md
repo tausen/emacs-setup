@@ -1,6 +1,6 @@
 # emacs23-setup
 
-A basic emacs23 setup, customized for my needs.
+A basic emacs23 (now mostly emacs24, actually) setup, customized for my needs.
 
 Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-starter-kit/
 
@@ -14,14 +14,17 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 #### Configuration
 ##### IRC
 - Customize znc connection settings with M-x customize-group znc RET
-- Customize IRC (ERC) alerts and channels, search for CUSTOMIZE ME in ~/.emacs.d/init.el
+- Customize IRC (ERC) alerts and channels
 
 ##### w3m browser
 - Install w3m: sudo apt-get install w3m / yum -y install w3m
 
 ##### LaTeX
 - Ensure that auctex is installed, do M-x package-install auctex -- I had some issues with this and had to install from http://www.gnu.org/software/auctex/download.html
-- Customize LaTeX compilation command, search for "Make full" in ~/.emacs.d/init.el
+- Customize LaTeX compilation command
+
+##### Python
+- Get EIN (emacs-ipython-notebook) via M-x package-install ein or via M-x package-list-packages
 
 #### Running
 - For best experience, always start emacs with emacsclient -c -a "" (bind it to a hotkey!)

@@ -32,3 +32,10 @@
 [submodule "lib/auctex"]
 	path = lib/auctex
 	url = https://github.com/jwiegley/auctex.git
+[submodule "lib/python"]
+	path = lib/python
+	url = https://github.com/fgallina/python.el.git
+	branch = emacs-24
+[submodule "lib/emacs-ipython-notebook"]
+	path = lib/emacs-ipython-notebook
+	url = https://github.com/tkf/emacs-ipython-notebook.git

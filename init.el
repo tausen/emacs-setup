@@ -1,7 +1,13 @@
 
-;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-;                         ("marmalade" . "http://marmalade-repo.org/packages/")
-;                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+;; Needed for packages installed via M-x package-install to work
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                           ("marmalade" . "http://marmalade-repo.org/packages/")
+                           ("melpa" . "http://melpa.milkbox.net/packages/")))
+  )
+
 
 ;(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
 ;(load "~/.emacs.d/init-starter-kit.el")
@@ -14,8 +20,8 @@
 (load "~/.emacs.d/init-dired.el")
 (load "~/.emacs.d/init-bfin.el")
 (load "~/.emacs.d/init-term.el")
-(load "~/.emacs.d/init-hotkeys.el")
 (load "~/.emacs.d/init-commands.el")
+(load "~/.emacs.d/init-hotkeys.el")
 (load "~/.emacs.d/init-matlab.el")
 (load "~/.emacs.d/init-python.el")
 (load "~/.emacs.d/init-irc.el")
