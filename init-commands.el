@@ -85,3 +85,13 @@
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
 (global-set-key [f11] 'toggle-fullscreen)
+
+(defun start-ipython-notebook ()
+  "Start ipython notebook server"
+  (interactive)
+  (async-shell-command "ipython notebook --port=8888 --no-browser --ip=*"))
+
+(defun kill-ipython ()
+  "Kill all ipython processes"
+  (interactive)
+  (shell-command "killall ipython"))
