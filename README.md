@@ -25,6 +25,9 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 
 ##### Python
 - Get EIN (emacs-ipython-notebook) via M-x package-install ein or via M-x package-list-packages
+- Get Jedi via M-x package-install jedi
+- Get epc via M-x package-install epc
+- Install python modules via pip install epc jedi or cd ~/.emacs.d/elpa/jedi-* && make requirements
 
 #### Running
 - For best experience, always start emacs with emacsclient -c -a "" (bind it to a hotkey!)
