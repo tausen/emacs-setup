@@ -24,3 +24,14 @@
 
 (setq ein:console-args '("--profile" "default"))
 (require 'ein)
+
+;; Needed for jedi to function properly
+(add-to-list 'load-path "~/.emacs.d/lib/popup/")
+(require 'popup)
+
+;; Epic python auto completion
+(add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'auto-complete-mode) ; ensure auto-complete-mode is on
+(add-hook 'python-mode-hook 'jedi:ac-setup)
+(setq jedi:setup-keys t)                      ; optional
+(setq jedi:complete-on-dot t)                 ; optional
