@@ -24,6 +24,7 @@
 
 (setq ein:console-args '("--profile" "default"))
 (require 'ein)
+(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
 ;; Needed for jedi to function properly
 (add-to-list 'load-path "~/.emacs.d/lib/popup/")
