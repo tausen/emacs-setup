@@ -1,6 +1,11 @@
 ;; zenburn theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'zenburn t)
+(when (>= emacs-major-version 24)
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+  (load-theme 'zenburn t)
+)
+(when (<= emacs-major-version 23)
+  (load-file "~/.emacs.d/themes/zenburn-theme.el")
+)
 
 ;; Highlight active buffer
 (set-face-attribute  'mode-line

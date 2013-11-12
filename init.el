@@ -7,6 +7,15 @@
                            ("marmalade" . "http://marmalade-repo.org/packages/")
                            ("melpa" . "http://melpa.milkbox.net/packages/")))
   )
+(when (<= emacs-major-version 23)
+  (load "~/.emacs.d/lib/package.el")
+  (require 'package)
+  (add-to-list 'package-archives 
+	       '("marmalade" .
+		 "http://marmalade-repo.org/packages/"))
+  (package-initialize)
+)
+
 
 
 ;(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
