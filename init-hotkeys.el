@@ -14,6 +14,11 @@
 ;; bind F5 to recompile (use M-x compile first!)
 (global-set-key (kbd "<f5>") 'recompile)
 
+;; proper beginning/end of line, kill line (rather than end-of-visual-line etc.)
+(global-set-key (kbd "C-e") 'end-of-line)
+(global-set-key (kbd "C-a") 'beginning-of-line)
+(global-set-key (kbd "C-k") 'kill-line) ;; this one doesnt work for some reason??
+
 ;; breadcrumbs easier bookmarks
 (require 'breadcrumb)
 (global-set-key [(meta I)]              'bc-set)            ;; Shift-SPACE for set bookmark
