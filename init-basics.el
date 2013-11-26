@@ -119,7 +119,8 @@
 (add-hook 'buffer-menu-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in buffer menu
 (add-hook 'c-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in c-mode
 (add-hook 'lisp-mode-hook (lambda () (setq truncate-lines t))) ; please truncate in lisp-mode
-(setq line-move-visual nil) ; C-e goes to *actual* end of line
+(add-hook 'term-mode-hook (lambda () (setq truncate-lines t))) ; truncate in ansi-term and similar
+(add-hook 'diff-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in diff mode
 
 ;; auto scroll compilation window
 (setq compilation-auto-scroll t)
