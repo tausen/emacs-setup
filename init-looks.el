@@ -43,4 +43,4 @@
 (column-number-mode 1)
 
 ; font size
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 80)
