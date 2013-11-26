@@ -54,3 +54,4 @@
 (global-set-key (kbd "C-c e o") 'ein:notebooklist-open)
 (global-set-key (kbd "C-c e k") 'ein:notebook-kill-all-buffers)
 (global-set-key (kbd "C-c e c") 'ein:connect-to-notebook-command)
+(global-set-key (kbd "C-c e a") 'ein:notebook-execute-autoexec-cells)
