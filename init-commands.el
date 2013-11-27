@@ -95,3 +95,16 @@
   "Kill all ipython processes"
   (interactive)
   (shell-command "killall ipython"))
+
+;; Scroll screen and point
+(defun scroll-next-line (nlines)
+  "Scroll pointer and screen down"
+  (interactive)
+  (scroll-up-line nlines)
+  (next-line nlines))
+(defun scroll-previous-line (nlines)
+  "Scroll pointer and screen up"
+  (interactive)
+  (scroll-down-line nlines)
+  (previous-line nlines))
+
