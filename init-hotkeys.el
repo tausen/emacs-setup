@@ -60,3 +60,12 @@
 (global-set-key (kbd "C-c e k") 'ein:notebook-kill-all-buffers)
 (global-set-key (kbd "C-c e c") 'ein:connect-to-notebook-command)
 (global-set-key (kbd "C-c e a") 'ein:notebook-execute-autoexec-cells)
+
+;; Some scrolling hotkeys
+(global-set-key (kbd "M-p") (lambda () (interactive) (scroll-down 5)))
+(global-set-key (kbd "M-n") (lambda () (interactive) (scroll-up 5)))
+(global-set-key (kbd "s-p") (lambda () (interactive) (scroll-previous-line 1)))
+(global-set-key (kbd "s-n") (lambda () (interactive) (scroll-next-line 1)))
+(global-set-key (kbd "M-s-p") (lambda () (interactive) (scroll-previous-line 5)))
+(global-set-key (kbd "M-s-n") (lambda () (interactive) (scroll-next-line 5)))
+
