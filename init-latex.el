@@ -22,6 +22,10 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-auctex t)
 
+; beginning/end of line shouldnt go to actual end of line in latex, in case the line is wrapped
+(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "C-e") 'end-of-visual-line)))
+(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "C-a") 'beginning-of-visual-line)))
+
 ;; may be required?
 ; (require 'tex-site)
 ; (setq TeX-auto-save t)
