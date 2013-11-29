@@ -31,6 +31,7 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 
 #### Running
 - For best experience, always start emacs with emacsclient -c -a "" (bind it to a hotkey!)
+- Oh, and for better performance C-u 0 M-x byte-recompile-directory RET ~/.emacs.d/ RET
 
 #### Includes
 - nXhtml mode: http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html

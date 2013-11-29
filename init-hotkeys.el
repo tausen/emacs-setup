@@ -38,8 +38,8 @@
 (global-set-key (kbd "C-x \\") 'align-regexp)
 
 (global-set-key (kbd "C-x t") 'insert-this)
-(global-set-key (kbd "C-x ½") 'winsav-rotate) ; flip buffers
-(global-set-key (kbd "C-x 9") 'winsav-rotate) ; flip buffers
+(global-set-key (kbd "C-x ½") 'window-toggle-split-direction)
+(global-set-key (kbd "C-x 9") 'window-toggle-split-direction)
 
 ;; mode toggle hotkeys
 (define-key global-map (kbd "C-c m a") 'auto-complete-mode)
