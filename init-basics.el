@@ -122,6 +122,7 @@
 (add-hook 'term-mode-hook (lambda () (setq truncate-lines t))) ; truncate in ansi-term and similar
 (add-hook 'diff-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in diff mode
 (add-hook 'ibuffer-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in ibuffer mode
+(add-hook 'proced-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in proced mode
 
 ;; auto scroll compilation window
 (setq compilation-auto-scroll t)
