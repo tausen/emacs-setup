@@ -1,0 +1,34 @@
+* org-mode work tracking basics
+  More at http://orgmode.org/manual/Clocking-work-time.html
+  
+** Basics  
+   Create a section with a name matching the task you're about to do. Place the cursor in that
+   section. Use the following hotkeys to clock in or out:
+   
+   C-c C-x C-i: clock in
+   C-c C-x C-o: clock out
+   
+   To change a timestamp after it is inserted, place the cursor on the element you wish you change
+   (year, month, day, hour, minute) and click S-up or S-down.
+   
+   To generate a report of the total time
+   
+** Reports
+   C-c C-x C-r: generate report
+   C-c C-x C-u: update report (place cursor at #+BEGIN first)
+
+   Adjust :maxlevel to get more details
+
+** Idle time
+   If the you're is emacs idle in org-clock-idle-time minutes and a clock is started, emacs will
+   prompt you on what to do with the idle minutes.
+
+   k: keep some or all minutes
+   K: keep some or all minutes and clock out
+   s: keep none of the idle minutes
+   S: keep none of the idle minutes and clock out
+   g: "got back" X minutes ago
+   G: "got back" X minutes ago and clock out
+   C: cancel the clock entirely
+
+   More at http://orgmode.org/manual/Resolving-idle-time.html

@@ -55,3 +55,6 @@
 	path = lib/popup
 	url = https://github.com/auto-complete/popup-el.git
 	ignore = dirty
+[submodule "lib/multiple-cursors"]
+	path = lib/multiple-cursors
+	url = https://github.com/magnars/multiple-cursors.el.git
