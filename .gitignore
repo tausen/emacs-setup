@@ -13,3 +13,6 @@ custom.el
 *.cfg
 session.*
 abbrev_defs
+/org-clock-save.el
+/ede-projects.el
+/request/curl-cookie-jar
