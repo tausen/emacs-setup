@@ -58,6 +58,8 @@
 [submodule "lib/multiple-cursors"]
 	path = lib/multiple-cursors
 	url = https://github.com/magnars/multiple-cursors.el.git
+    ignore = dirty
 [submodule "lib/browse-kill-ring"]
 	path = lib/browse-kill-ring
 	url = https://github.com/browse-kill-ring/browse-kill-ring.git
+    ignore = dirty
