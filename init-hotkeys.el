@@ -71,3 +71,10 @@
 (global-set-key (kbd "M-s-p") (lambda () (interactive) (scroll-previous-line 5)))
 (global-set-key (kbd "M-s-n") (lambda () (interactive) (scroll-next-line 5)))
 
+;; multiple cursors
+(global-unset-key (kbd "C-S-<mouse-1>"))
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+;; https://github.com/magnars/multiple-cursors.el/issues/44
+(global-set-key (kbd "C-c C-,") 'create-cursor)
+(global-set-key (kbd "C-c C-.") 'multiple-cursors-mode)
+

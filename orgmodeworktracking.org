@@ -11,7 +11,8 @@
    To change a timestamp after it is inserted, place the cursor on the element you wish you change
    (year, month, day, hour, minute) and click S-up or S-down.
    
-   To generate a report of the total time
+   C-c !:     insert time stamp w/ date
+   C-u C-c !: insert time stamp w/ date + time
    
 ** Reports
    C-c C-x C-r: generate report

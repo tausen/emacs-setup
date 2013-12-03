@@ -124,6 +124,10 @@
 (add-hook 'ibuffer-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in ibuffer mode
 (add-hook 'proced-mode-hook (lambda () (setq truncate-lines t))) ; truncate lines in proced mode
 
+;; Automatically enable auto fill mode in text modes
+;; http://www.emacswiki.org/emacs/AutoFillMode
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+
 ;; auto scroll compilation window
 (setq compilation-auto-scroll t)
 (setq compilation-scroll-output t)
@@ -146,3 +150,16 @@
 
 ; disable menu bar
 (menu-bar-mode -1)
+
+;; Browse kill ring
+(add-to-list 'load-path "~/.emacs.d/lib/browse-kill-ring/") 
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings) ; browse kill ring with M-y
+
+;; Multiple cursors
+(add-to-list 'load-path "~/.emacs.d/lib/multiple-cursors/") 
+(require 'multiple-cursors)
+(global-set-key (kbd "C-c m e") 'mc/edit-lines) 
+(global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c m a") 'mc/mark-all-like-this)

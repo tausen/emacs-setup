@@ -135,3 +135,8 @@ i.e. change right window to bottom, or change bottom window to right."
                     (split-window-vertically)
                   (split-window-horizontally))
                 (set-window-buffer (windmove-find-other-window neighbour-dir) other-buf))))))))
+
+;; https://github.com/magnars/multiple-cursors.el/issues/44
+(defun create-cursor ()
+  (interactive)
+  (mc/create-fake-cursor-at-point))
