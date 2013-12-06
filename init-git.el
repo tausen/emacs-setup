@@ -5,4 +5,5 @@
 ; (magit-status-buffer-switch-function (quote switch-to-buffer))
 ; (magit-status-buffer-switch-function (quote pop-to-buffer))
 
+(setenv "GIT_EDITOR" "emacsclient")
 (setenv "EDITOR" "emacsclient")

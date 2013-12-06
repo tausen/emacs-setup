@@ -42,10 +42,10 @@
 (global-set-key (kbd "C-x 9") 'window-toggle-split-direction)
 
 ;; mode toggle hotkeys
-(define-key global-map (kbd "C-c m a") 'auto-complete-mode)
-(define-key global-map (kbd "C-c m p") 'autopair-mode)
-(define-key global-map (kbd "C-c m f") 'flyspell-mode)
-(define-key global-map (kbd "C-c m s") 'semantic-mode)
+(define-key global-map (kbd "C-c a t") 'auto-complete-mode)
+(define-key global-map (kbd "C-c p t") 'autopair-mode)
+(define-key global-map (kbd "C-c f t") 'flyspell-mode)
+(define-key global-map (kbd "C-c s t") 'semantic-mode)
 
 ;; flyspell hotkeys
 (define-key global-map (kbd "C-c f b") 'flyspell-buffer)
