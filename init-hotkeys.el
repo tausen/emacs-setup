@@ -42,8 +42,8 @@
 (global-set-key (kbd "C-x 9") 'window-toggle-split-direction)
 
 ;; mode toggle hotkeys
-(define-key global-map (kbd "C-c a t") 'auto-complete-mode)
-(define-key global-map (kbd "C-c p t") 'autopair-mode)
+(define-key global-map (kbd "C-c c t") 'auto-complete-mode)
+(define-key global-map (kbd "C-c a t") 'autopair-mode)
 (define-key global-map (kbd "C-c f t") 'flyspell-mode)
 (define-key global-map (kbd "C-c s t") 'semantic-mode)
 
