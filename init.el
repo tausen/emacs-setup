@@ -28,6 +28,7 @@
 (load "~/.emacs.d/init-bfin.el")
 (load "~/.emacs.d/init-term.el")
 (load "~/.emacs.d/init-commands.el")
+(load "~/.emacs.d/init-projectile.el")
 (load "~/.emacs.d/init-hotkeys.el")
 (load "~/.emacs.d/init-matlab.el")
 (load "~/.emacs.d/init-python.el")
