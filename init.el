@@ -79,21 +79,9 @@
 ; Testing out EDE
 (global-ede-mode t)
 
-;; Testing out work tracker
-;; https://github.com/chrisdone/emacsworktracker
-;; (load "worktracker.el")
-;; ;;; Clock into project
-;; (global-set-key (kbd "C-c w i") 'work-clockin)
-;; ;;; Clock out of project (done)
-;; (global-set-key (kbd "C-c w o") 'work-clockout)
-;; ;;; Pause project (interrupted)
-;; (global-set-key (kbd "C-c w p") 'work-interrupted)
-;; ;;; Resume project
-;; (global-set-key (kbd "C-c w r") 'work-resume)
-
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
 
-(load "~/.emacs.d/custom.el")
-
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
