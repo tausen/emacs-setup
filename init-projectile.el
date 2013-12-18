@@ -9,6 +9,14 @@
 (add-to-list 'load-path "~/emacs.d/lib/dash")
 (add-to-list 'load-path "~/emacs.d/lib/s")
 
+(load "~/.emacs.d/lib/flx/flx.el")
+(load "~/.emacs.d/lib/dash/dash.el")
+(load "~/.emacs.d/lib/s/s.el")
+
+(require 'flx)
+(require 'dash)
+(require 's)
+
 (add-to-list 'load-path "~/emacs.d/lib/projectile")
 (load "~/.emacs.d/lib/projectile/projectile.el")
 (require 'projectile)
