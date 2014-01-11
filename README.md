@@ -10,6 +10,7 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 - Clone this repository
 - git submodule init
 - git submodule update
+- M-x package-list-packages and install pkg-info
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
 
 #### Configuration
