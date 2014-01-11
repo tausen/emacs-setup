@@ -151,6 +151,9 @@
 ; disable menu bar
 (menu-bar-mode -1)
 
+; better resolution when zooming in docview
+(setq doc-view-resolution 125)
+
 ;; Browse kill ring
 (add-to-list 'load-path "~/.emacs.d/lib/browse-kill-ring/") 
 (require 'browse-kill-ring)
