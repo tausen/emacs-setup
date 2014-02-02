@@ -38,6 +38,7 @@
 (load "~/.emacs.d/init-latex.el")
 (load "~/.emacs.d/init-git.el")
 (load "~/.emacs.d/init-w3m.el")
+(load "~/.emacs.d/init-markdown.el")
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
