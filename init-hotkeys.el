@@ -78,3 +78,8 @@
 (global-set-key (kbd "C-c C-,") 'create-cursor)
 (global-set-key (kbd "C-c C-.") 'multiple-cursors-mode)
 
+;; doc-view
+;; bind shift-space to scroll down in doc-view mode (space scrolls up)
+(add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "S-SPC") 'doc-view-scroll-down-or-previous-page)))
+;; bind M-r to rotate page (command in init-commands.el)
+(add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "M-r") 'doc-view-rotate-current-page)))
