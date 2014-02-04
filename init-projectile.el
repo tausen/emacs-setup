@@ -2,6 +2,7 @@
 ;; http://batsov.com/projectile/
 ;; C-c p f: find file in project
 ;; C-c p c: compile project
+;; C-u C-c p c: compile project but prompt for compile command
 ;; C-c p R: recompile TAGS
 
 ;; Dependencies
@@ -26,6 +27,9 @@
 ;; my ctags did not recognize the -e option, so had to install
 ;; ctags-exuberant and use that instead
 (setq projectile-tags-command "ctags-exuberant -Re %s")
+
+;; Don't prompt for compilation command unless prefix command
+(setq compilation-read-command nil)
 
 ;; Browse tags in project
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
