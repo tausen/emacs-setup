@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 """A hacked up version of the multiple-Python checkers script from EmacsWiki.
 
  - Simplified & faster
@@ -32,15 +32,23 @@ unknown.
 
 """
 
+
 ## Customization ##
 
 # Checkers to run be default, when no --checkers options are supplied.
 # One or more of pydo, pep8 or pyflakes, separated by commas
+#default_checkers = 'pep8, pyflakes, epylint'
+#default_checkers = 'pep8, pyflakes,pylint'
+#default_checkers = 'pylint'
 default_checkers = 'pep8, pyflakes'
 
 # A list of error codes to ignore.
 # default_ignore_codes = ['E225', 'W114']
 default_ignore_codes = []
+# E501 = line to long
+default_ignore_codes = ['E501']
+
+
 
 ## End of customization ##
 
@@ -87,7 +95,6 @@ class LintRunner(object):
         args = [self.command]
         args.extend(self.run_flags)
         args.append(filename)
-
         process = Popen(args, stdout=PIPE, stderr=PIPE)
 
         for line in process.stdout:
@@ -136,6 +143,68 @@ class PyflakesRunner(LintRunner):
         data['error_number'] = 'F'
 
         return data
+
+class EpylintRunner(LintRunner):
+    """Run epylint, producing flymake readable output.
+
+    The raw output looks like:
+src/subscription_manager/managercli.py:465: Warning (W): TODO remove the username/password
+src/subscription_manager/managercli.py:791: Warning (W): TODO:  Something about these magic numbers!
+src/subscription_manager/managercli.py:24: Warning (W): Relative import 'constants', should be 'subscription_manager.constants'
+"""
+
+    command = 'epylint'
+
+    output_matcher = re.compile(
+        r'(?P<filename>[^:]+):'
+        r'(?P<line_number>[^:]+):'
+        r'\s+(?P<level>.*)\s+\((?P<error_type>.+)(?P<error_number>\d\d\d\d).*\):'
+        r'(?P<description>.+)$')
+
+    @classmethod
+    def fixup_data(cls, line, data):
+        if data['level'] == "Warning":
+            data['level'] = 'WARNING'
+        if data['level'] == 'Error':
+            data['level'] =  'ERROR'
+
+        return data
+
+
+class PylintRunner(LintRunner):
+    """Run pylint, producing flymake readable output.
+
+    The raw output looks like:
+src/subscription_manager/managercli.py:798: [W0703, ListCommand._do_command] Catch "Exception"
+src/subscription_manager/managercli.py:838: [C0111, ListCommand._format_name.add_line] Missing docstring
+src/subscription_manager/managercli.py:828: [R0201, ListCommand._format_name] Method could be a function
+src/subscription_manager/managercli.py:856: [C0111, CLI] Missing docstring
+src/subscription_manager/managercli.py:861: [C0324, CLI.__init__] Comma not followed by a space
+
+"""
+
+    command = 'pylint'
+
+    output_matcher = re.compile(
+        r'(?P<filename>[^:]+):'
+        r'(?P<line_number>[^:]+):'
+        r'\s+\[(?P<error_type>.+)(?P<error_number>\d\d\d\d).*?\]'
+        r'(?P<description>.*)')
+
+    @classmethod
+    def fixup_data(cls, line, data):
+        # Refactor, Convention, Warning
+        if data['error_type'] in ['R','C','W']:
+            data['level'] = "WARNING"
+        # Error, Fatal
+        if data['error_type'] in ['E', 'F']:
+            data['level'] = 'ERROR'
+
+        return data
+
+    @property
+    def run_flags(self):
+        return '--output-format=parseable','--include-ids=y','--reports=n'
 
 
 class Pep8Runner(LintRunner):
@@ -207,6 +276,8 @@ RUNNERS = {
     'pyflakes': PyflakesRunner,
     'pep8': Pep8Runner,
     'pydo': PydoRunner,
+    'epylint': EpylintRunner,
+    'pylint':PylintRunner,
     }
 
 
