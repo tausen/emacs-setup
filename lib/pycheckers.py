@@ -46,7 +46,8 @@ default_checkers = 'pep8, pyflakes'
 # default_ignore_codes = ['E225', 'W114']
 default_ignore_codes = []
 # E501 = line to long
-default_ignore_codes = ['E501']
+# E221 = multiple spaces before operator
+default_ignore_codes = ['E501', 'E221']
 
 
 
