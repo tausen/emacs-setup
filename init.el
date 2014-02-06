@@ -58,7 +58,7 @@
 ;; Proper autopair/autoclose parenthesis
 (add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
-(autopair-global-mode) ;; enable autopair in all buffers
+;(autopair-global-mode) ;; enable autopair in all buffers
 ;(add-hook 'term-mode-hook #'(lambda () (setq autopair-dont-activate t))) ;; except term modes
 
 ; https://code.google.com/p/autopair/issues/detail?id=54
