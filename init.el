@@ -20,8 +20,11 @@
 ;(load "~/.emacs.d/init-starter-kit.el")
 (load "~/.emacs.d/lib/better-defaults/better-defaults.el")
 
+(add-to-list 'load-path "~/.emacs.d/lib/")
+
 ;;; MAT init el
-(load "~/.emacs.d/init-web.el")
+;(load "~/.emacs.d/init-web.el")
+(load "~/.emacs.d/init-webmode.el")
 (load "~/.emacs.d/init-looks.el")
 (load "~/.emacs.d/init-basics.el")
 (load "~/.emacs.d/init-dired.el")

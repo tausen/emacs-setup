@@ -79,3 +79,6 @@
 	path = lib/s
 	url = https://github.com/magnars/s.el.git
 	ignore = dirty
+[submodule "lib/web-mode"]
+	path = lib/web-mode
+	url = https://github.com/fxbois/web-mode.git
