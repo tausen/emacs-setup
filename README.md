@@ -25,6 +25,10 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 - Ensure that auctex is installed, do M-x package-install auctex -- I had some issues with this and had to install from http://www.gnu.org/software/auctex/download.html
 - Customize LaTeX compilation command
 
+##### Org-mode
+- I had some issues with org-mode (especially export), which seem to be fixed in version 8. Still seems like version 7.9 is shipped with emacs 24, though, so install the new version via M-x package-list-packages, search for org
+- NOTE: org has some issues if not installed in a "clean" emacs session (that is, org-mode must not be loaded when installing the new version). This config does some org initialization on startup, so start emacs with "emacs -q" and install org, that seems to do the trick
+
 ##### Python
 - Get EIN (emacs-ipython-notebook) via M-x package-install ein or via M-x package-list-packages
 - Get Jedi via M-x package-install jedi
