@@ -41,6 +41,9 @@ Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-s
 - Oh, and for better performance C-u 0 M-x byte-recompile-directory RET ~/.emacs.d/ RET
 - For better theme when running with no window, you may wanna add this to your .bashrc: `export TERM=xterm-256color`
 
+#### Issues
+- Magit control characters instead of colors - do "git config --global --edit" and set color.diff to auto
+
 #### Includes
 - nXhtml mode: http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html
 - zenburn theme
