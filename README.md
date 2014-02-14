@@ -2,7 +2,7 @@
 
 A basic emacs23 (now mostly emacs24, actually) setup, customized for my needs.
 
-Initial setup based on emacs-starter-kit: https://github.com/technomancy/emacs-starter-kit/
+**NOTE**: You should probably stick to the emacs24 branch, I'm hardly updating master (which was meant for emacs23).
 
 ### Getting started
 #### Installation
