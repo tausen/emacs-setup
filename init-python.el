@@ -34,8 +34,14 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook 'auto-complete-mode) ; ensure auto-complete-mode is on
 (add-hook 'python-mode-hook 'jedi:ac-setup)
-(setq jedi:setup-keys t)                      ; optional
+(add-hook 'ein:notebook-multilang-mode-hook 'jedi:ac-setup)
+;(setq jedi:setup-keys t)                      ; optional
 (setq jedi:complete-on-dot t)                 ; optional
+
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
+(add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
+(add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
 
 ;; autocomplete: dont suggest numbers
 ;; http://stackoverflow.com/questions/14767277/can-emacs-ac-mode-autocomplete-mode-be-configured-to-ignore-numbers
@@ -88,5 +94,6 @@
 
 ;; load flymake automatically for python files
 (add-hook 'python-mode-hook (lambda () (flymake-mode)))
+;(remove-hook 'python-mode-hook (lambda () (flymake-mode)))
 
 ;;; END OF PYTHON LINT ;;;
