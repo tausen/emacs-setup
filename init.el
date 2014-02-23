@@ -86,6 +86,10 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
+(setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
+
+(setq snake-score-file
+      "~/.emacs.d/snake-scores")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
