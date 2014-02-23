@@ -11,3 +11,9 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 (setq web-mode-code-indent-offset 4)
+
+;; js2-mode for js
+(add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(defalias 'javascript-mode 'js2-mode)
