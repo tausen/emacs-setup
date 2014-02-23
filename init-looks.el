@@ -20,21 +20,8 @@
                  :box '(:line-width 1 :style released-button))
 
 ;; disable different background coloring w/ nxhtml
-;; don't edit by hand! use:
-;; M-x customize-option RET mumamo-chunk-coloring RET
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(initial-buffer-choice t)
- '(mumamo-chunk-coloring 900))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+(setq initial-buffer-choice t)
+(setq mumamo-chunk-coloring 900)
 
 ; line numbers, etc
 ;; Show line-number in the mode line
@@ -57,7 +44,8 @@
 (defun linum-format-func (line)
   (concat
    (propertize (format linum-format-fmt line) 'face 'linum)
-   (propertize " " 'face 'linum)))
+   (propertize "" 'face 'linum)))
+;;              ^- put a space here for more spacing between line no and text
 
 (unless window-system
   (setq linum-format 'linum-format-func))
