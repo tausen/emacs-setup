@@ -64,6 +64,7 @@
 ;; Keymaps to navigate to the errors
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-cn" 'flymake-goto-next-error)))
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-cp" 'flymake-goto-prev-error)))
+(add-hook 'python-mode-hook '(lambda () (define-key python-mode-map (kbd "C-c f t") 'flymake-mode)))
 
 ;; To avoid having to mouse hover for the error message, these functions make flymake error messages
 ;; appear in the minibuffer
@@ -97,3 +98,18 @@
 ;(remove-hook 'python-mode-hook (lambda () (flymake-mode)))
 
 ;;; END OF PYTHON LINT ;;;
+
+;; ipython interpreter
+;; run buffer with C-c C-c
+;; show ipython with C-c C-z
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+ "from IPython.core.completerlib import module_completion"
+ python-shell-completion-module-string-code
+ "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+ "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
