@@ -10,6 +10,11 @@
   '(add-to-list 'TeX-command-list
                 '("Release" "make release" TeX-run-TeX t t :help "Release") t))
 
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list
+                '("Bibtex" "make bibtex" TeX-run-TeX t t :help "Bibtex") t))
+
+
 ; C-c C-c Make full RET to compile
 ; NOTE: to use latex properly, do package-install auctex or
 ; download, compile and install it yourself (very easy):
