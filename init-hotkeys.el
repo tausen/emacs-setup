@@ -83,3 +83,6 @@
 (add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "S-SPC") 'doc-view-scroll-down-or-previous-page)))
 ;; bind M-r to rotate page (command in init-commands.el)
 (add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "M-r") 'doc-view-rotate-current-page)))
+
+;; speedbar
+(global-set-key (kbd "C-c b t") 'speedbar)  ; toggle speedbar

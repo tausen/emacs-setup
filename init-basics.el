@@ -166,3 +166,7 @@
 (global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c m a") 'mc/mark-all-like-this)
+
+;; Speedbar
+(setq speedbar-update-flag t)  ; speedbar follow active buffer (press t in speedbar to toggle)
+(eval-after-load "speedbar" '(speedbar-add-supported-extension ".php"))
