@@ -87,6 +87,7 @@
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
 (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
+(setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
 
 (setq snake-score-file
       "~/.emacs.d/snake-scores")
