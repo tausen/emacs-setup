@@ -20,7 +20,9 @@
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
 ; hotkey for prompting for master file
-(define-key global-map (kbd "C-c t") 'TeX-master-file-ask)
+;(define-key global-map (kbd "C-c t") 'TeX-master-file-ask)
+(add-hook 'latex-mode-hook (lambda () (local-set-key (kbd "C-c t") 'TeX-master-file-ask)))
+(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "C-c t") 'TeX-master-file-ask)))
 
 ; use reftex
 (add-hook 'latex-mode-hook 'turn-on-reftex)
