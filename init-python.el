@@ -85,7 +85,7 @@
   (defun flymake-pycheckers-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
                        'flymake-create-temp-inplace))
-           (local-file (file-relative-name
+           (local-file (expand-file-name
                         temp-file
                         (file-name-directory buffer-file-name))))
       (list "~/.emacs.d/lib/pycheckers.py" (list local-file))))
