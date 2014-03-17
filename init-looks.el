@@ -44,9 +44,11 @@
 (defun linum-format-func (line)
   (concat
    (propertize (format linum-format-fmt line) 'face 'linum)
-   (propertize "" 'face 'linum)))
+   (propertize " " 'face 'linum)))
 ;;              ^- put a space here for more spacing between line no and text
 
 (unless window-system
   (setq linum-format 'linum-format-func))
 
+;; Remove the odd padding from buffers (used to show small arrows for line wrap)
+(set-fringe-mode 0)
