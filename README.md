@@ -1,8 +1,6 @@
-# emacs23-setup
+# emacs-setup
 
-A basic emacs23 (now mostly emacs24, actually) setup, customized for my needs.
-
-**NOTE**: You should probably stick to the emacs24 branch, I'm hardly updating master (which was meant for emacs23).
+A basic emacs24 setup, customized for my needs.
 
 ### Getting started
 #### Installation
