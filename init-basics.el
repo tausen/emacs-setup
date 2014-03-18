@@ -170,3 +170,7 @@
 ;; Speedbar
 (setq speedbar-update-flag t)  ; speedbar follow active buffer (press t in speedbar to toggle)
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".php"))
+(eval-after-load "speedbar" '(speedbar-add-supported-extension ".vht"))
+
+;; Automatically update buffers if files are changed
+(global-auto-revert-mode t)
