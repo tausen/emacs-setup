@@ -17,3 +17,6 @@ abbrev_defs
 /ede-projects.el
 /request/curl-cookie-jar
 .mc-lists.el
+/eshell/
+/projectile-bookmarks.eld
+/snake-scores

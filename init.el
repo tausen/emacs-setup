@@ -16,20 +16,22 @@
   (package-initialize)
 )
 
-
-
 ;(add-to-list 'load-path "~/.emacs.d/lib/starter-kit")
 ;(load "~/.emacs.d/init-starter-kit.el")
 (load "~/.emacs.d/lib/better-defaults/better-defaults.el")
 
+(add-to-list 'load-path "~/.emacs.d/lib/")
+
 ;;; MAT init el
 (load "~/.emacs.d/init-web.el")
+(load "~/.emacs.d/init-webmode.el")
 (load "~/.emacs.d/init-looks.el")
 (load "~/.emacs.d/init-basics.el")
 (load "~/.emacs.d/init-dired.el")
 (load "~/.emacs.d/init-bfin.el")
 (load "~/.emacs.d/init-term.el")
 (load "~/.emacs.d/init-commands.el")
+(load "~/.emacs.d/init-projectile.el")
 (load "~/.emacs.d/init-hotkeys.el")
 (load "~/.emacs.d/init-matlab.el")
 (load "~/.emacs.d/init-python.el")
@@ -39,6 +41,7 @@
 (load "~/.emacs.d/init-latex.el")
 (load "~/.emacs.d/init-git.el")
 (load "~/.emacs.d/init-w3m.el")
+(load "~/.emacs.d/init-markdown.el")
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
@@ -50,15 +53,15 @@
 (add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-completions-mode 1)))
 
 ;; svn for emacs23
-(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
-(require 'vc-svn17)
+;(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
+;(require 'vc-svn17)
 
 (require 'fill-column-indicator)
 
 ;; Proper autopair/autoclose parenthesis
 (add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
-(autopair-global-mode) ;; enable autopair in all buffers
+;(autopair-global-mode) ;; enable autopair in all buffers
 ;(add-hook 'term-mode-hook #'(lambda () (setq autopair-dont-activate t))) ;; except term modes
 
 ; https://code.google.com/p/autopair/issues/detail?id=54
@@ -80,21 +83,14 @@
 ; Testing out EDE
 (global-ede-mode t)
 
-;; Testing out work tracker
-;; https://github.com/chrisdone/emacsworktracker
-;; (load "worktracker.el")
-;; ;;; Clock into project
-;; (global-set-key (kbd "C-c w i") 'work-clockin)
-;; ;;; Clock out of project (done)
-;; (global-set-key (kbd "C-c w o") 'work-clockout)
-;; ;;; Pause project (interrupted)
-;; (global-set-key (kbd "C-c w p") 'work-interrupted)
-;; ;;; Resume project
-;; (global-set-key (kbd "C-c w r") 'work-resume)
-
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
+(setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
+(setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
 
-(load "~/.emacs.d/custom.el")
+(setq snake-score-file
+      "~/.emacs.d/snake-scores")
 
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)

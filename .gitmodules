@@ -58,8 +58,27 @@
 [submodule "lib/multiple-cursors"]
 	path = lib/multiple-cursors
 	url = https://github.com/magnars/multiple-cursors.el.git
-    ignore = dirty
+	ignore = dirty
 [submodule "lib/browse-kill-ring"]
 	path = lib/browse-kill-ring
 	url = https://github.com/browse-kill-ring/browse-kill-ring.git
-    ignore = dirty
+	ignore = dirty
+[submodule "lib/flx"]
+	path = lib/flx
+	url = https://github.com/lewang/flx.git
+	ignore = dirty
+[submodule "lib/projectile"]
+	path = lib/projectile
+	url = https://github.com/bbatsov/projectile.git
+	ignore = dirty
+[submodule "lib/dash"]
+	path = lib/dash
+	url = https://github.com/magnars/dash.el.git
+	ignore = dirty
+[submodule "lib/s"]
+	path = lib/s
+	url = https://github.com/magnars/s.el.git
+	ignore = dirty
+[submodule "lib/web-mode"]
+	path = lib/web-mode
+	url = https://github.com/fxbois/web-mode.git

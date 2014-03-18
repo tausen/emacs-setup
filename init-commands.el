@@ -140,3 +140,39 @@ i.e. change right window to bottom, or change bottom window to right."
 (defun create-cursor ()
   (interactive)
   (mc/create-fake-cursor-at-point))
+
+;; http://www.emacswiki.org/emacs/DictMode
+(defun my-dictionary-search ()
+  (interactive)
+  (let ((word (current-word))
+        (enable-recursive-minibuffers t)
+        (val))
+    (setq val (read-from-minibuffer
+               (concat "Word"
+                       (when word
+                         (concat " (" word ")"))
+                       ": ")))
+    (dictionary-new-search
+     (cons (cond
+            ((and (equal val "") word)
+             word)
+            ((> (length val) 0)
+             val)
+            (t
+             (error "No word to lookup")))
+           dictionary-default-dictionary))))
+
+;; Rotate page in doc-view-mode
+;; http://stackoverflow.com/questions/2684547/rotate-document-in-emacs-doc-view-mode
+(defun doc-view-rotate-current-page ()
+  "Rotate the current page by 90 degrees.
+Requires ImageMagick installation"
+  (interactive)
+  (when (eq major-mode 'doc-view-mode)
+    ;; we are assuming current doc-view internals about cache-names
+    (let ((file-name (expand-file-name (format "page-%d.png" (doc-view-current-page)) (doc-view-current-cache-dir))))
+      ;; assume imagemagick is installed and rotate file in-place and redisplay buffer
+      (call-process-shell-command "convert" nil nil nil "-rotate" "90" file-name file-name)
+      (clear-image-cache)
+      (doc-view-goto-page (doc-view-current-page)))))
+

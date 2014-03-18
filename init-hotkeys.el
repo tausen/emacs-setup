@@ -42,8 +42,8 @@
 (global-set-key (kbd "C-x 9") 'window-toggle-split-direction)
 
 ;; mode toggle hotkeys
-(define-key global-map (kbd "C-c a t") 'auto-complete-mode)
-(define-key global-map (kbd "C-c p t") 'autopair-mode)
+(define-key global-map (kbd "C-c c t") 'auto-complete-mode)
+(define-key global-map (kbd "C-c a t") 'autopair-mode)
 (define-key global-map (kbd "C-c f t") 'flyspell-mode)
 (define-key global-map (kbd "C-c s t") 'semantic-mode)
 
@@ -78,3 +78,11 @@
 (global-set-key (kbd "C-c C-,") 'create-cursor)
 (global-set-key (kbd "C-c C-.") 'multiple-cursors-mode)
 
+;; doc-view
+;; bind shift-space to scroll down in doc-view mode (space scrolls up)
+(add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "S-SPC") 'doc-view-scroll-down-or-previous-page)))
+;; bind M-r to rotate page (command in init-commands.el)
+(add-hook 'doc-view-mode-hook (lambda () (local-set-key (kbd "M-r") 'doc-view-rotate-current-page)))
+
+;; speedbar
+(global-set-key (kbd "C-c b t") 'speedbar)  ; toggle speedbar
