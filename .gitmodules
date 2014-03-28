@@ -82,3 +82,8 @@
 [submodule "lib/web-mode"]
 	path = lib/web-mode
 	url = https://github.com/fxbois/web-mode.git
+	ignore = dirty
+[submodule "lib/ace-jump-mode"]
+	path = lib/ace-jump-mode
+	url = https://github.com/winterTTr/ace-jump-mode.git
+	ignore = dirty

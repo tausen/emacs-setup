@@ -85,12 +85,25 @@
 
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
+
 (setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
 (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
 (setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
 
 (setq snake-score-file
       "~/.emacs.d/snake-scores")
+
+;---
+;; ace jump mode major function
+(add-to-list 'load-path "~/.emacs.d/lib/ace-jump-mode")
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+;; you can select the key you prefer to
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+;---
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
