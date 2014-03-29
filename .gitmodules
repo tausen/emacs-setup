@@ -87,3 +87,6 @@
 	path = lib/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
 	ignore = dirty
+[submodule "lib/god-mode"]
+	path = lib/god-mode
+	url = https://github.com/chrisdone/god-mode.git

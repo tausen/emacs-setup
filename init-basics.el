@@ -162,10 +162,10 @@
 ;; Multiple cursors
 (add-to-list 'load-path "~/.emacs.d/lib/multiple-cursors/") 
 (require 'multiple-cursors)
-(global-set-key (kbd "C-c m e") 'mc/edit-lines) 
-(global-set-key (kbd "C-c m n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c m p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c m a") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-m C-e") 'mc/edit-lines) 
+(global-set-key (kbd "C-c C-m C-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-c C-m C-p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-m C-a") 'mc/mark-all-like-this)
 
 ;; Speedbar
 (setq speedbar-update-flag t)  ; speedbar follow active buffer (press t in speedbar to toggle)
