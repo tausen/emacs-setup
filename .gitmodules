@@ -99,3 +99,6 @@
 	path = themes
 	url = https://github.com/bbatsov/zenburn-emacs.git
 	ignore = dirty
+[submodule "lib/minimap"]
+	path = lib/minimap
+	url = https://github.com/dengste/minimap.git
