@@ -90,9 +90,12 @@
 [submodule "lib/god-mode"]
 	path = lib/god-mode
 	url = https://github.com/chrisdone/god-mode.git
+	ignore = dirty
 [submodule "lib/switch-window"]
 	path = lib/switch-window
 	url = https://github.com/dimitri/switch-window.git
+	ignore = dirty
 [submodule "themes"]
 	path = themes
 	url = https://github.com/bbatsov/zenburn-emacs.git
+	ignore = dirty
