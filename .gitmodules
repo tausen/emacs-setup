@@ -90,3 +90,6 @@
 [submodule "lib/god-mode"]
 	path = lib/god-mode
 	url = https://github.com/chrisdone/god-mode.git
+[submodule "lib/switch-window"]
+	path = lib/switch-window
+	url = https://github.com/dimitri/switch-window.git

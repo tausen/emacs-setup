@@ -162,15 +162,24 @@
 ;; Multiple cursors
 (add-to-list 'load-path "~/.emacs.d/lib/multiple-cursors/") 
 (require 'multiple-cursors)
-(global-set-key (kbd "C-c C-m C-e") 'mc/edit-lines) 
-(global-set-key (kbd "C-c C-m C-n") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-c C-m C-p") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-m C-a") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/edit-lines) 
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C->") 'mc/mark-all-like-this)
+;(global-set-key (kbd "C-c C-m C-a") 'set-rectangular-region-anchor)
 
 ;; Speedbar
 (setq speedbar-update-flag t)  ; speedbar follow active buffer (press t in speedbar to toggle)
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".php"))
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".vht"))
+(eval-after-load "speedbar" '(speedbar-add-supported-extension ".vhd"))
 
 ;; Automatically update buffers if files are changed
-(global-auto-revert-mode t)
+;(global-auto-revert-mode t)
+
+(windmove-default-keybindings)
+
+;; Might remove this again, just testing!
+(add-to-list 'load-path "~/.emacs.d/lib/switch-window") 
+(require 'switch-window)
+(global-set-key (kbd "C-x C-o") 'switch-window)
