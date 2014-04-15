@@ -93,3 +93,6 @@
 [submodule "lib/switch-window"]
 	path = lib/switch-window
 	url = https://github.com/dimitri/switch-window.git
+[submodule "themes"]
+	path = themes
+	url = https://github.com/bbatsov/zenburn-emacs.git
