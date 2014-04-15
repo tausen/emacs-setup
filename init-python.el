@@ -113,3 +113,7 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+
+;; Easier to press these with godmode
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-<") 'python-indent-shift-left)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C->") 'python-indent-shift-right)))
