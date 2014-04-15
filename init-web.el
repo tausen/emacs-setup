@@ -6,6 +6,8 @@
 ;;         c-basic-offset 4)
 ;;   )
 
+(load "~/.emacs.d/lib/php-mode.el")
+
 ;;;;;;; WEB ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun web/trim (str)
