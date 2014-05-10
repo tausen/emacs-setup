@@ -163,6 +163,7 @@
 (add-to-list 'load-path "~/.emacs.d/lib/multiple-cursors/") 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-c C-<") 'mc/edit-lines) 
+(global-set-key (kbd "C-c M-<") 'mc/edit-lines) 
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C->") 'mc/mark-all-like-this)
@@ -182,4 +183,5 @@
 ;; Might remove this again, just testing!
 (add-to-list 'load-path "~/.emacs.d/lib/switch-window") 
 (require 'switch-window)
-(global-set-key (kbd "C-x C-o") 'switch-window)
+;; (global-set-key (kbd "C-x C-o") 'switch-window)
+(global-set-key (kbd "C-x C-o") 'other-window)
