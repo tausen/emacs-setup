@@ -185,3 +185,9 @@
 (require 'switch-window)
 ;; (global-set-key (kbd "C-x C-o") 'switch-window)
 (global-set-key (kbd "C-x C-o") 'other-window)
+
+;; Nice line wrap (virtual indent)
+(add-to-list 'load-path "~/.emacs.d/lib/adaptive-wrap/")
+(require 'adaptive-wrap)
+(add-hook 'org-mode-hook (lambda () (adaptive-wrap-prefix-mode)))
+(add-hook 'prog-mode-hook (lambda () (adaptive-wrap-prefix-mode)))

@@ -102,3 +102,6 @@
 [submodule "lib/minimap"]
 	path = lib/minimap
 	url = https://github.com/dengste/minimap.git
+[submodule "lib/adaptive-wrap"]
+	path = lib/adaptive-wrap
+	url = https://github.com/emacsmirror/adaptive-wrap.git
