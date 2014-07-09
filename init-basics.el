@@ -9,6 +9,9 @@
 
 ;; Set the fill column 
 ;(setq-default fill-column 72)
+
+;; load slightly modified linum
+(load "~/.emacs.d/lib/linum.el")
 ;; Enable line numbers with exceptions (buffers with * in name don't have linum)
 (global-linum-mode t)
 (require 'linum-off)
