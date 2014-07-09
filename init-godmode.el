@@ -13,6 +13,11 @@
 (global-set-key (kbd "C-x C-5 C-0") 'delete-frame)
 (global-set-key (kbd "C-x C-#") 'server-edit)
 
+;; god-mode projectile hotkeys
+(global-set-key (kbd "C-c C-p C-c") 'projectile-compile-project)
+(global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
+(global-set-key (kbd "C-c C-p C-R") 'projectile-regenerate-tags)
+
 (define-key god-local-mode-map (kbd "z") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-mode-all)
 
@@ -23,6 +28,12 @@
 (global-set-key (kbd "<f12>") 'god-mode-all)
 (add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'web-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
