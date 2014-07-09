@@ -81,17 +81,7 @@
 (setq snake-score-file
       "~/.emacs.d/snake-scores")
 
-;---
-;; ace jump mode major function
-(add-to-list 'load-path "~/.emacs.d/lib/ace-jump-mode")
-(autoload
-  'ace-jump-mode
-  "ace-jump-mode"
-  "Emacs quick move minor mode"
-  t)
-;; you can select the key you prefer to
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-;---
+(load "~/.emacs.d/init-ace.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
