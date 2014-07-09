@@ -94,8 +94,8 @@
                '("\\.py\\'" flymake-pycheckers-init)))
 
 ;; load flymake automatically for python files
-(add-hook 'python-mode-hook (lambda () (flymake-mode)))
-;(remove-hook 'python-mode-hook (lambda () (flymake-mode)))
+;; (add-hook 'python-mode-hook (lambda () (flymake-mode)))
+;; (remove-hook 'python-mode-hook (lambda () (flymake-mode)))
 
 ;;; END OF PYTHON LINT ;;;
 
