@@ -181,6 +181,7 @@
 ;; Automatically update buffers if files are changed
 ;(global-auto-revert-mode t)
 
+;; Emacs builtin move between windows. Default keys are shift and arrow keys
 (windmove-default-keybindings)
 
 ;; Might remove this again, just testing!
@@ -192,5 +193,14 @@
 ;; Nice line wrap (virtual indent)
 (add-to-list 'load-path "~/.emacs.d/lib/adaptive-wrap/")
 (require 'adaptive-wrap)
-(add-hook 'org-mode-hook (lambda () (adaptive-wrap-prefix-mode)))
+;; enable for all programming modes
 (add-hook 'prog-mode-hook (lambda () (adaptive-wrap-prefix-mode)))
+
+;; Hotkey to revert buffers safely
+(require 'revbufs)
+;; (define-key god-local-mode-map (kbd "c r") 'revbufs)
+(global-set-key (kbd "C-c C-r") 'revbufs)
+
+;; Use org-indent mode when in org mode
+(add-hook 'org-mode-hook (lambda () (org-indent-mode)))
+
