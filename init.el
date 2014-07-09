@@ -36,7 +36,6 @@
 (load "~/.emacs.d/init-matlab.el")
 (load "~/.emacs.d/init-python.el")
 (load "~/.emacs.d/init-irc.el")
-(load "~/.emacs.d/init-cedet.el")
 (load "~/.emacs.d/init-ido.el")
 (load "~/.emacs.d/init-latex.el")
 (load "~/.emacs.d/init-git.el")
