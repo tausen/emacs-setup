@@ -71,18 +71,6 @@
                (autopair-mode -1))             ;; for emacsen >= 24
 )
 
-(add-to-list 'load-path
-              "~/.emacs.d/lib/yasnippet")
-(require 'yasnippet)
-(yas/global-mode 1)
-
-; Fix yasnippets ansi-term compatibility
-(add-hook 'term-mode-hook (lambda()
-                            (setq yas-dont-activate t)))
-
-; Testing out EDE
-(global-ede-mode t)
-
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
