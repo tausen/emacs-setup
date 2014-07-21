@@ -89,6 +89,16 @@
 ;; emacs code browser
 (load "~/.emacs.d/init-ecb.el")
 
+;; -----------------------------------------------
+(setq speedbar-use-images nil)
+
+;; (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-æ") 'semantic-ia-show-summary)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'company-gtags)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'gtags-find-tag)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'gtags-find-rtag)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'gtags-pop-stack)))
+;; -----------------------------------------------
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 (put 'upcase-region 'disabled nil)
