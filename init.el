@@ -97,6 +97,8 @@
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'gtags-find-tag)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'gtags-find-rtag)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'gtags-pop-stack)))
+
+(add-hook 'gtags-select-mode-hook (lambda () (local-set-key (kbd "RET") 'gtags-select-tag)))
 ;; -----------------------------------------------
 
 (setq custom-file "~/.emacs.d/custom.el")
