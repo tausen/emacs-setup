@@ -6,7 +6,8 @@
 ;;         c-basic-offset 4)
 ;;   )
 
-(load "~/.emacs.d/lib/php-mode.el")
+(add-to-list 'load-path "~/.emacs.d/lib/php-mode/")
+(require 'php-mode)
 
 ;;;;;;; WEB ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

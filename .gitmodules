@@ -105,3 +105,6 @@
 [submodule "lib/adaptive-wrap"]
 	path = lib/adaptive-wrap
 	url = https://github.com/emacsmirror/adaptive-wrap.git
+[submodule "lib/php-mode"]
+	path = lib/php-mode
+	url = https://github.com/ejmr/php-mode.git
