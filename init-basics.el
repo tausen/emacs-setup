@@ -177,6 +177,7 @@
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".php"))
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".vht"))
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".vhd"))
+(eval-after-load "speedbar" '(speedbar-add-supported-extension ".css"))
 
 ;; Automatically update buffers if files are changed
 ;(global-auto-revert-mode t)
