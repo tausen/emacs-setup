@@ -178,6 +178,7 @@
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".vht"))
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".vhd"))
 (eval-after-load "speedbar" '(speedbar-add-supported-extension ".css"))
+(setq speedbar-use-images nil)
 
 ;; Automatically update buffers if files are changed
 ;(global-auto-revert-mode t)
