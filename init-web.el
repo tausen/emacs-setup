@@ -9,6 +9,12 @@
 (add-to-list 'load-path "~/.emacs.d/lib/php-mode/")
 (require 'php-mode)
 
+;; Hotkey for arrow (for php..)
+(defun insert-arrow ()
+  (interactive)
+  (insert "->"))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-a") 'insert-arrow)))
+
 ;;;;;;; WEB ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun web/trim (str)
@@ -119,3 +125,8 @@ It expects a properly indented CSS"
   (web/css-remove-semicolons))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; js2-mode for js
+(add-to-list 'load-path "~/.emacs.d/lib/js2-mode/")
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(defalias 'javascript-mode 'js2-mode)
