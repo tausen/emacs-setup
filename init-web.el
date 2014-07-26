@@ -130,3 +130,61 @@ It expects a properly indented CSS"
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (defalias 'javascript-mode 'js2-mode)
+
+;; ------------------------------------------------------------
+;; php auto completion using gtags, ggtags and auto-complete
+
+;; for this to work, install exuberant ctags, global and pygments like this:
+
+;; wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+;; tar -zxvf ctags-5.8.tar.gz
+;; cd ctags-5.8
+;; ./configure
+;; make && sudo make install
+
+;; wget http://tamacom.com/global/global-6.3.tar.gz
+;; tar -zxvf global-6.3.tar.gz
+;; cd global-6.3
+;; ./configure --prefix=/usr/local --with-exuberant-ctags=/usr/local/bin/ctags
+;; make && sudo make install
+
+;; yum install python-pygments (or use pip install Pygments)
+
+;; git clone https://github.com/yoshizow/global-pygments-plugin.git
+;; cd global-pygments-plugin
+;; sh reconf.sh
+;; ./configure --prefix=/usr/local --with-exuberant-ctags=/usr/local/bin/ctags
+;; make && make install
+;; cp sample.globalrc $HOME/.globalrc
+
+;; Important notes:
+
+;; gtags is extremely slow over sshfs, so if you're editing files via sshfs, don't let
+;; emacs run gtags for you. Run it manually on the host machine with "gtags -v" and
+;; update tags using "global -u".
+
+(add-to-list 'load-path "~/.emacs.d/lib/ggtags")
+(require 'ggtags)
+(add-hook 'php-mode-hook (lambda () (ggtags-mode 1)))
+
+;; M-x package-list-packages and install popup, auto-complete (and fuzzy?)
+
+(ac-config-default)
+
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'ggtags-find-reference)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-s") 'ggtags-find-other-symbol)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-f") 'ggtags-find-file)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
+
+;; TODO: figure out how to use this
+(setq eldoc-documentation-function #'ggtags-eldoc-function)
+(add-hook 'ggtags-mode-hook 'eldoc-mode)
+
+;; ------------------------------------------------------------

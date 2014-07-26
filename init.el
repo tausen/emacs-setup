@@ -48,10 +48,6 @@
 (require 'auto-complete)
 ;(global-auto-complete-mode 1) ; (uncomment to enable by default)
 
-;; Semantic mode
-(add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-summary-mode 1)))
-(add-hook 'semantic-mode-hook (lambda () (global-semantic-idle-completions-mode 1)))
-
 ;; svn for emacs23
 ;(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
 ;(require 'vc-svn17)
@@ -88,18 +84,6 @@
 
 ;; emacs code browser
 (load "~/.emacs.d/init-ecb.el")
-
-;; -----------------------------------------------
-(setq speedbar-use-images nil)
-
-;; (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-æ") 'semantic-ia-show-summary)))
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'company-gtags)))
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'gtags-find-tag)))
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'gtags-find-rtag)))
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'gtags-pop-stack)))
-
-(add-hook 'gtags-select-mode-hook (lambda () (local-set-key (kbd "RET") 'gtags-select-tag)))
-;; -----------------------------------------------
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
