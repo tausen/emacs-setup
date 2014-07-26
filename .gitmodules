@@ -108,3 +108,6 @@
 [submodule "lib/php-mode"]
 	path = lib/php-mode
 	url = https://github.com/ejmr/php-mode.git
+[submodule "lib/ggtags"]
+	path = lib/ggtags
+	url = https://github.com/leoliu/ggtags.git
