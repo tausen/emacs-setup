@@ -102,12 +102,16 @@
 [submodule "lib/minimap"]
 	path = lib/minimap
 	url = https://github.com/dengste/minimap.git
+	ignore = dirty
 [submodule "lib/adaptive-wrap"]
 	path = lib/adaptive-wrap
 	url = https://github.com/emacsmirror/adaptive-wrap.git
+	ignore = dirty
 [submodule "lib/php-mode"]
 	path = lib/php-mode
 	url = https://github.com/ejmr/php-mode.git
+	ignore = dirty
 [submodule "lib/ggtags"]
 	path = lib/ggtags
 	url = https://github.com/leoliu/ggtags.git
+	ignore = dirty
