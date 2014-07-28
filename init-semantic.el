@@ -21,6 +21,16 @@
 ;; semantic-complete-jump-local is by default bound to C-c , j
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-æ") 'semantic-ia-show-summary)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-i") 'semantic-complete-analyze-inline)))
+
+;; Do M-i to get completions at point and M-æ to get summary of function at point in minibuffer
+;; M-n and M-p to cycle completions
+;; C-c C-- C-j  -- jump to tag
+;; C-c C-, C-l  -- list possible completions
+;; C-c C-, C-g  -- prompt for tag, show list of callers
+;; C-c C-, C-G  -- display list of callers of current tag
+;; semantic-complete-jump-local is by default bound to C-c , j
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-æ") 'semantic-ia-show-summary)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-i") 'semantic-complete-analyze-inline)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-s") 'semantic-ia-show-summary)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'semantic-complete-analyze-inline)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'semantic-complete-jump)))
@@ -32,6 +42,8 @@
 ;; NOTE: Hmm, still not working entirely as intended. Must do M-x global-ede-mode the first time a c file
 ;; is opened and reopen the file (C-x v RET) for semantics to work. Adding global-ede-mode to c-mode-hook does
 ;; not work.
+
+(require 'semantic/sb) ;; speedbar + semantic
 
 ;; Also use 'locate' to find includes.
 (setq ede-locate-setup-options
