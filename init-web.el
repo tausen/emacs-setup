@@ -169,10 +169,14 @@ It expects a properly indented CSS"
 
 ;; M-x package-list-packages and install popup, auto-complete (and fuzzy?)
 
+(global-auto-complete-mode t)
 (ac-config-default)
 
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+;; don't show auto-complete stuff automatically
+(setq ac-auto-show-menu nil)
+(setq ac-auto-start nil)
 
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
@@ -183,8 +187,53 @@ It expects a properly indented CSS"
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
 
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'ggtags-find-reference)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-s") 'ggtags-find-other-symbol)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-f") 'ggtags-find-file)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark)))
+
 ;; TODO: figure out how to use this
 (setq eldoc-documentation-function #'ggtags-eldoc-function)
-(add-hook 'ggtags-mode-hook 'eldoc-mode)
+;; (add-hook 'ggtags-mode-hook 'eldoc-mode)
+
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
+
+;; define options, commands and keybindings for running "global -u" from a dir on a remote shell
+;; to set up, do M-x customize-group global-ssh
+(defgroup global-ssh nil
+  "Setup for running global -u via remote shell"
+  :prefix "global-ssh-"
+  :group 'convenience)
+
+(defcustom global-ssh-username ""
+  "SSH username for remote global -u"
+  :type 'string
+  :group 'global-ssh)
+
+(defcustom global-ssh-host ""
+  "SSH host for remote global -u"
+  :type 'string
+  :group 'global-ssh)
+
+(defcustom global-ssh-path ""
+  "Path to dir with GTAGS file for remote global -u"
+  :type 'string
+  :group 'global-ssh)
+
+(defcustom global-ssh-port "22"
+  "SSH port for remote global -u"
+  :type 'string
+  :group 'global-ssh)
+
+(defun global-ssh-update ()
+   (interactive)
+   (shell-command (concat "ssh -p " global-ssh-port " " global-ssh-username "@" global-ssh-host " 'cd " global-ssh-path " && global -u'")))
 
 ;; ------------------------------------------------------------
