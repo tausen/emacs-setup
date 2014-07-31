@@ -186,6 +186,7 @@ It expects a properly indented CSS"
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
 
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
@@ -197,6 +198,7 @@ It expects a properly indented CSS"
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
 
 ;; TODO: figure out how to use this
 (setq eldoc-documentation-function #'ggtags-eldoc-function)
