@@ -117,3 +117,16 @@
 ;; Easier to press these with godmode
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-<") 'python-indent-shift-left)))
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C->") 'python-indent-shift-right)))
+
+;; Auto-completion etc. using gtags (requires gnu global, http://www.gnu.org/software/global/, and pygments plug-in parser https://github.com/yoshizow/global-pygments-plugin)
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'ggtags-find-reference)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-s") 'ggtags-find-other-symbol)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-f") 'ggtags-find-file)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
