@@ -176,7 +176,7 @@ It expects a properly indented CSS"
 (setq ac-auto-show-menu nil)
 (setq ac-auto-start nil)
 
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+;; Auto-completion etc. using gtags (requires gnu global, http://www.gnu.org/software/global/, and pygments plug-in parser https://github.com/yoshizow/global-pygments-plugin)(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
@@ -239,3 +239,23 @@ It expects a properly indented CSS"
    (shell-command (concat "ssh -p " global-ssh-port " " global-ssh-username "@" global-ssh-host " 'cd " global-ssh-path " && global -u'")))
 
 ;; ------------------------------------------------------------
+
+(add-hook 'js2-init-hook 'my-js2-init-hook)
+
+;; project-specific js2-mode externs (variables that should always be considered defined)
+;; try also js2-global-externs via M-x customize-group js2-mode
+;; example value: '("$" "setTimeout" "WebSocket")
+(defun my-js2-init-hook ()  "My js2-mode init hook"
+  (when (string-match-p "gomspace/csp-web" (buffer-file-name))
+    (setq js2-additional-externs '("GDO" "noty"))
+    )
+  )
+
+;; easy jdoc
+(load "~/.emacs.d/lib/js-doc.el")
+(require 'js-doc)
+
+(add-hook 'js2-mode-hook
+          #'(lambda ()
+              (define-key js2-mode-map "\C-ci" 'js-doc-insert-function-doc)
+              (define-key js2-mode-map "@" 'js-doc-insert-tag)))
