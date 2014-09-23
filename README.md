@@ -35,6 +35,10 @@ A basic emacs24 setup, customized for my needs.
 - Install python modules via pip install epc jedi or cd ~/.emacs.d/elpa/jedi-* && make requirements
 - sudo apt-get install pep8 pyflakes
 
+##### TypeScript
+- Get the tss package via M-x package-install tss
+- Install [typescript-tools](https://github.com/clausreinke/typescript-tools) via: npm install -g typescript-tools
+
 #### Running
 - For best experience, always start emacs with emacsclient -c -a "" (bind it to a hotkey!)
 - Oh, and for better performance C-u 0 M-x byte-recompile-directory RET ~/.emacs.d/ RET (you might have to delete lib/auctex/preview/prv-xemacs.el if this gives you issues)

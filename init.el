@@ -85,6 +85,9 @@
 ;; emacs code browser
 (load "~/.emacs.d/init-ecb.el")
 
+;; emacs typescript config
+(load "~/.emacs.d/init-tss.el")
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 (put 'upcase-region 'disabled nil)
