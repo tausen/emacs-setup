@@ -10,6 +10,7 @@ A basic emacs24 setup, customized for my needs.
 - git submodule update
 - M-x package-list-packages and install pkg-info
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
+- For gtags, install GNU Global from http://www.gnu.org/software/global/ and the pygments plugin parser from https://github.com/yoshizow/global-pygments-plugin
 
 #### Configuration
 ##### IRC
@@ -20,7 +21,7 @@ A basic emacs24 setup, customized for my needs.
 - Install w3m: sudo apt-get install w3m / yum -y install w3m
 
 ##### LaTeX
-- Ensure that auctex is installed, do M-x package-install auctex -- I had some issues with this and had to install from http://www.gnu.org/software/auctex/download.html
+- Ensure that auctex is installed, do M-x package-install auctex or install from http://www.gnu.org/software/auctex/download.html
 - Customize LaTeX compilation command
 
 ##### Org-mode
@@ -43,7 +44,6 @@ A basic emacs24 setup, customized for my needs.
 - Magit control characters instead of colors - do "git config --global --edit" and set color.diff to auto
 
 #### Includes
-- nXhtml mode: http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html
 - zenburn theme
 - dired+ and some dired customization 
 - Some autocompletion/semantics
@@ -58,7 +58,9 @@ A basic emacs24 setup, customized for my needs.
 - Minor eshell customization
 - IRC using ERC and ZNC + desktop notifications for IRC
 - yasnippet
-- emacs-for-python
+- lots of stuff for python
+- lots of stuff for navigating tags in php, js, ..
+- semantic stuff for C
 - autopair (proper auto-insert parenthesis etc.)
 
 ...and some more stuff I forgot
