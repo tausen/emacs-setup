@@ -12,6 +12,10 @@
 
 (eval-after-load "tex"
   '(add-to-list 'TeX-command-list
+                '("Draft" "make draft" TeX-run-TeX t t :help "Draft") t))
+
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list
                 '("Bibtex" "make bibtex" TeX-run-TeX t t :help "Bibtex") t))
 
 
