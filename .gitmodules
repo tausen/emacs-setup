@@ -2,14 +2,6 @@
 	path = lib/znc
 	url = https://github.com/sshirokov/ZNC.el
 	ignore = dirty
-[submodule "lib/emacs-for-python"]
-	path = lib/emacs-for-python
-	url = https://github.com/gabrielelanaro/emacs-for-python.git
-	ignore = dirty
-[submodule "lib/emacs-flymake"]
-	path = lib/emacs-flymake
-	url = https://github.com/illusori/emacs-flymake.git
-	ignore = dirty
 [submodule "lib/autopair"]
 	path = lib/autopair
 	url = https://github.com/capitaomorte/autopair.git
@@ -33,10 +25,6 @@
 [submodule "lib/js2-mode"]
         path = lib/js2-mode
         url = https://github.com/mooz/js2-mode.git
-	ignore = dirty
-[submodule "lib/yasnippet"]
-	path = lib/yasnippet
-	url = https://github.com/capitaomorte/yasnippet.git
 	ignore = dirty
 [submodule "lib/auctex"]
 	path = lib/auctex
