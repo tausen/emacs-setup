@@ -175,3 +175,11 @@ Requires ImageMagick installation"
       (call-process-shell-command "convert" nil nil nil "-rotate" "90" file-name file-name)
       (clear-image-cache)
       (doc-view-goto-page (doc-view-current-page)))))
+
+(defun yank-to-other ()
+  (interactive)
+  (other-window 1)
+  (yank)
+  (newline-and-indent)
+  (other-window -1))
+(global-set-key (kbd "C-c C-y") 'yank-to-other)
