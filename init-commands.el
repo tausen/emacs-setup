@@ -175,4 +175,3 @@ Requires ImageMagick installation"
       (call-process-shell-command "convert" nil nil nil "-rotate" "90" file-name file-name)
       (clear-image-cache)
       (doc-view-goto-page (doc-view-current-page)))))
-
