@@ -191,7 +191,8 @@
 ;; Might remove this again, just testing!
 (add-to-list 'load-path "~/.emacs.d/lib/switch-window") 
 (require 'switch-window)
-;; (global-set-key (kbd "C-x C-o") 'switch-window)
+(global-set-key (kbd "C-c C-o") 'switch-window)
+(add-hook 'sh-mode-hook (lambda () (local-set-key (kbd "C-c C-o") 'switch-window)))
 (global-set-key (kbd "C-x C-o") 'other-window)
 
 ;; Nice line wrap (virtual indent)
