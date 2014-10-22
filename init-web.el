@@ -9,6 +9,13 @@
 (add-to-list 'load-path "~/.emacs.d/lib/php-mode/")
 (require 'php-mode)
 
+;; sass mode for scss files
+(add-to-list 'load-path "~/.emacs.d/lib/haml-mode/")
+(require 'haml-mode)
+(add-to-list 'load-path "~/.emacs.d/lib/sass-mode/")
+(require 'sass-mode)
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . sass-mode))
+
 ;; Hotkey for arrow (for php..)
 (defun insert-arrow ()
   (interactive)
