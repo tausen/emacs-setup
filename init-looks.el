@@ -1,6 +1,9 @@
 ;; zenburn theme
 (when (>= emacs-major-version 24)
-  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/zenburn")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/gotham")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/monokai")
+  (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/spacegray")
   (load-theme 'zenburn t)
 )
 (when (<= emacs-major-version 23)

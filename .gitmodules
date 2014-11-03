@@ -103,10 +103,27 @@
 	path = lib/ggtags
 	url = https://github.com/leoliu/ggtags.git
 	ignore = dirty
-
 [submodule "lib/haml-mode"]
 	path = lib/haml-mode
 	url = https://github.com/nex3/haml-mode.git
+	ignore = dirty
 [submodule "lib/sass-mode"]
 	path = lib/sass-mode
 	url = https://github.com/nex3/sass-mode.git
+	ignore = dirty
+[submodule "themes/zenburn"]
+	path = themes/zenburn
+	url = https://github.com/bbatsov/zenburn-emacs.git
+	ignore = dirty
+[submodule "themes/gotham"]
+	path = themes/gotham
+	url = https://github.com/wasamasa/gotham-theme.git
+	ignore = dirty
+[submodule "themes/monokai"]
+	path = themes/monokai
+	url = https://github.com/oneKelvinSmith/monokai-emacs.git
+	ignore = dirty
+[submodule "themes/spacegray"]
+	path = themes/spacegray
+	url = https://github.com/bruce/emacs-spacegray-theme.git
+	ignore = dirty
