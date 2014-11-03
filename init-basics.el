@@ -79,8 +79,8 @@
 (delete-selection-mode t)
 ;; make sure delete key is delete key
 (global-set-key [delete] 'delete-char)
-;; turn on the menu bar
-(menu-bar-mode 1)
+;; turn off the menu bar
+(menu-bar-mode 0)
 ;; have emacs scroll line-by-line
 (setq scroll-step 1)
 ;; ;; set color-theme
