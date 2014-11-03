@@ -34,6 +34,7 @@
 (add-hook 'emacs-lisp-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'web-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
