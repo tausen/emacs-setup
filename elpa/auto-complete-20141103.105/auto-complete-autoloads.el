@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (global-auto-complete-mode auto-complete-mode auto-complete)
-;;;;;;  "auto-complete" "auto-complete.el" (21459 51140 705588 282000))
+;;;;;;  "auto-complete" "auto-complete.el" (21594 46848 192599 972000))
 ;;; Generated autoloads from auto-complete.el
 
 (autoload 'auto-complete "auto-complete" "\
@@ -41,7 +41,7 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 ;;;***
 
 ;;;### (autoloads (ac-config-default) "auto-complete-config" "auto-complete-config.el"
-;;;;;;  (21459 51140 733588 281000))
+;;;;;;  (21594 46848 860599 944000))
 ;;; Generated autoloads from auto-complete-config.el
 
 (autoload 'ac-config-default "auto-complete-config" "\
@@ -51,8 +51,8 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("auto-complete-pkg.el") (21459 51140 761633
-;;;;;;  282000))
+;;;### (autoloads nil nil ("auto-complete-pkg.el") (21594 46848 887806
+;;;;;;  324000))
 
 ;;;***
 
