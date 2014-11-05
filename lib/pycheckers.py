@@ -47,7 +47,7 @@ default_checkers = 'pep8, pyflakes'
 # E501 = line too long
 # E221 = multiple spaces before operator
 # E226 = missing whitespace around arithmetic operator
-default_ignore_codes = ['E501', 'E226']
+default_ignore_codes = ['E226']
 
 ## End of customization ##
 

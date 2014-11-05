@@ -36,7 +36,7 @@
 (add-hook 'python-mode-hook 'jedi:ac-setup)
 (add-hook 'ein:notebook-multilang-mode-hook 'jedi:ac-setup)
 ;(setq jedi:setup-keys t)                      ; optional
-(setq jedi:complete-on-dot t)                 ; optional
+;; (setq jedi:complete-on-dot t)                 ; optional
 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
@@ -94,7 +94,7 @@
                '("\\.py\\'" flymake-pycheckers-init)))
 
 ;; load flymake automatically for python files
-;; (add-hook 'python-mode-hook (lambda () (flymake-mode)))
+(add-hook 'python-mode-hook (lambda () (flymake-mode)))
 ;; (remove-hook 'python-mode-hook (lambda () (flymake-mode)))
 
 ;;; END OF PYTHON LINT ;;;
@@ -130,3 +130,9 @@
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
+
+;; Set fill column to 80
+(add-hook 'python-mode-hook (lambda () (setq fill-column 80)))
+
+;; Enable fci-mode
+;; (add-hook 'python-mode-hook (lambda () (fci-mode t)))
