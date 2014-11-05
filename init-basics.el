@@ -209,3 +209,21 @@
 ;; Use org-indent mode when in org mode
 (add-hook 'org-mode-hook (lambda () (org-indent-mode)))
 
+;; Avoid jumpy previous-line when fci-mode is on
+(defadvice previous-line (around avoid-jumpy-fci activate)
+  (if (symbol-value 'fci-mode)
+      (progn (fci-mode -1) ad-do-it (fci-mode 1))
+    ad-do-it))
+
+(defun comment-or-uncomment-region-or-line ()
+    "Comments or uncomments the region or the current line if there's no active region."
+    (interactive)
+    (let (beg end)
+        (if (region-active-p)
+            (setq beg (region-beginning) end (region-end))
+            (setq beg (line-beginning-position) end (line-end-position)))
+        (comment-or-uncomment-region beg end)))
+(global-set-key (kbd "M-[") 'comment-or-uncomment-region-or-line)
+
+;; delete pair of parens, ..
+(global-set-key (kbd "C-x p") 'delete-pair)
