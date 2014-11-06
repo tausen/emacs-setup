@@ -131,8 +131,12 @@
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
 
-;; Set fill column to 80
-(add-hook 'python-mode-hook (lambda () (setq fill-column 80)))
+;; Set fill column to 79 when in python-mode
+(add-hook 'python-mode-hook (lambda () (setq fill-column 79)))
 
-;; Enable fci-mode
-;; (add-hook 'python-mode-hook (lambda () (fci-mode t)))
+;; Enable fci-mode and do some fci-related tweaks
+(add-hook 'python-mode-hook (lambda () (setq visual-line-mode nil)))
+(add-hook 'python-mode-hook (lambda () (fci-mode t)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-a") 'beginning-of-line)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-e") 'end-of-line)))
+
