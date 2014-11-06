@@ -43,15 +43,6 @@
 (load "~/.emacs.d/init-markdown.el")
 (load "~/.emacs.d/init-godmode.el")
 
-;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/lib/auto-complete/")
-(require 'auto-complete)
-;(global-auto-complete-mode 1) ; (uncomment to enable by default)
-
-;; svn for emacs23
-;(add-to-list 'load-path "~/.emacs.d/lib/vc-svn17-el")
-;(require 'vc-svn17)
-
 (require 'fill-column-indicator)
 
 ;; Proper autopair/autoclose parenthesis
