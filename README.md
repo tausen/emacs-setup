@@ -11,6 +11,7 @@ A basic emacs24 setup, customized for my needs.
 - M-x package-list-packages and install pkg-info
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
 - For gtags, install GNU Global from http://www.gnu.org/software/global/ and the pygments plugin parser from https://github.com/yoshizow/global-pygments-plugin
+- For completion in js2-mode using tern, cd into lib/tern and do npm install
 
 #### Configuration
 ##### IRC
