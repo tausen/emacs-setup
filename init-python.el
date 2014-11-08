@@ -80,18 +80,21 @@
 
 (add-hook 'post-command-hook 'show-fly-err-at-point)
 
-;; use pycheckers script, https://bitbucket.org/alikins/sandbox
+;; http://stackoverflow.com/questions/5793839/can-flymakes-temporary-file-be-created-in-the-systems-temporary-directory
 (when (load "flymake" t)
+  (defun flymake-create-temp-in-system-tempdir (filename prefix)
+    (make-temp-file (or prefix "flymake")))
+
   (defun flymake-pycheckers-init ()
     (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
-           (local-file (expand-file-name
+                       'flymake-create-temp-in-system-tempdir))
+           (local-file (file-relative-name
                         temp-file
                         (file-name-directory buffer-file-name))))
-      (list "~/.emacs.d/lib/pycheckers.py" (list local-file))))
+      (list "~/.emacs.d/lib/pycheckers.py" (list temp-file))))
 
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pycheckers-init)))
+  (add-to-list 'flymake-allowed-file-name-masks '("\\.py\\'" flymake-pycheckers-init))
+  )
 
 ;; load flymake automatically for python files
 (add-hook 'python-mode-hook (lambda () (flymake-mode)))
