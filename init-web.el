@@ -196,16 +196,17 @@ It expects a properly indented CSS"
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark))) 
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
 
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
+;; trying out tern for most of these - lets use gtags for what tern does not support
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-gtags)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-.") 'ggtags-find-tag-dwim)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'ggtags-find-definition)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-c") 'tags-loop-continue)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-r") 'ggtags-find-reference)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-s") 'ggtags-find-other-symbol)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-f") 'ggtags-find-file)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'pop-tag-mark)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-p") 'ggtags-prev-mark)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-n") 'ggtags-next-mark)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C--") 'ggtags-grep)))
 
 ;; TODO: figure out how to use this
@@ -213,7 +214,26 @@ It expects a properly indented CSS"
 ;; (add-hook 'ggtags-mode-hook 'eldoc-mode)
 
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
+;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
+
+;; trying out tern for smarter JS completion...
+;; http://ternjs.net/doc/manual.html#emacs
+;; tern default keys:
+;; M-.      Jump to the definition of the thing under the cursor
+;; M-,      Brings you back to last place you were when you pressed M-.
+;; C-c C-r  Rename the variable under the cursor
+;; C-c C-c  Find the type of the thing under the cursor
+;; C-c C-d  Find docs of the thing under the cursor. Press again to open the associated URL (if any)
+(add-to-list 'load-path "~/.emacs.d/lib/tern/emacs")
+(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "M-i") 'tern-ac-complete)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-j") 'tern-find-definition)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-m") 'tern-pop-find-definition)))
 
 ;; define options, commands and keybindings for running "global -u" from a dir on a remote shell
 ;; to set up, do M-x customize-group global-ssh

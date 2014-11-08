@@ -127,3 +127,6 @@
 	path = themes/spacegray
 	url = https://github.com/bruce/emacs-spacegray-theme.git
 	ignore = dirty
+[submodule "lib/tern"]
+	path = lib/tern
+	url = https://github.com/marijnh/tern.git
