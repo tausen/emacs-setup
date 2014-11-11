@@ -53,5 +53,8 @@
 (unless window-system
   (setq linum-format 'linum-format-func))
 
-;; Remove the odd padding from buffers (used to show small arrows for line wrap)
-(set-fringe-mode 0)
+;; Customize fringe: 10px left, no right, almost same background as rest (of zenburn, anyway)
+(set-fringe-mode '(10 . 0))
+(set-face-attribute 'fringe
+                 nil 
+                 :background "#3A3A3A")

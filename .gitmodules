@@ -130,3 +130,11 @@
 [submodule "lib/tern"]
 	path = lib/tern
 	url = https://github.com/marijnh/tern.git
+[submodule "lib/git-gutter-plus"]
+	path = lib/git-gutter-plus
+	url = https://github.com/nonsequitur/git-gutter-plus.git
+	ignore = dirty
+[submodule "lib/git-gutter-fringe-plus"]
+	path = lib/git-gutter-fringe-plus
+	url = https://github.com/nonsequitur/git-gutter-fringe-plus.git
+	ignore = dirty

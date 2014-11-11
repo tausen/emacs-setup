@@ -79,6 +79,8 @@
 ;; emacs typescript config
 (load "~/.emacs.d/init-tss.el")
 
+;; git gutter
+(load "~/.emacs.d/init-gitgutter.el")
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 (put 'upcase-region 'disabled nil)
