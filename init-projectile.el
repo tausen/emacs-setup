@@ -43,3 +43,5 @@
               tags-completion-table)
     (find-tag (ido-completing-read "Tag: " tag-names))))
 (global-set-key (kbd "C-c p .") 'ido-find-tag)
+
+(projectile-global-mode)
