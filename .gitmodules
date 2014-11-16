@@ -141,6 +141,8 @@
 [submodule "lib/helm"]
 	path = lib/helm
 	url = https://github.com/emacs-helm/helm.git
+	ignore = dirty
 [submodule "lib/async"]
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
+	ignore = dirty

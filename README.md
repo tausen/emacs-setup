@@ -8,6 +8,7 @@ A basic emacs24 setup, customized for my needs.
 - Clone this repository
 - git submodule init
 - git submodule update
+- cd into lib/helm and run make
 - M-x package-list-packages and install pkg-info
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
 - For gtags, install GNU Global from http://www.gnu.org/software/global/ and the pygments plugin parser from https://github.com/yoshizow/global-pygments-plugin
