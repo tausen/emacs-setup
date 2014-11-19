@@ -227,3 +227,7 @@
 
 ;; delete pair of parens, ..
 (global-set-key (kbd "C-x p") 'delete-pair)
+
+;; go to next/previous match (errors, grep, ..)
+(global-set-key (kbd "C-x C-n") 'next-error)
+(global-set-key (kbd "C-x C-p") 'previous-error)
