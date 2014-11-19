@@ -36,6 +36,7 @@
                    (point)))
       (activate-mark))))
 (define-key global-map (kbd "C-x w") 'my-mark-current-word)
+(define-key global-map (kbd "C-M-w") 'my-mark-current-word)
 
 (defun insert-php-comment ()
   (interactive)
