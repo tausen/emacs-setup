@@ -58,3 +58,16 @@
 (set-face-attribute 'fringe
                  nil 
                  :background "#3A3A3A")
+
+;; While fringe is enabled, there's no reason to underline flymake warnings
+(when (load "flymake" t)
+  (set-face-attribute 'flymake-warnline
+                      nil
+                      :underline nil)
+  (set-face-attribute 'flymake-errline
+                      nil
+                      :underline nil)
+  (set-face-attribute 'flymake-infoline
+                      nil
+                      :underline nil)
+  )
