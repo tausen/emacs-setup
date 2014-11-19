@@ -44,4 +44,11 @@
     (find-tag (ido-completing-read "Tag: " tag-names))))
 (global-set-key (kbd "C-c p .") 'ido-find-tag)
 
+;; enable projectile project caching
+(setq projectile-enable-caching t)
+(setq projectile-indexing-method 'alien)
+
+;; Stop cluttering my mode line
+(setq projectile-mode-line (quote (:eval (format " P[%s]" (projectile-project-name)))))
+
 (projectile-global-mode)
