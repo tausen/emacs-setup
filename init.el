@@ -81,6 +81,11 @@
 
 ;; git gutter
 (load "~/.emacs.d/init-gitgutter.el")
+;; stop cluttering my mode line
+(load "~/.emacs.d/lib/diminish.el")
+(require 'diminish)
+(diminish 'git-gutter+-mode)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 (put 'upcase-region 'disabled nil)
