@@ -13,7 +13,8 @@ A basic emacs24 setup, customized for my needs.
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
 - For gtags, install GNU Global from http://www.gnu.org/software/global/ and the pygments plugin parser from https://github.com/yoshizow/global-pygments-plugin
 - For completion in js2-mode using tern, cd into lib/tern and do npm install
-- M-x package-list-packages and install git-commit-mode (for git-gutter and probably magit, too) and fringe-helper (for git-gutter)
+- M-x package-list-packages and install fringe-helper (for git-gutter)
+- cd into lib/magit and do make lisp
 
 #### Configuration
 ##### IRC

@@ -146,3 +146,9 @@
 	path = lib/async
 	url = git@github.com:jwiegley/emacs-async.git
 	ignore = dirty
+[submodule "lib/magit"]
+	path = lib/magit
+	url = https://github.com/magit/magit.git
+[submodule "lib/git-modes"]
+	path = lib/git-modes
+	url = https://github.com/magit/git-modes.git
