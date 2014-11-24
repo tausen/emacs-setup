@@ -256,3 +256,10 @@
 ;; C-u C-c i  expand file name to full path
 ;; M-- C-c i  relative path
 (global-set-key (kbd "C-c i") 'my-insert-file-name)
+
+;; open pdfs with qpdfview
+(add-to-list 'load-path "~/.emacs.d/lib/openwith.el")
+(require 'openwith)
+(setq openwith-associations '(("\\.pdf\\'" "qpdfview" ("--unique" file))
+                              ("\\.eps\\'" "qpdfview" ("--unique" file))))
+(openwith-mode t)
