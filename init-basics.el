@@ -231,3 +231,28 @@
 ;; go to next/previous match (errors, grep, ..)
 (global-set-key (kbd "C-x C-n") 'next-error)
 (global-set-key (kbd "C-x C-p") 'previous-error)
+
+;; http://www.emacswiki.org/emacs/InsertFileName
+(defun my-insert-file-name (filename &optional args)
+  "Insert name of file FILENAME into buffer after point.
+  
+  Prefixed with \\[universal-argument], expand the file name to
+  its fully canocalized path.  See `expand-file-name'.
+  
+  Prefixed with \\[negative-argument], use relative path to file
+  name from current directory, `default-directory'.  See
+  `file-relative-name'.
+  
+  The default with no prefix is to insert the file name exactly as
+  it appears in the minibuffer prompt."
+  ;; Based on insert-file in Emacs -- ashawley 20080926
+  (interactive "*fInsert file name: \nP")
+  (cond ((eq '- args)
+         (insert (file-relative-name filename)))
+        ((not (null args))
+         (insert (expand-file-name filename)))
+        (t
+         (insert filename))))
+;; C-u C-c i  expand file name to full path
+;; M-- C-c i  relative path
+(global-set-key (kbd "C-c i") 'my-insert-file-name)
