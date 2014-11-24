@@ -18,6 +18,29 @@
   '(add-to-list 'TeX-command-list
                 '("Bibtex" "make bibtex" TeX-run-TeX t t :help "Bibtex") t))
 
+;; add LaCheck and ChkTeX options for latex linting
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list
+                '("LaCheck" "lacheck %k" TeX-run-compile nil (latex-mode) :help "Check LaTeX file for correctness using lacheck") t))
+
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list
+                '("ChkTeX" "chktex -v3 %k" TeX-run-compile nil (latex-mode) :help "Check LaTeX file for correctness using chktex") t))
+
+;; used in above commands - get relative file name to pass to chktex and lacheck
+(eval-after-load "tex"
+  '(add-to-list 'TeX-expand-list
+                '("%k" (lambda nil (file-relative-name buffer-file-name))) t))
+
+;; Use eqref when doing refs to equations
+(setq reftex-label-alist '(AMSTeX))
+
+;; Add secref, chref and figref to possible ref types through C-c ) using s, c and f
+(eval-after-load "reftex"
+  '(add-to-list 'reftex-ref-style-alist
+                '("Custom" t (("\\ref" 13) ("\\secref" 115) ("\\chref" 99) ("\\figref" 102))) t))
+
+(setq reftex-ref-style-default-list '("Custom"))
 
 ; C-c C-c Make full RET to compile
 ; NOTE: to use latex properly, do package-install auctex or
