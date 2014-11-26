@@ -152,3 +152,7 @@
 [submodule "lib/git-modes"]
 	path = lib/git-modes
 	url = https://github.com/magit/git-modes.git
+[submodule "lib/f"]
+	path = lib/f
+	url = https://github.com/rejeep/f.el.git
+    ignore = dirty
