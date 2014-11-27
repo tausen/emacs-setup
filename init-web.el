@@ -22,6 +22,32 @@
   (insert "->"))
 (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-a") 'insert-arrow)))
 
+(defun insert-php-comment ()
+  (interactive)
+  (let ((start (point)))  ; store starting pos
+
+    ;; insert php comment
+      (insert 
+       "/**
+         * Short description.
+         * Longer description.
+         *
+         * @param type $param description of param
+         * @return type description of return value
+         */"
+       )
+
+      ;; indent from starting pos to new point
+      (indent-region start (point)))
+  )
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-b") 'insert-php-comment)))
+
+;; EXAMPLE:
+(defun insert-php-this ()
+  (interactive)
+  (insert "$this->"))
+(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-t") 'insert-php-this)))
+
 ;;;;;;; WEB ;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun web/trim (str)

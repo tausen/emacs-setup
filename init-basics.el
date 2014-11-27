@@ -52,10 +52,6 @@
 ;; Use (setq-default ...) to set value globally 
 (setq-default indent-tabs-mode nil) 
 
-; fix php/C {'s, http://stackoverflow.com/questions/168621/php-mode-for-emacs
-(setq c-default-style "bsd"
-      c-basic-offset 4)
-
 ;; set automated backups dir
 ; Enable backup files.
 ;(setq make-backup-files t)

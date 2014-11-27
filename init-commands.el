@@ -38,23 +38,6 @@
 (define-key global-map (kbd "C-x w") 'my-mark-current-word)
 (define-key global-map (kbd "C-M-w") 'my-mark-current-word)
 
-(defun insert-php-comment ()
-  (interactive)
-  (insert "/**
-     * Short description.
-     * Longer description.
-     *
-     * @param type $param description of param
-     * @return type description of return value
-     */"))
-(global-set-key (kbd "C-M-,") 'insert-php-comment)
-
-;; EXAMPLE:
-(defun insert-this ()
-  (interactive)
-  (insert "$this->"))
-
-
 ;; delete whitespace from point to word
 (defun whack-whitespace (arg)
   "Delete all white space from point to the next word.  With prefix ARG
