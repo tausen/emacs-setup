@@ -156,3 +156,7 @@
 	path = lib/f
 	url = https://github.com/rejeep/f.el.git
     ignore = dirty
+[submodule "lib/epresent"]
+	path = lib/epresent
+	url = https://github.com/eschulte/epresent.git
+    ignore = dirty
