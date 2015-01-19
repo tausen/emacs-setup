@@ -24,8 +24,9 @@
 (global-set-key [(meta I)]              'bc-set)            ;; Shift-SPACE for set bookmark
 (global-set-key [(meta P)]              'bc-local-previous) ;; M-j for jump to previous
 (global-set-key [(meta N)]              'bc-local-next)     ;; Shift-M-j for jump to next
+(global-set-key [(meta L)]              'bc-list)
 (global-set-key [(control c)(j)]        'bc-goto-current)   ;; C-c j for jump to current bookmark
-(global-set-key [(control x)(meta j)]   'bc-list)           ;; C-x M-j for the bookmark menu list
+;; (global-set-key [(control x)(meta j)]   'bc-list)           ;; C-x M-j for the bookmark menu list
 (global-set-key [(meta C)]              'bc-clear)          ;; M-c to clear bookmarks
 ; also bc-previous, bc-next (can also jump between buffers)
 
