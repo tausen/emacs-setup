@@ -260,14 +260,3 @@
                               ("\\.eps\\'" "qpdfview" ("--unique" file))))
 (openwith-mode t)
 
-;; use __ instead of \emsp in org clock tables
-(defun org-clocktable-indent-string (level)
-  (if (= level 1) ""
-    (let ((str ""))
-      (dotimes (k (1- level) str)
-        ;; (setq str (concat "\\emsp" str))))))
-        (setq str (concat "__" str))))))
-
-;; presentations via org-mode
-(add-to-list 'load-path "~/.emacs.d/lib/epresent")
-(load "~/.emacs.d/lib/epresent/epresent.el")

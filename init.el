@@ -43,6 +43,7 @@
 (load "~/.emacs.d/init-w3m.el")
 (load "~/.emacs.d/init-markdown.el")
 (load "~/.emacs.d/init-godmode.el")
+(load "~/.emacs.d/init-org.el")
 
 (require 'fill-column-indicator)
 

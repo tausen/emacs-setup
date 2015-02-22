@@ -160,3 +160,6 @@
 	path = lib/epresent
 	url = https://github.com/eschulte/epresent.git
     ignore = dirty
+[submodule "lib/org-download"]
+	path = lib/org-download
+	url = git@github.com:abo-abo/org-download.git
