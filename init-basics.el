@@ -260,3 +260,7 @@
                               ("\\.eps\\'" "qpdfview" ("--unique" file))))
 (openwith-mode t)
 
+(add-to-list 'load-path "~/.emacs.d/lib/makey")
+(add-to-list 'load-path "~/.emacs.d/lib/discover.el")
+(require 'discover)
+(global-discover-mode 1)
