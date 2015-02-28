@@ -56,6 +56,13 @@
 (add-hook 'latex-mode-hook (lambda () (local-set-key (kbd "C-c t") 'TeX-master-file-ask)))
 (add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "C-c t") 'TeX-master-file-ask)))
 
+;; ampersand is a bitch
+(defun my-insert-ampersand ()
+  (interactive)
+  (insert "&"))
+(add-hook 'latex-mode-hook (lambda () (local-set-key (kbd "C-c C-a") 'my-insert-ampersand)))
+(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "C-c C-a") 'my-insert-ampersand)))
+
 ; use reftex
 (add-hook 'latex-mode-hook 'turn-on-reftex)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
