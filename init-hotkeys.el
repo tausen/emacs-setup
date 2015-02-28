@@ -11,8 +11,8 @@
 ;; indent hotkey
 (global-set-key (kbd "M-M") 'indent-region)
 
-;; bind F5 to recompile (use M-x compile first!)
-(global-set-key (kbd "<f5>") 'recompile)
+;; bind F5 to compile, C-u compile to customize compile command
+(global-set-key (kbd "<f5>") 'compile)
 
 ;; regular beginning/end of line, kill line (rather than end-of-visual-line etc.)
 ;(global-set-key (kbd "C-e") 'end-of-visual-line)
