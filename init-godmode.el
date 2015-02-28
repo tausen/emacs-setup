@@ -26,6 +26,7 @@
 (global-set-key (kbd "<RET>") 'god-mode-all) ;; really bad when pasting into nowindow
 (global-set-key (kbd "<home>") 'god-mode-all)
 (global-set-key (kbd "<f12>") 'god-mode-all)
+(add-hook 'plain-tex-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
@@ -35,6 +36,7 @@
 (add-hook 'web-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
 (add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-mode-all)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
@@ -74,6 +76,10 @@
 ;;           (t (progn
 ;;                (set-face-background 'mode-line (if limited-colors-p "gray15" "#262626"))
 ;;                (set-face-background 'mode-line-inactive (if limited-colors-p "gray25" "#404040")))))))
+
+;; this is proably a bad idea! -- keep god mode enabled in ALL the modes
+;; (setq god-exempt-predicates '(god-exempt-mode-p god-comint-mode-p god-view-mode-p god-special-mode-p))
+(setq god-exempt-predicates nil)
 
 ;; only works with x11
 (defun my-update-cursor ()
