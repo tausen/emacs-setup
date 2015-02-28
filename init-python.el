@@ -143,3 +143,10 @@
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-a") 'beginning-of-line)))
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-e") 'end-of-line)))
 
+(defun python-skeleton-includes ()
+  (interactive)
+  (insert "from __future__ import division\n")
+  (insert "import numpy as np\n")
+  (insert "import matplotlib.pyplot as plt\n")
+  (insert "import scipy.signal as ss\n"))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-t h") 'python-skeleton-includes)))
