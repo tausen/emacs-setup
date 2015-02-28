@@ -78,10 +78,10 @@
 (elscreen-start)
 
 ;; emacs semantic, autocompletion
-(load "~/.emacs.d/init-semantic.el")
+;; (load "~/.emacs.d/init-semantic.el")
 
 ;; emacs code browser
-(load "~/.emacs.d/init-ecb.el")
+;; (load "~/.emacs.d/init-ecb.el")
 
 ;; emacs typescript config
 (load "~/.emacs.d/init-tss.el")
