@@ -169,3 +169,6 @@
 [submodule "lib/makey"]
 	path = lib/makey
 	url = git@github.com:mickeynp/makey.git
+[submodule "lib/elscreen"]
+	path = lib/elscreen
+	url = https://github.com/knu/elscreen.git

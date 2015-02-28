@@ -72,6 +72,11 @@
 
 (load "~/.emacs.d/init-ace.el")
 
+(setq elscreen-prefix-key (kbd "C-#"))
+(add-to-list 'load-path "~/.emacs.d/lib/elscreen")
+(load "~/.emacs.d/lib/elscreen/elscreen.el")
+(elscreen-start)
+
 ;; emacs semantic, autocompletion
 (load "~/.emacs.d/init-semantic.el")
 
