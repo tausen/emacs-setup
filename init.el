@@ -73,6 +73,8 @@
 (load "~/.emacs.d/init-ace.el")
 
 (setq elscreen-prefix-key (kbd "C-#"))
+(define-key org-mode-map (kbd "C-#") nil) ;; key already in use in org-mode
+(define-key c-mode-map (kbd "#") nil) ;; key already in use in c-mode
 (add-to-list 'load-path "~/.emacs.d/lib/elscreen")
 (load "~/.emacs.d/lib/elscreen/elscreen.el")
 (elscreen-start)
