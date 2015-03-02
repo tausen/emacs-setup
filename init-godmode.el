@@ -31,6 +31,11 @@
 (global-set-key (kbd "C-# C-a") (lambda () (interactive) (elscreen-toggle)))
 
 ;; toggle god-mode while doing isearch, e.g.
+;; do s something <tab> s s s instead of s something C-s C-s C-s
+(require 'god-mode-isearch)
+(define-key isearch-mode-map (kbd "<tab>") 'god-mode-isearch-activate)
+(define-key god-mode-isearch-map (kbd "<tab>") 'god-mode-isearch-disable)
+
 ;; god-mode projectile hotkeys
 (global-set-key (kbd "C-c C-p C-c") 'projectile-compile-project)
 (global-set-key (kbd "C-c C-p C-f") 'projectile-find-file)
