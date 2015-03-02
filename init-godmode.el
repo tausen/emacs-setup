@@ -34,7 +34,9 @@
 ;; do s something <tab> s s s instead of s something C-s C-s C-s
 (require 'god-mode-isearch)
 (define-key isearch-mode-map (kbd "<tab>") 'god-mode-isearch-activate)
+(define-key isearch-mode-map "\t" 'god-mode-isearch-activate) ;; tab in nowindow
 (define-key god-mode-isearch-map (kbd "<tab>") 'god-mode-isearch-disable)
+(define-key god-mode-isearch-map "\t" 'god-mode-isearch-disable) ;; tab in nowindow
 
 ;; god-mode projectile hotkeys
 (global-set-key (kbd "C-c C-p C-c") 'projectile-compile-project)
