@@ -1,7 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/lib/god-mode")
 (require 'god-mode)
 
-
 (global-set-key (kbd "C-x C-1") 'delete-other-windows)
 (global-set-key (kbd "C-x C-2") 'split-window-below)
 (global-set-key (kbd "C-x C-3") 'split-window-right)
@@ -12,23 +11,6 @@
 (global-set-key (kbd "C-x C-]") 'enlarge-window)
 (global-set-key (kbd "C-x C-5 C-0") 'delete-frame)
 (global-set-key (kbd "C-x C-#") 'server-edit)
-
-(global-set-key (kbd "C-# C-0") (lambda () (interactive) (elscreen-goto 0)))
-(global-set-key (kbd "C-# C-1") (lambda () (interactive) (elscreen-goto 1)))
-(global-set-key (kbd "C-# C-2") (lambda () (interactive) (elscreen-goto 2)))
-(global-set-key (kbd "C-# C-3") (lambda () (interactive) (elscreen-goto 3)))
-(global-set-key (kbd "C-# C-4") (lambda () (interactive) (elscreen-goto 4)))
-(global-set-key (kbd "C-# C-5") (lambda () (interactive) (elscreen-goto 5)))
-(global-set-key (kbd "C-# C-6") (lambda () (interactive) (elscreen-goto 6)))
-(global-set-key (kbd "C-# C-7") (lambda () (interactive) (elscreen-goto 7)))
-(global-set-key (kbd "C-# C-8") (lambda () (interactive) (elscreen-goto 8)))
-(global-set-key (kbd "C-# C-9") (lambda () (interactive) (elscreen-goto 9)))
-(global-set-key (kbd "C-# C-n") (lambda () (interactive) (elscreen-next)))
-(global-set-key (kbd "C-# C-p") (lambda () (interactive) (elscreen-previous)))
-(global-set-key (kbd "C-# C-C") (lambda () (interactive) (elscreen-clone)))
-(global-set-key (kbd "C-# C-c") (lambda () (interactive) (elscreen-create)))
-(global-set-key (kbd "C-# C-k") (lambda () (interactive) (elscreen-kill)))
-(global-set-key (kbd "C-# C-a") (lambda () (interactive) (elscreen-toggle)))
 
 ;; toggle god-mode while doing isearch, e.g.
 ;; do s something <tab> s s s instead of s something C-s C-s C-s
