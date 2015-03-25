@@ -98,6 +98,10 @@
 (load "~/.emacs.d/lib/diminish.el")
 (require 'diminish)
 (diminish 'git-gutter+-mode)
+(diminish 'helm-mode)
+(diminish 'global-visual-line-mode)
+(diminish 'visual-line-mode)
+(diminish 'god-local-mode)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
