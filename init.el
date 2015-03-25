@@ -73,6 +73,15 @@
 
 (load "~/.emacs.d/init-ace.el")
 
+(add-to-list 'load-path "~/.emacs.d/lib/powerline")
+(require 'powerline)
+(powerline-default-theme)
+(setq powerline-default-separator (quote utf-8))
+
+(set-face-attribute 'powerline-active2
+                    nil
+                    :background "#5f5f5f"
+                    :foreground "white")
 
 ;; emacs semantic, autocompletion
 ;; (load "~/.emacs.d/init-semantic.el")
