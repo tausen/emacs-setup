@@ -178,3 +178,6 @@
 [submodule "lib/powerline"]
 	path = lib/powerline
 	url = https://github.com/milkypostman/powerline.git
+[submodule "lib/powerlinefonts"]
+	path = lib/powerlinefonts
+	url = https://github.com/powerline/fonts.git
