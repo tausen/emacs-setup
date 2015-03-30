@@ -13,7 +13,8 @@ A basic emacs24 setup, customized for my needs.
 - M-x package-list-packages and install pkg-info
 - M-x package-list-packages and install fringe-helper (for git-gutter)
 - cd into lib/magit and do make lisp
-- For better performance, do C-u 0 C-c M-x byte-recompile-directory RET ~/.emacs.d/ RET (you might have to delete lib/auctex/preview/prv-xemacs.el if this gives you issues)
+- For better performance, do C-u 0 C-c M-x byte-recompile-directory RET ~/.emacs.d/ RET (if this config has not been loaded, omit C-c)
+  - You might have to delete lib/auctex/preview/prv-xemacs.el if this gives you issues
 
 ##### TAGS
 - Install exuberant-ctags for generating TAGS files (e.g. sudo apt-get install exuberant-ctags)
@@ -27,7 +28,12 @@ A basic emacs24 setup, customized for my needs.
 - Install w3m: sudo apt-get install w3m / yum -y install w3m
 
 ##### LaTeX
-- Ensure that auctex is installed, do M-x package-install auctex or install from http://www.gnu.org/software/auctex/download.html
+- Ensure that auctex is installed
+  - cd into lib/auctex and do
+    - ./configure
+    - make
+    - make install
+  - or do M-x package-install auctex or install from http://www.gnu.org/software/auctex/download.html
 - Customize LaTeX compilation command in init-latex.el (includes examples)
 
 ##### Org-mode
