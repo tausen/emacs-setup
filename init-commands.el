@@ -195,3 +195,21 @@ Requires ImageMagick installation"
          (swap-parens-at-points (save-excursion (forward-sexp -1) (point)) (point)))
         ((message "Not at a paren"))))
 (global-set-key (kbd "C-c s p") 'swap-parens)
+
+;; run grep-find from projectile root directory, mostly stolen from function grep-find in grep.el
+(defun my-projectile-grep-find (command-args)
+  (interactive
+   (progn
+     (grep-compute-defaults)
+     (if grep-find-command
+         (let ((findopts (read-string "Find options: "))) 
+           (list
+            (read-shell-command "Run find (like this): " (concat "find " (projectile-project-root) " -type f " findopts " -print0 | xargs -0 -e grep -nH -e ") 'grep-find-history)))
+       ;; No default was set
+       (read-string
+        "compile.el: No `grep-find-command' command available. Press RET.")
+       (list nil))))
+  (when command-args
+    (let ((null-device nil))		; see grep
+      (grep command-args))))
+(global-set-key (kbd "C-c m p g") 'my-projectile-grep-find)
