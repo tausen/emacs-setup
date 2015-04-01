@@ -94,6 +94,14 @@
 
 ;; git gutter
 (load "~/.emacs.d/init-gitgutter.el")
+;; load undo-tree mode, ensure C-x u is still regular undo and C-c u is now undo-tree-visualize
+(load "~/.emacs.d/lib/undo-tree-0.6.4.el")
+(require 'undo-tree)
+(define-key undo-tree-map (kbd "C-x u") 'undo)
+(define-key undo-tree-map (kbd "C-c u") 'undo-tree-visualize)
+(global-undo-tree-mode)
+(add-hook 'undo-tree-visualizer-mode-hook (lambda () (local-set-key (kbd "RET") 'undo-tree-visualizer-quit)))
+
 ;; stop cluttering my mode line
 (load "~/.emacs.d/lib/diminish.el")
 (require 'diminish)
@@ -102,6 +110,7 @@
 (diminish 'global-visual-line-mode)
 (diminish 'visual-line-mode)
 (diminish 'god-local-mode)
+(diminish 'undo-tree-mode)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
