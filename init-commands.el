@@ -120,6 +120,8 @@ i.e. change right window to bottom, or change bottom window to right."
                   (split-window-horizontally))
                 (set-window-buffer (windmove-find-other-window neighbour-dir) other-buf))))))))
 
+(global-set-key (kbd "C-x C-y") 'window-toggle-split-direction)
+
 ;; https://github.com/magnars/multiple-cursors.el/issues/44
 (defun create-cursor ()
   (interactive)
