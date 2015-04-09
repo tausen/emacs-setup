@@ -66,7 +66,7 @@
 ;; (add-hook 'overwrite-mode-hook 'god-toggle-on-overwrite)
 
 (add-to-list 'god-exempt-major-modes 'term-mode)
-;; (add-to-list 'god-exempt-major-modes 'magit-mode)
+(add-to-list 'god-exempt-major-modes 'magit-mode)
 ;; (add-to-list 'god-exempt-major-modes 'inferior-python-mode)
 
 ;; Remove something from exempt major modes like this:
@@ -85,8 +85,9 @@
 ;;                (set-face-background 'mode-line-inactive (if limited-colors-p "gray25" "#404040")))))))
 
 ;; this is proably a bad idea! -- keep god mode enabled in ALL the modes
+;; (setq god-exempt-predicates nil)
 ;; (setq god-exempt-predicates '(god-exempt-mode-p god-comint-mode-p god-view-mode-p god-special-mode-p))
-(setq god-exempt-predicates nil)
+(setq god-exempt-predicates '(god-exempt-mode-p god-view-mode-p god-special-mode-p))
 
 ;; only works with x11
 (defun my-update-cursor ()
