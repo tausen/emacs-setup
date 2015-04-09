@@ -26,30 +26,30 @@
 (global-set-key (kbd "C-c C-p C-R") 'projectile-regenerate-tags)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
-(define-key god-local-mode-map (kbd "i") 'god-mode-all)
+(define-key god-local-mode-map (kbd "i") 'god-or-newline)
 
 ;; Bind ALL the keys
-(global-set-key (kbd "<escape>") 'god-mode-all)
-(global-set-key (kbd "<RET>") 'god-mode-all) ;; really bad when pasting into nowindow
-(global-set-key (kbd "<home>") 'god-mode-all)
-(global-set-key (kbd "<f12>") 'god-mode-all)
-(add-hook 'plain-tex-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'org-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'emacs-lisp-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'web-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
-(add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-mode-all)))
+(global-set-key (kbd "<escape>") 'god-or-newline)
+(global-set-key (kbd "<RET>") 'god-or-newline) ;; really bad when pasting into nowindow
+(global-set-key (kbd "<home>") 'god-or-newline)
+(global-set-key (kbd "<f12>") 'god-or-newline)
+(add-hook 'plain-tex-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'LaTeX-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'org-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'web-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-or-newline)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
 (add-hook 'vhdl-mode-hook (lambda () (define-key god-local-mode-map (kbd "<SPC>") 'set-mark-command)))
 ;; this may be a bad idea
-(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-mode-all)))
+(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; Should do something like this...
 ;; (define-key god-local-mode-map (kbd "s-j") 'windwmove-down)
@@ -108,6 +108,10 @@
 ;; toggle RET between god-mode-all and newline with f7
 (setq god-bound-to-ret t)
 
+(defun god-or-newline ()
+  (interactive)
+  (if god-bound-to-ret (god-mode-all) (newline)))
+
 (defun bind-ret-god ()
   (cond
 
@@ -115,7 +119,7 @@
                      (setq god-bound-to-ret nil)
                      (message "RET bound to newline") )
 
-   (t (global-set-key (kbd "<RET>") 'god-mode-all)
+   (t (global-set-key (kbd "<RET>") 'god-or-newline)
       (setq god-bound-to-ret t)
       (message "RET bound to god-mode-all") )
    
