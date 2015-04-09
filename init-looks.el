@@ -31,6 +31,9 @@
 (line-number-mode 1)
 ;; Show column-number in the mode line
 (column-number-mode 1)
+;; Show battery charge in mode line
+(setq battery-mode-line-format "[%L %b%p %t]")
+(display-battery-mode 1)
 
 ; font size
 (set-face-attribute 'default nil :height 80)
