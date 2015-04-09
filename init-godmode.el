@@ -26,7 +26,7 @@
 (global-set-key (kbd "C-c C-p C-R") 'projectile-regenerate-tags)
 
 (define-key god-local-mode-map (kbd "z") 'repeat)
-(define-key god-local-mode-map (kbd "i") 'god-or-newline)
+(define-key god-local-mode-map (kbd "i") 'god-mode-all)
 
 ;; Bind ALL the keys
 (global-set-key (kbd "<escape>") 'god-or-newline)
