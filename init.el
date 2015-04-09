@@ -97,7 +97,8 @@
 ;; load undo-tree mode, ensure C-x u is still regular undo and C-c u is now undo-tree-visualize
 (load "~/.emacs.d/lib/undo-tree-0.6.4.el")
 (require 'undo-tree)
-(define-key undo-tree-map (kbd "C-x u") 'undo)
+(define-key undo-tree-map (kbd "C-x u") 'undo-tree-undo)
+(define-key undo-tree-map (kbd "C-x y") 'undo-tree-redo)
 (define-key undo-tree-map (kbd "C-c u") 'undo-tree-visualize)
 (global-undo-tree-mode)
 (add-hook 'undo-tree-visualizer-mode-hook (lambda () (local-set-key (kbd "RET") 'undo-tree-visualizer-quit)))
