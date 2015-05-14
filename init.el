@@ -68,6 +68,20 @@
 (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
 (setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
 
+;; http://emacswiki.org/emacs/ModeCompile
+;; Close the compilation window if there was no error at all.
+(setq compilation-finish-functions 'compile-autoclose)
+  (defun compile-autoclose (buffer string)
+     (cond ((string-match "finished" string)
+	  (bury-buffer "*compilation*")
+          (winner-undo)
+          (message "Build successful."))
+         (t                                                                    
+          (message "Compilation exited abnormally: %s" string))))
+;; enable winner mode
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
 (setq snake-score-file
       "~/.emacs.d/snake-scores")
 
