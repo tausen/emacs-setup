@@ -5,6 +5,7 @@
 ; dired-details-hide
 (require 'dired-details)
 (dired-details-install)
+; (setq dired-details-initially-hide t)  ; uncomment to not hide details initially
 
 ;; dired order directories first
 (defun sof/dired-sort ()
@@ -38,6 +39,8 @@
 (setq tramp-default-method "ssh")
 
 (put 'dired-find-alternate-file 'disabled nil)
+
+(add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "<backspace>") 'dired-kill-subdir)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; dired-fixups.el --- fixups for dired mode
