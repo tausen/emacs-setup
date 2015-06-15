@@ -23,6 +23,8 @@
 (global-set-key (kbd "C-# C-c") (lambda () (interactive) (elscreen-create)))
 (global-set-key (kbd "C-# C-k") (lambda () (interactive) (elscreen-kill)))
 (global-set-key (kbd "C-# C-a") (lambda () (interactive) (elscreen-toggle)))
+;; Not sure why, but keys such as C-# C-C do not work with god-mode.
+;; Do C-c C instead
 
 ;; looks
 (setq elscreen-display-screen-number nil)
