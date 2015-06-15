@@ -102,6 +102,8 @@
 
 ;;; END OF PYTHON LINT ;;;
 
+(define-coding-system-alias 'UTF-8 'utf-8)
+
 ;; ipython interpreter
 ;; run buffer with C-c C-c
 ;; show ipython with C-c C-z
