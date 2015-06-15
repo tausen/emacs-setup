@@ -90,6 +90,11 @@
 
 (load "~/.emacs.d/init-ace.el")
 
+;; in vhdl-mode, use rising_edge() insted of clk'event and clk='1'
+(setq vhdl-clock-edge-condition 'function)
+;; wrap comments at column 100 rather than 80
+(setq vhdl-end-comment-column 100)
+
 (add-to-list 'load-path "~/.emacs.d/lib/powerline")
 (require 'powerline)
 (powerline-default-theme)
