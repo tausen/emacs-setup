@@ -262,6 +262,10 @@
                               ("\\.eps\\'" "qpdfview" ("--unique" file))))
 (openwith-mode t)
 
+;; I'm getting real tired of your shit, mr window split
+(setq split-height-threshold nil)
+(setq split-width-threshold 160)
+
 ;; seems to suddenly be broken - wonder why
 ;; (add-to-list 'load-path "~/.emacs.d/lib/makey")
 ;; (add-to-list 'load-path "~/.emacs.d/lib/discover.el")
