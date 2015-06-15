@@ -107,6 +107,9 @@
 
 
 ;; toggle RET between god-mode-all and newline with f7
+;; note: Due to the hooks binding RET to god-or-newline, RET is in most modes not actually
+;;       bound back to newline. god-or-newline handles this by checking the god-bound-to-ret
+;;       flag.
 (setq god-bound-to-ret t)
 
 (defun god-or-newline ()
@@ -114,7 +117,7 @@
   (if god-bound-to-ret (god-mode-all) (newline)))
 
 (defun bind-ret-god ()
-  (cond
+  (cond  ;; tries each condition until one succeeds
 
    (god-bound-to-ret (global-set-key (kbd "<RET>") 'newline)
                      (setq god-bound-to-ret nil)
