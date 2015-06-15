@@ -128,5 +128,12 @@
 
 (global-set-key (kbd "<f7>") (lambda () (interactive) (bind-ret-god)))
 
+;; goto-line that I can bind to another key
+(defun my-goto-line (line)
+  (interactive "nGoto line: ")
+  (goto-char (point-min))
+  (forward-line (1- line)))
 
-
+;; goto line with C-G or just G in god-mode
+(global-set-key (kbd "C-S-g") 'my-goto-line)
+(define-key god-local-mode-map (kbd "G") 'my-goto-line)
