@@ -82,6 +82,9 @@
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
+(setq cua-enable-cua-keys nil)  ; enable only CUA's rectangle selections
+(cua-mode t)
+
 (setq snake-score-file
       "~/.emacs.d/snake-scores")
 
