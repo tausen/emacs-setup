@@ -53,4 +53,7 @@
 ;; Stop cluttering my mode line
 (setq projectile-mode-line (quote (:eval (format " P[%s]" (projectile-project-name)))))
 
+;; in case projectile is slow when using tramp, do something like
+;;(setq projectile-mode-line "P")
+
 (projectile-global-mode)
