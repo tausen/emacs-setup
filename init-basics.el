@@ -37,10 +37,12 @@
 
 ;; bind return to newline and indent (turn on autoindentation)
 (define-key global-map (kbd "RET") 'newline-and-indent)
+;; (if init-godmode.el is loaded, this is overridden)
 
 ;; ===== Set standard indent ====
 (setq standard-indent 4)
 (setq-default tab-width 4)
+(setq-default c-basic-offset 4)
 
 ;; ===== Turn off tab character =====
 ;; Emacs normally uses both tabs and spaces to indent lines. If you
