@@ -33,18 +33,18 @@
 (load "~/.emacs.d/init-commands.el")
 (load "~/.emacs.d/init-projectile.el")
 (load "~/.emacs.d/init-hotkeys.el")
-(load "~/.emacs.d/init-matlab.el")
-(load "~/.emacs.d/init-python.el")
-(load "~/.emacs.d/init-irc.el")
+;(load "~/.emacs.d/init-matlab.el")
+;(load "~/.emacs.d/init-python.el")
+;(load "~/.emacs.d/init-irc.el")
 ;; (load "~/.emacs.d/init-ido.el")
 (load "~/.emacs.d/init-helm.el")
-(load "~/.emacs.d/init-latex.el")
+;(load "~/.emacs.d/init-latex.el")
 (load "~/.emacs.d/init-git.el")
-(load "~/.emacs.d/init-w3m.el")
+;(load "~/.emacs.d/init-w3m.el")
 (load "~/.emacs.d/init-markdown.el")
 (load "~/.emacs.d/init-godmode.el")
-(load "~/.emacs.d/init-org.el")
-(load "~/.emacs.d/init-elscreen.el")
+;(load "~/.emacs.d/init-org.el")
+;(load "~/.emacs.d/init-elscreen.el")
 
 (require 'fill-column-indicator)
 
@@ -87,15 +87,15 @@
 
 (load "~/.emacs.d/init-ace.el")
 
-(add-to-list 'load-path "~/.emacs.d/lib/powerline")
-(require 'powerline)
-(powerline-default-theme)
-(setq powerline-default-separator (quote utf-8))
-
-(set-face-attribute 'powerline-active2
-                    nil
-                    :background "#5f5f5f"
-                    :foreground "white")
+;(add-to-list 'load-path "~/.emacs.d/lib/powerline")
+;(require 'powerline)
+;(powerline-default-theme)
+;(setq powerline-default-separator (quote utf-8))
+;
+;(set-face-attribute 'powerline-active2
+;                    nil
+;                    :background "#5f5f5f"
+;                    :foreground "white")
 
 ;; emacs semantic, autocompletion
 ;; (load "~/.emacs.d/init-semantic.el")
@@ -104,10 +104,10 @@
 ;; (load "~/.emacs.d/init-ecb.el")
 
 ;; emacs typescript config
-(load "~/.emacs.d/init-tss.el")
+;(load "~/.emacs.d/init-tss.el")
 
 ;; git gutter
-(load "~/.emacs.d/init-gitgutter.el")
+;(load "~/.emacs.d/init-gitgutter.el")
 ;; load undo-tree mode, ensure C-x u is still regular undo and C-c u is now undo-tree-visualize
 (load "~/.emacs.d/lib/undo-tree-0.6.4.el")
 (require 'undo-tree)
@@ -120,12 +120,21 @@
 ;; stop cluttering my mode line
 (load "~/.emacs.d/lib/diminish.el")
 (require 'diminish)
-(diminish 'git-gutter+-mode)
+;(diminish 'git-gutter+-mode)
 (diminish 'helm-mode)
 (diminish 'global-visual-line-mode)
 (diminish 'visual-line-mode)
 (diminish 'god-local-mode)
 (diminish 'undo-tree-mode)
+
+;; required on windows to start emacs server
+(server-start)
+;; if you encounter:
+;; error: The directory `~/.emacs.d/server' is unsafe
+;; go to C:\Users\<user>\AppData\Roaming\.emacs.d and properties -> security on the server dir, advanced, owner change to your user
+
+;; completely disable the annoying bell sound on windows
+(setq ring-bell-function 'ignore)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
