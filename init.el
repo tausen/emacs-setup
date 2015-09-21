@@ -128,6 +128,8 @@
 (diminish 'undo-tree-mode)
 
 (setq custom-file "~/.emacs.d/custom.el")
+(unless (file-exists-p custom-file) ;; create file if it does not exist
+  (write-region "" nil custom-file))
 (load custom-file)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)

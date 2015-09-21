@@ -22,9 +22,10 @@
 (add-to-list 'load-path "~/.emacs.d/lib/python/") 
 (require 'python)
 
-(setq ein:console-args '("--profile" "default"))
-(require 'ein)
-(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+(when (fboundp 'ein:tb-show) ;; only if ein is installed
+  (setq ein:console-args '("--profile" "default"))
+  (require 'ein)
+  (add-hook 'ein:connect-mode-hook 'ein:jedi-setup))
 
 ;; Needed for jedi to function properly
 (add-to-list 'load-path "~/.emacs.d/lib/popup/")
@@ -34,14 +35,16 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (add-hook 'python-mode-hook 'auto-complete-mode) ; ensure auto-complete-mode is on
 (add-hook 'python-mode-hook 'jedi:ac-setup)
-(add-hook 'ein:notebook-multilang-mode-hook 'jedi:ac-setup)
+(when (fboundp 'ein:tb-show) ;; only if ein is installed
+  (add-hook 'ein:notebook-multilang-mode-hook 'jedi:ac-setup))
 ;(setq jedi:setup-keys t)                      ; optional
 ;; (setq jedi:complete-on-dot t)                 ; optional
 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
-(add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
-(add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
+(when (fboundp 'ein:tb-show) ;; only if ein is installed
+  (add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
+  (add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc))))
 
 ;; autocomplete: dont suggest numbers
 ;; http://stackoverflow.com/questions/14767277/can-emacs-ac-mode-autocomplete-mode-be-configured-to-ignore-numbers
