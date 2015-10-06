@@ -137,6 +137,6 @@
   (goto-char (point-min))
   (forward-line (1- line)))
 
-;; goto line with C-G or just G in god-mode
-(global-set-key (kbd "C-S-g") 'my-goto-line)
-(define-key god-local-mode-map (kbd "G") 'my-goto-line)
+;; goto line with C-L or just L in god-mode
+(global-set-key (kbd "C-S-l") 'my-goto-line)
+(define-key god-local-mode-map (kbd "L") 'my-goto-line)
