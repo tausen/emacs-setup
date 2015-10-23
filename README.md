@@ -4,7 +4,7 @@ A basic emacs24 setup, customized for my needs.
 
 ### Getting started
 #### Installation
-- Ensure ~/emacs does not exist
+- Ensure ~/.emacs does not exist
 - Clone this repository into ~/.emacs.d
 - cd into lib/powerlinefonts and do ./install.sh
 - git submodule init
