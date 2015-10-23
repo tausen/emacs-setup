@@ -21,14 +21,13 @@
 
 ;; breadcrumbs easier bookmarks
 (require 'breadcrumb)
-(global-set-key [(meta I)]              'bc-set)            ;; Shift-SPACE for set bookmark
-(global-set-key [(meta P)]              'bc-local-previous) ;; M-j for jump to previous
-(global-set-key [(meta N)]              'bc-local-next)     ;; Shift-M-j for jump to next
-(global-set-key [(meta L)]              'bc-list)
-(global-set-key [(control c)(j)]        'bc-goto-current)   ;; C-c j for jump to current bookmark
-;; (global-set-key [(control x)(meta j)]   'bc-list)           ;; C-x M-j for the bookmark menu list
-(global-set-key [(meta C)]              'bc-clear)          ;; M-c to clear bookmarks
-; also bc-previous, bc-next (can also jump between buffers)
+(global-set-key (kbd "M-I")   'bc-set)            ;; M-I for set bookmark
+(global-set-key (kbd "M-P")   'bc-local-previous) ;; M-P for jump to previous (local)
+(global-set-key (kbd "M-N")   'bc-local-next)     ;; M-N for jump to next (local)
+(global-set-key (kbd "M-L")   'bc-list)           ;; M-L for list of bookmarks
+(global-set-key (kbd "C-c j") 'bc-goto-current)   ;; C-c j for jump to current bookmark
+(global-set-key (kbd "M-C")   'bc-clear)          ;; M-C to clear bookmarks
+; see also bc-previous, bc-next (can also jump between buffers)
 
 ;; indent comment to same column as previous line comment
 (global-set-key (kbd "C-<tab>") 'indent-for-comment)
