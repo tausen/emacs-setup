@@ -114,6 +114,9 @@
 ;; emacs typescript config
 (load "~/.emacs.d/init-tss.el")
 
+;; save window layout: C-x r w <num> 
+;; load window layout: C-x r j <num>
+
 ;; git gutter
 (load "~/.emacs.d/init-gitgutter.el")
 ;; example .dir-locals.el to fix C indentation after macros that are not terminated with semicolon
