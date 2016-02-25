@@ -116,6 +116,12 @@
 
 ;; git gutter
 (load "~/.emacs.d/init-gitgutter.el")
+;; example .dir-locals.el to fix C indentation after macros that are not terminated with semicolon
+;; ((nil . ())
+;;       (c-mode . ((c-macro-names-with-semicolon . ("PROFILE_START" "PROFILE_END"))))
+;;       (c-mode . ((eval . (c-make-macro-with-semi-re))))
+;;       )
+
 (desktop-save-mode t)
 
 ;; load undo-tree mode, ensure C-x u is still regular undo and C-c u is now undo-tree-visualize
