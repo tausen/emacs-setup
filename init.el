@@ -78,7 +78,7 @@
 ;;           (message "Build successful."))
 ;;          (t                                                                    
 ;;           (message "Compilation exited abnormally: %s" string))))
-;; enable winner mode
+;; enable winner mode if it is installed (binds C-c <left> to winner-undo, C-c <right> to winner-redo)
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
