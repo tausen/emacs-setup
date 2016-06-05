@@ -37,13 +37,13 @@
 (add-hook 'python-mode-hook 'jedi:ac-setup)
 (when (fboundp 'ein:tb-show) ;; only if ein is installed
   (add-hook 'ein:notebook-multilang-mode-hook 'jedi:ac-setup))
-;(setq jedi:setup-keys t)                      ; optional
-;; (setq jedi:complete-on-dot t)                 ; optional
+(setq jedi:setup-keys t)                      ; optional
+(setq jedi:complete-on-dot t)                 ; optional
 
 (add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc)))
-(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "M-i") 'jedi:complete)))
 (when (fboundp 'ein:tb-show) ;; only if ein is installed
-  (add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c i") 'jedi:complete)))
+  (add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "M-i") 'jedi:complete)))
   (add-hook 'ein:notebook-multilang-mode-hook (lambda () (local-set-key (kbd "C-c d") 'jedi:show-doc))))
 
 ;; autocomplete: dont suggest numbers
