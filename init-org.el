@@ -1,3 +1,5 @@
+;; customize the variable org-file-apps to set pdf viewer etc
+
 ;; use __ instead of \emsp in org clock tables
 (add-hook 'org-mode-hook (lambda ()
                            (defun org-clocktable-indent-string (level)
@@ -13,10 +15,13 @@
                                         '("da" "Fil" "L" "Timestamp" "Emne" "Tid" "ALL" "Total tid" "File time" "Tabel genereret"))))
 
 ;; do clocksums as fractional hours instead of hours:minutes
-(setq org-time-clocksum-format (quote (:hours "%d" :require-hours t)))
+;; breaks setting deadline in some cases
+;; (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t)))
 (setq org-time-clocksum-use-fractional t)
 
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "C-c C-S-l") 'org-store-link)))
+
+(add-hook 'org-mode-hook (lambda () (local-set-key (kbd "M-j") 'org-meta-return)))
 
 ;; languages to allow running from org-mode code blocks
 (org-babel-do-load-languages
