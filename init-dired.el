@@ -42,6 +42,9 @@
 
 (add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "<backspace>") 'dired-kill-subdir)))
 
+;; if two dired buffers are open side-by-side and doing move/rename from one, auto-suggest the location of the other as destination
+(setq dired-dwim-target t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; dired-fixups.el --- fixups for dired mode
 
