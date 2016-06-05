@@ -66,6 +66,8 @@
 (global-set-key (kbd "M-n") (lambda () (interactive) (scroll-up 5)))
 (global-set-key (kbd "C-s-p") (lambda () (interactive) (previous-line 5)))
 (global-set-key (kbd "C-s-n") (lambda () (interactive) (next-line 5)))
+;; (global-set-key (kbd "M-P") (lambda () (interactive) (previous-line 5)))
+;; (global-set-key (kbd "M-N") (lambda () (interactive) (next-line 5)))
 ;; (global-set-key (kbd "s-p") (lambda () (interactive) (scroll-previous-line 1)))
 ;; (global-set-key (kbd "s-n") (lambda () (interactive) (scroll-next-line 1)))
 (global-set-key (kbd "M-s-p") (lambda () (interactive) (scroll-previous-line 5)))
