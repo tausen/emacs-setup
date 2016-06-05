@@ -239,7 +239,7 @@ It expects a properly indented CSS"
 (setq eldoc-documentation-function #'ggtags-eldoc-function)
 ;; (add-hook 'ggtags-mode-hook 'eldoc-mode)
 
-(add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
+;; (add-hook 'php-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
 ;; (add-hook 'js2-mode-hook (lambda () (local-set-key (kbd "C-c C-- C-u") 'global-ssh-update)))
 
 ;; trying out tern for smarter JS completion...
