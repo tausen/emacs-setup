@@ -103,9 +103,12 @@
 
 ;; indicate whether god-mode is on with blue mode-line background
 ;; always works (if not in limited colors term..)
+;; (defun c/god-mode-update-cursor ()
+;;   (cond (god-local-mode (progn (set-face-background 'mode-line "blue4")))
+;;         (t (progn (set-face-background 'mode-line "gray15")))))
 (defun c/god-mode-update-cursor ()
-  (cond (god-local-mode (progn (set-face-background 'mode-line "blue4")))
-        (t (progn (set-face-background 'mode-line "gray15")))))
+  (cond (god-local-mode (progn (set-face-background 'mode-line "deep sky blue")))
+        (t (progn (set-face-background 'mode-line "gray80")))))
 (add-hook 'god-mode-enabled-hook 'c/god-mode-update-cursor)
 (add-hook 'god-mode-disabled-hook 'c/god-mode-update-cursor)
 

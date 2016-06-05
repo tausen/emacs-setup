@@ -13,7 +13,7 @@
 ;; load slightly modified linum
 (load "~/.emacs.d/lib/linum.el")
 ;; Enable line numbers with exceptions (buffers with * in name don't have linum)
-(global-linum-mode t)
+;(global-linum-mode t)
 (require 'linum-off)
 ;(global-linum-mode nil)
 
@@ -31,9 +31,6 @@
 
 ;; don't use comment column by default
 (setq-default comment-column 0)
-
-;; highlight current line
-(global-hl-line-mode 1)
 
 ;; bind return to newline and indent (turn on autoindentation)
 (define-key global-map (kbd "RET") 'newline-and-indent)
