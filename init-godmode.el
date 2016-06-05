@@ -44,6 +44,7 @@
 (add-hook 'css-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 (add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 (add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-or-newline)))
+(add-hook 'table-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
@@ -67,6 +68,9 @@
 
 (add-to-list 'god-exempt-major-modes 'term-mode)
 (add-to-list 'god-exempt-major-modes 'magit-mode)
+(add-to-list 'god-exempt-major-modes 'org-agenda-mode)
+(add-to-list 'god-exempt-major-modes 'calc-mode)
+(add-to-list 'god-exempt-major-modes 'ibuffer-mode)
 ;; (add-to-list 'god-exempt-major-modes 'inferior-python-mode)
 
 ;; Remove something from exempt major modes like this:
