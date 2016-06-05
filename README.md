@@ -46,6 +46,7 @@ A basic emacs24 setup, customized for my needs.
 - Get epc via M-x package-install epc
 - Install python modules via pip install epc jedi or cd ~/.emacs.d/elpa/jedi-* && make requirements
 - sudo apt-get install pep8 pyflakes
+- Might have to do chmod +x ~/.emacs.d/lib/pycheckers.py for python linting to work
 
 ##### Javascript
 - For completion in js2-mode using tern, cd into lib/tern and do sudo npm install
