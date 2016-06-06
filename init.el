@@ -45,6 +45,7 @@
 (load "~/.emacs.d/init-godmode.el")
 (load "~/.emacs.d/init-org.el")
 (load "~/.emacs.d/init-elscreen.el")
+(load "~/.emacs.d/init-c.el")
 
 (require 'fill-column-indicator)
 
