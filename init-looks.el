@@ -54,7 +54,7 @@
 ;; (display-battery-mode 1)
 
 ; font size
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 120)
 
 ; some spacing after line numbers when using emacs no window
 (unless window-system

@@ -51,6 +51,7 @@
 (add-hook 'vhdl-mode-hook (lambda () (define-key god-local-mode-map (kbd "<SPC>") 'set-mark-command)))
 ;; this may be a bad idea
 (add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'verilog-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; Should do something like this...
 ;; (define-key god-local-mode-map (kbd "s-j") 'windwmove-down)

@@ -88,3 +88,6 @@
 
 ;; speedbar
 (global-set-key (kbd "C-c b t") 'speedbar)  ; toggle speedbar
+
+(add-hook 'makefile-gmake-mode-hook (lambda () (local-set-key (kbd "M-p") (lambda () (interactive) (scroll-down 5)))))
+(add-hook 'makefile-gmake-mode-hook (lambda () (local-set-key (kbd "M-n") (lambda () (interactive) (scroll-up 5)))))

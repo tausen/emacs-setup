@@ -38,16 +38,20 @@
 (load "~/.emacs.d/init-irc.el")
 ;; (load "~/.emacs.d/init-ido.el")
 (load "~/.emacs.d/init-helm.el")
-(load "~/.emacs.d/init-latex.el")
+;;(load "~/.emacs.d/init-latex.el")
 (load "~/.emacs.d/init-git.el")
-(load "~/.emacs.d/init-w3m.el")
+;;(load "~/.emacs.d/init-w3m.el")
 (load "~/.emacs.d/init-markdown.el")
 (load "~/.emacs.d/init-godmode.el")
 (load "~/.emacs.d/init-org.el")
-(load "~/.emacs.d/init-elscreen.el")
+;;(load "~/.emacs.d/init-elscreen.el")
+;;(load "~/.emacs.d/init-semantic.el")
 (load "~/.emacs.d/init-c.el")
 
 (require 'fill-column-indicator)
+
+;; (installed image+ using package manager)
+(eval-after-load 'image '(require 'image+))
 
 ;; Proper autopair/autoclose parenthesis
 (add-to-list 'load-path "~/.emacs.d/lib/autopair/") ;; comment if autopair.el is in standard load path 
@@ -65,9 +69,11 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 
-(setq org-clock-idle-time 10) ; emacs idle time before org-mode will alert of running clock
+(setq org-clock-idle-time nil) ; emacs idle time before org-mode will alert of running clock
 (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
 (setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
+
+;; (xclip-mode 1)
 
 ;; http://emacswiki.org/emacs/ModeCompile
 ;; Close the compilation window if there was no error at all.
@@ -94,7 +100,11 @@
 ;; in vhdl-mode, use rising_edge() insted of clk'event and clk='1'
 (setq vhdl-clock-edge-condition 'function)
 ;; wrap comments at column 100 rather than 80
-(setq vhdl-end-comment-column 100)
+;; (setq vhdl-end-comment-column 100)
+(setq vhdl-end-comment-column 120)
+(setq vhdl-indent-tabs-mode nil)
+(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
+(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "TAB") 'auto-complete)))
 
 ;; emacs semantic, autocompletion
 ;; (load "~/.emacs.d/init-semantic.el")
@@ -110,11 +120,14 @@
 
 ;; git gutter
 (load "~/.emacs.d/init-gitgutter.el")
+
 ;; example .dir-locals.el to fix C indentation after macros that are not terminated with semicolon
 ;; ((nil . ())
 ;;       (c-mode . ((c-macro-names-with-semicolon . ("PROFILE_START" "PROFILE_END"))))
 ;;       (c-mode . ((eval . (c-make-macro-with-semi-re))))
 ;;       )
+
+(add-to-list 'tramp-remote-path "~/.local/bin/")
 
 (desktop-save-mode t)
 

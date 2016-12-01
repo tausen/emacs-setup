@@ -148,6 +148,22 @@ i.e. change right window to bottom, or change bottom window to right."
              (error "No word to lookup")))
            dictionary-default-dictionary))))
 
+;; Insert nicely formatted number with unit using math (for use in rest-mode)
+(defun my-rest-insert-num (n u)
+  "Insert number with unit"
+  (interactive "sNumber: 
+sUnit: ")
+  (insert (format ":math:`%s\\text{\\,%s}`" n u)))
+(add-hook 'rst-mode-hook (lambda () (local-set-key (kbd "C-c C-u") 'my-rest-insert-num)))
+
+(defun my-rest-insert-range (n m u)
+  "Insert number range with unit"
+  (interactive "sFirst number: 
+sSecond number: 
+sUnit: ")
+  (insert (format ":math:`%s\\text{-}%s\\text{\\,%s}`" n m u)))
+(add-hook 'rst-mode-hook (lambda () (local-set-key (kbd "C-c C-i") 'my-rest-insert-range)))
+
 ;; Rotate page in doc-view-mode
 ;; http://stackoverflow.com/questions/2684547/rotate-document-in-emacs-doc-view-mode
 (defun doc-view-rotate-current-page ()

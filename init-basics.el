@@ -37,9 +37,9 @@
 ;; (if init-godmode.el is loaded, this is overridden)
 
 ;; ===== Set standard indent ====
-(setq standard-indent 4)
-(setq-default tab-width 4)
-(setq-default c-basic-offset 4)
+(setq standard-indent 8)
+(setq-default tab-width 8)
+(setq-default c-basic-offset 8)
 
 ;; ===== Turn off tab character =====
 ;; Emacs normally uses both tabs and spaces to indent lines. If you
@@ -49,7 +49,7 @@
 ;; disabled for all buffers.
 ;; Use (setq ...) to set value locally to a buffer
 ;; Use (setq-default ...) to set value globally 
-(setq-default indent-tabs-mode nil) 
+(setq-default indent-tabs-mode t) 
 
 ;; set automated backups dir
 ; Enable backup files.
