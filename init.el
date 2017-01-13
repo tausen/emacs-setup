@@ -129,7 +129,7 @@
 
 (add-to-list 'tramp-remote-path "~/.local/bin/")
 
-(desktop-save-mode t)
+;;(desktop-save-mode t)
 
 ;; load undo-tree mode, ensure C-x u is still regular undo and C-c u is now undo-tree-visualize
 (load "~/.emacs.d/lib/undo-tree-0.6.4.el")
