@@ -1,0 +1,6 @@
+(require 'undo-tree)
+(define-key undo-tree-map (kbd "C-x u") 'undo-tree-undo)
+(define-key undo-tree-map (kbd "C-x y") 'undo-tree-redo)
+(define-key undo-tree-map (kbd "C-c u") 'undo-tree-visualize)
+(global-undo-tree-mode)
+(add-hook 'undo-tree-visualizer-mode-hook (lambda () (local-set-key (kbd "RET") 'undo-tree-visualizer-quit)))
