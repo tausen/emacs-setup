@@ -27,3 +27,5 @@
 
 (require 'helm-projectile)
 (helm-projectile-on)
+
+(setq helm-split-window-in-side-p t)
