@@ -15,3 +15,4 @@
 ;; google c style
 (load "~/.emacs.d/lib/google-c-style.el")
 (add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook (lambda () (electric-indent-mode -1)))
