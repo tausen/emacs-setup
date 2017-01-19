@@ -25,6 +25,18 @@
 ;;
 ;;    (add-hook 'c-mode-common-hook 'google-make-newline-indent)
 
+;; ---------------------------------------------------------------------
+;;                    GOMSPACE INSTALL INSTRUCTIONS
+;; ---------------------------------------------------------------------
+;; To automatically load Google C style and set line width to 120 chars,
+;; copy this file to ~/.emacs.d/ and add the following to your
+;; ~/.emacs.d/init.el:
+;;
+;; (load "~/.emacs.d/google-c-style.el")
+;; (add-hook 'c-mode-common-hook 'google-set-c-style)
+;; (add-hook 'c-mode-common-hook (lambda () (setq fill-column 120)))
+;; ---------------------------------------------------------------------
+
 ;;; Code:
 
 ;; For some reason 1) c-backward-syntactic-ws is a macro and 2)  under Emacs 22
