@@ -29,6 +29,8 @@
 (setq auto-window-vscroll nil)
 ;; highlight parens
 (show-paren-mode t)
+;; indent after newline in c-like modes
+(electric-indent-mode -1)
 
 ;; truncate lines 
 (setq-default truncate-lines t) 
