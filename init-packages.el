@@ -1,37 +1,37 @@
 ; list the packages you want
 (setq package-list '(better-defaults
-		     ggtags
-		     popup
-		     auto-complete
-		     fuzzy
-		     helm
-		     magit
-		     org
-		     undo-tree
-		     multiple-cursors
-		     adaptive-wrap
-		     openwith
-		     dired+
-		     dired-details
-		     projectile
-		     python
-		     smex
-		     helm-projectile
+                     ggtags
+                     popup
+                     auto-complete
+                     fuzzy
+                     helm
+                     magit
+                     org
+                     undo-tree
+                     multiple-cursors
+                     adaptive-wrap
+                     openwith
+                     dired+
+                     dired-details
+                     projectile
+                     python
+                     smex
+                     helm-projectile
                      ac-helm
-		     winner
-		     git-gutter+
-		     git-gutter-fringe+
-		     undo-tree
-		     diminish
-		     flx
-		     s
-		     cl))
+                     winner
+                     git-gutter+
+                     git-gutter-fringe+
+                     undo-tree
+                     diminish
+                     flx
+                     s
+                     cl))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-			 ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ; activate all the packages (in particular autoloads)
 (package-initialize)
