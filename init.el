@@ -10,12 +10,14 @@
 (load "~/.emacs.d/init-git.el")
 (load "~/.emacs.d/init-gitgutter.el")
 (load "~/.emacs.d/init-markdown.el")
-(load "~/.emacs.d/init-godmode.el")
 (load "~/.emacs.d/init-org.el")
 (load "~/.emacs.d/init-c.el")
 (load "~/.emacs.d/init-vhdl.el")
 (load "~/.emacs.d/init-undotree.el")
 (load "~/.emacs.d/init-diminish.el")
+
+;; consider removing this line for a more emacs-y experience
+(load "~/.emacs.d/init-godmode.el")
 
 (setq custom-file "~/.emacs.d/custom.el")
 (unless (file-exists-p custom-file) ;; create file if it does not exist
