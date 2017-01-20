@@ -6,6 +6,7 @@
 - git submodule init
 - git submodule update
 - Install GNU Global from http://www.gnu.org/software/global/
+- Install pep8 and pyflakes (e.g. sudo apt-get install pep8 pyflakes)
 
 #### Configuration
 - For a slightly more emacsy experience, dont load init-godmode.el in init.el
