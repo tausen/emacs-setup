@@ -11,6 +11,7 @@
 
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-abbrev)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-gtags)))
+(add-hook 'c-mode-hook (lambda () (auto-complete-mode)))
 
 ;; do indent after newline
 (add-hook 'c-mode-common-hook (lambda () (electric-indent-mode -1)))
