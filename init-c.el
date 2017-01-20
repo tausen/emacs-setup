@@ -1,4 +1,14 @@
 
+;; completion and navigation using gtags
+;; to use, run gtags in root dir of the project (or use any ggtags cmd in emacs to be prompted)
+;; most important:
+;; - start typing for completion, M-n and M-p to choose next/prev candidate, RET to confirm
+;;   while completing, C-s to search or M-o for helm fuzzy search
+;; - jump to definition using C-c C-t C-j
+;;   if multiple matches, navigate to next/prev with C-x n and C-x p
+;; - jump back to where you came from with C-c C-t C-m
+;; - same goes for finding references with C-c C-t C-r
+
 (add-hook 'c-mode-hook (lambda () (ggtags-mode)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-j") 'ggtags-find-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-r") 'ggtags-find-reference)))
@@ -9,9 +19,10 @@
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
 
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-abbrev)))
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-gtags)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
 (add-hook 'c-mode-hook (lambda () (auto-complete-mode)))
+(add-hook 'c-mode-hook (lambda () (setq ac-use-menu-map t)))
+(ac-config-default)
 
 ;; do indent after newline
 (add-hook 'c-mode-common-hook (lambda () (electric-indent-mode -1)))

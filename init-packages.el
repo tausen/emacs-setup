@@ -17,6 +17,7 @@
 		     python
 		     smex
 		     helm-projectile
+                     ac-helm
 		     winner
 		     git-gutter+
 		     git-gutter-fringe+
