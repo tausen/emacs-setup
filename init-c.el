@@ -31,3 +31,12 @@
 (load "~/.emacs.d/lib/google-c-style.el")
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook (lambda () (setq fill-column 120)))
+
+(defun gs-old-indent-mode ()
+  "Switch to old GomSpace indent mode: 8-space tabs"
+  (interactive)
+  (setq c-basic-offset 8)
+  (setq indent-tabs-mode t)
+  (setq tab-width 8)
+  (c-set-offset 'case-label nil)
+  )
