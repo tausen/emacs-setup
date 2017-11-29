@@ -15,6 +15,8 @@
 (load "~/.emacs.d/init-vhdl.el")
 (load "~/.emacs.d/init-undotree.el")
 (load "~/.emacs.d/init-diminish.el")
+(load "~/.emacs.d/init-rst.el")
+
 
 ;; consider removing this line for a more emacs-y experience
 (load "~/.emacs.d/init-godmode.el")
