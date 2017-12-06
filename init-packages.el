@@ -25,7 +25,9 @@
                      diminish
                      flx
                      s
-                     cl))
+                     cl
+                     auto-complete-rst))
+
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
