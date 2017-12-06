@@ -13,6 +13,7 @@
                      openwith
                      dired+
                      dired-details
+                     dired-details+
                      projectile
                      python
                      smex
