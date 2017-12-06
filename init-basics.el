@@ -17,6 +17,7 @@
 (delete-selection-mode t)
 ;; turn off the menu bar
 (menu-bar-mode 0)
+(tool-bar-mode 0)
 ;; have emacs scroll line-by-line
 (setq scroll-step 1)
 ;; set mouse scroll to line by line
