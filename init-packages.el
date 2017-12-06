@@ -12,8 +12,7 @@
                      adaptive-wrap
                      openwith
                      dired+
-                     dired-details
-                     dired-details+
+                     image-dired+
                      projectile
                      python
                      smex

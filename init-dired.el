@@ -1,7 +1,4 @@
 (require 'dired+)
-(require 'dired-details)
-(require 'dired-details+)
-(dired-details-install)
 
 ;; dired order directories first
 (defun sof/dired-sort ()
