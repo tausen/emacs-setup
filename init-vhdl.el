@@ -10,3 +10,8 @@
 (add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
 ;(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "TAB") 'auto-complete)))
 (add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "TAB") 'vhdl-indent-line)))
+
+(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
+(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
+(add-hook 'vhdl-mode-hook (lambda () (setq ac-use-menu-map t)))
+(ac-config-default)
