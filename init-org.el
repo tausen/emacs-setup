@@ -49,8 +49,15 @@
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 (setq org-clock-idle-time nil) ; emacs idle time before org-mode will alert of running clock
-(setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
-(setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
+
+;; org-time-clocksum-format is now deprecated in favor of org-duration-format
+;; (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
+;; Following is from the org-duration format documentation: format periods >1 day as fractional days, <1 day as
+;; fractional hours. Always two decimals precision.
+(setq org-duration-format '(("d" . nil) ("h" . nil) (special . 2)))
+
+;; doesn't work?
+;; (setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
 
 ;; use google-chrome for opening URLs
 (setq browse-url-browser-function 'browse-url-generic
