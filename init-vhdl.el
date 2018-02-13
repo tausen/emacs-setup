@@ -15,3 +15,7 @@
 (add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
 (add-hook 'vhdl-mode-hook (lambda () (setq ac-use-menu-map t)))
 (ac-config-default)
+
+;; when using vhd-port-paste-*, strip off tailing _i or _o and append _s to port names
+;; note: important that first .* is followed by ? to make it not greedy
+(setq vhdl-actual-port-name (quote ("\\(.*?\\)\\(_[io]\\)?$" . "\\1_s")))
