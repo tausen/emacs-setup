@@ -3,10 +3,10 @@
 
 ;; in vhdl-mode, use rising_edge() insted of clk'event and clk='1'
 (setq vhdl-clock-edge-condition 'function)
-;; wrap comments at column 150 rather than 80
-(setq vhdl-end-comment-column 150)
-(setq vhdl-inline-comment-column 90)
-(add-hook 'vhdl-mode-hook (lambda () (setq fill-column 150)))
+;; wrap comments at column 100 rather than 80
+(setq vhdl-end-comment-column 100)
+(setq vhdl-inline-comment-column 80)
+(add-hook 'vhdl-mode-hook (lambda () (setq fill-column 100)))
 (setq vhdl-indent-tabs-mode nil)
 (setq vhdl-basic-offset 4)
 (add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
