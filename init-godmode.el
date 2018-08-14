@@ -45,6 +45,7 @@
 (add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 (add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-or-newline)))
 (add-hook 'table-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'matlab-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
