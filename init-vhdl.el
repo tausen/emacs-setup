@@ -20,7 +20,9 @@
 
 ;; when using vhd-port-paste-*, strip off tailing _i or _o and append _s to port names
 ;; note: important that first .* is followed by ? to make it not greedy
-(setq vhdl-actual-port-name (quote ("\\(.*?\\)\\(_[io]\\)?$" . "\\1_s")))
+;;(setq vhdl-actual-port-name (quote ("\\(.*?\\)\\(_[io]\\)?$" . "\\1_s")))
+;; update: no longer using _s
+(setq vhdl-actual-port-name (quote ("\\(.*?\\)\\(_[io]\\)?$" . "\\1")))
 
 ;; ;; (setq vhdl-types (remove "bc_bytearray" vhdl-keywords))
 ;; (add-to-list 'vhdl-types "bc_bytearray")
