@@ -1,15 +1,15 @@
 ;; autocomplete: dont suggest numbers
 ;; http://stackoverflow.com/questions/14767277/can-emacs-ac-mode-autocomplete-mode-be-configured-to-ignore-numbers
-(eval-after-load "auto-complete"
-  '(progn
-     (defun ac-prefix-default ()
-       "Same as `ac-prefix-symbol' but ignore a number prefix."
-       (let ((start (ac-prefix-symbol)))
-         (when (and start
-                    (not (string-match "^\\(?:0[xX][0-9A-Fa-f]+\\|[0-9]+\\)$"
-                                       (buffer-substring-no-properties start (point)))))
-           start)))
-     ))
+;; (eval-after-load "auto-complete"
+;;   '(progn
+;;      (defun ac-prefix-default ()
+;;        "Same as `ac-prefix-symbol' but ignore a number prefix."
+;;        (let ((start (ac-prefix-symbol)))
+;;          (when (and start
+;;                     (not (string-match "^\\(?:0[xX][0-9A-Fa-f]+\\|[0-9]+\\)$"
+;;                                        (buffer-substring-no-properties start (point)))))
+;;            start)))
+;;      ))
 
 ;; Configure to wait a bit longer after edits before starting
 (setq-default flymake-no-changes-timeout '3)

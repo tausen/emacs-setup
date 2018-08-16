@@ -1,5 +1,5 @@
 
-(add-hook 'rst-mode-hook (lambda () (auto-complete-mode)))
+;; (add-hook 'rst-mode-hook (lambda () (auto-complete-mode)))
 
 ;; RST include files: use rst-mode
 (add-to-list 'auto-mode-alist '("\\.rsti\\'" . rst-mode))

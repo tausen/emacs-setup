@@ -2,7 +2,7 @@
 (setq package-list '(better-defaults
                      ggtags
                      popup
-                     auto-complete
+                     ;; auto-complete
                      fuzzy
                      helm
                      magit
@@ -26,11 +26,16 @@
                      flx
                      s
                      cl
-                     auto-complete-rst))
+                     auto-complete-rst
+                     company
+                     company-flx
+                     vhdl-capf))
 
+;;                     org-plus-contrib))
 
 ; list the repositories containing them
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("org" . "http://orgmode.org/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))

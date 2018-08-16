@@ -19,10 +19,14 @@
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
 
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
-(add-hook 'c-mode-hook (lambda () (auto-complete-mode)))
-(add-hook 'c-mode-hook (lambda () (setq ac-use-menu-map t)))
-(ac-config-default)
+; testing out company completion...
+;; (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
+;; (add-hook 'c-mode-hook (lambda () (auto-complete-mode)))
+;; (add-hook 'c-mode-hook (lambda () (setq ac-use-menu-map t)))
+;; (ac-config-default)
+
+;; testing out eldoc mode - not yet added to init-packages
+(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
 
 ;; do indent after newline
 (add-hook 'c-mode-common-hook (lambda () (electric-indent-mode -1)))

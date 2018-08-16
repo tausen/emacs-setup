@@ -43,4 +43,4 @@
 ;; in case projectile is slow when using tramp, do something like
 ;;(setq projectile-mode-line "P")
 
-(projectile-global-mode)
+(projectile-mode 1)

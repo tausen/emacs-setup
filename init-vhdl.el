@@ -9,14 +9,18 @@
 (add-hook 'vhdl-mode-hook (lambda () (setq fill-column 100)))
 (setq vhdl-indent-tabs-mode nil)
 (setq vhdl-basic-offset 4)
-(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
+;(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
 ;(add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "TAB") 'auto-complete)))
 (add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "TAB") 'vhdl-indent-line)))
 
 (add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
-(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
+;(add-hook 'vhdl-mode-hook (lambda () (auto-complete-mode)))
 (add-hook 'vhdl-mode-hook (lambda () (setq ac-use-menu-map t)))
-(ac-config-default)
+;(ac-config-default)
+
+; trying some other completion instead of auto-complete
+(when (require 'vhdl-capf)
+  (vhdl-capf-enable))
 
 ;; when using vhd-port-paste-*, strip off tailing _i or _o and append _s to port names
 ;; note: important that first .* is followed by ? to make it not greedy
