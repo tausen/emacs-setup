@@ -91,9 +91,5 @@
 
         end loop;
 
-        if run_forever then
-            wait;
-        end if;
-
         test_runner_cleanup(runner);    -- simulation ends here
     end process proc;")
