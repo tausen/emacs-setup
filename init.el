@@ -1,10 +1,10 @@
 
 (load "~/.emacs.d/init-packages.el")
+(load "~/.emacs.d/init-projectile.el")
 (load "~/.emacs.d/init-helm.el")
 (load "~/.emacs.d/init-looks.el")
 (load "~/.emacs.d/init-basics.el")
 (load "~/.emacs.d/init-dired.el")
-(load "~/.emacs.d/init-projectile.el")
 (load "~/.emacs.d/init-breadcrumb.el")
 (load "~/.emacs.d/init-python.el")
 (load "~/.emacs.d/init-git.el")

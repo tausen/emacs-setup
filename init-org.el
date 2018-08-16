@@ -24,9 +24,10 @@
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "M-j") 'org-meta-return)))
 
 ;; languages to allow running from org-mode code blocks
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t) (sh . t)))
+; does not work in emacs 26
+; (org-babel-do-load-languages
+;  'org-babel-load-languages
+;  '((python . t) (sh . t)))
 
 ;; uncomment to initially show latex fragments, inline images and pretty inline entities in org-mode
 ;; (add-hook 'org-mode-hook (lambda () (org-preview-latex-fragment)))
@@ -41,7 +42,8 @@
 (setq org-image-actual-width '(400))
 
 ;; scale up latex inline math a bit
-(plist-put org-format-latex-options :scale 1.5)
+; does not work in emacs 26
+;(plist-put org-format-latex-options :scale 1.5)
 
 (global-set-key (kbd "C-c o f") 'org-iswitchb)
 (global-set-key (kbd "C-c o a") 'org-agenda)
