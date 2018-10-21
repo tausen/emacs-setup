@@ -53,6 +53,13 @@
 
 (define-coding-system-alias 'UTF-8 'utf-8)
 
+(defun my-py-insert-pdb-trace ()
+  "Insert PDB trace"
+  (interactive)
+  (insert "import pdb; pdb.set_trace()"))
+(add-hook 'python-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-t") 'my-py-insert-pdb-trace)))
+
+
 (setq
  python-shell-interpreter "ipython"
  python-shell-interpreter-args ""
