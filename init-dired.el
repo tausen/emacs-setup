@@ -1,4 +1,4 @@
-(require 'dired+)
+;(require 'dired+) ;; no longer in MELPA
 
 ;; dired order directories first
 (defun sof/dired-sort ()

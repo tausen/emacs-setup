@@ -11,8 +11,8 @@
                      multiple-cursors
                      adaptive-wrap
                      openwith
-                     dired+
-                     image-dired+
+                     ;;dired+ ;; no longer available?
+                     ;;image-dired+ ;; no longer available?
                      projectile
                      python
                      smex
