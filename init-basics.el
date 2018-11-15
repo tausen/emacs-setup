@@ -32,6 +32,10 @@
 (show-paren-mode t)
 ;; indent after newline in c-like modes
 (electric-indent-mode -1)
+;; remember last place in file
+(save-place-mode 1)
+;; disable scrollbar
+(toggle-scroll-bar -1)
 
 ;; truncate lines 
 (setq-default truncate-lines t) 
