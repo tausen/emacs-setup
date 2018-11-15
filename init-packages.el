@@ -1,5 +1,5 @@
 ; list the packages you want
-(setq package-list '(better-defaults
+(setq package-list '(;;better-defaults ;; no longer available?
                      ggtags
                      popup
                      ;; auto-complete
