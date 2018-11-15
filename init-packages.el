@@ -29,7 +29,8 @@
                      auto-complete-rst
                      company
                      company-flx
-                     vhdl-capf))
+                     vhdl-capf
+		     dired-narrow))
 
 ;;                     org-plus-contrib))
 

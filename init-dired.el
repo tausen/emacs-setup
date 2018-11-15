@@ -29,6 +29,8 @@
  ))
 
 (add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "<backspace>") 'dired-kill-subdir)))
+(add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "/") 'dired-narrow)))
+(add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "\\") 'dired-narrow-regexp)))
 
 ;; if two dired buffers are open side-by-side and doing move/rename from one, auto-suggest the location of the other as destination
 (setq dired-dwim-target t)
