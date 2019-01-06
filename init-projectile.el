@@ -43,4 +43,12 @@
 ;; in case projectile is slow when using tramp, do something like
 ;;(setq projectile-mode-line "P")
 
+(global-set-key (kbd "C-c p a") 'projectile-find-other-file)
+
 (projectile-mode 1)
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; workaround for user-error: The value for: compile-command in project-type: generic was neither a function nor a string.
+;; https://github.com/bbatsov/projectile/pull/1269
+(setq projectile-project-compilation-cmd "")
