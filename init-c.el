@@ -9,6 +9,20 @@
 ;; - jump back to where you came from with C-c C-t C-m
 ;; - same goes for finding references with C-c C-t C-r
 
+(add-hook 'c++-mode-hook (lambda () (ggtags-mode)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-j") 'ggtags-find-definition)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-r") 'ggtags-find-reference)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-s") 'ggtags-grep)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-m") 'ggtags-prev-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-n") 'ggtags-next-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-p") 'ggtags-prev-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-u") 'ggtags-update-tags)))
+(add-hook 'c++-mode-hook (lambda () (company-mode)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "M-o") 'company-gtags)))
+
+
 (add-hook 'c-mode-hook (lambda () (ggtags-mode)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-j") 'ggtags-find-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-r") 'ggtags-find-reference)))
@@ -18,6 +32,12 @@
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-p") 'ggtags-prev-mark)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-u") 'ggtags-update-tags)))
+
+(add-hook 'c-mode-hook (lambda () (company-mode)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'company-gtags)))
+
+;; (remove-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ; testing out company completion...
 ;; (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
