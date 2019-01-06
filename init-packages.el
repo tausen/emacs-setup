@@ -30,7 +30,11 @@
                      company
                      company-flx
                      vhdl-capf
-		     dired-narrow))
+		     c-eldoc
+		     f
+		     fill-column-indicator
+		     dired-narrow
+		     org-plus-contrib))
 
 ;;                     org-plus-contrib))
 
