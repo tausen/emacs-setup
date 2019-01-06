@@ -93,3 +93,8 @@
 
         test_runner_cleanup(runner);    -- simulation ends here
     end process proc;")
+;; make file header a simple copyright string and nothing else
+(setq vhdl-copyright-string "-- Copyright (c) <year>-<year> GomSpace A/S. All rights reserved.
+")
+(setq vhdl-file-header "<copyright>
+")
