@@ -19,6 +19,9 @@
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map "\C-cp" 'flymake-goto-prev-error)))
 (add-hook 'python-mode-hook '(lambda () (define-key python-mode-map (kbd "C-c f t") 'flymake-mode)))
 
+(add-hook 'python-mode-hook '(lambda () (visual-line-mode -1)))  ;; force disable visual-line-mode
+(add-hook 'python-mode-hook '(lambda () (eldoc-mode -1)))  ;; force disable eldoc mode
+
 ;; To avoid having to mouse hover for the error message, these functions make flymake error messages
 ;; appear in the minibuffer
 ;(defun show-fly-err-at-point ()
