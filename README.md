@@ -1,5 +1,8 @@
 # emacs-setup
 
+#### Emacs server
+Copy `emacs.service` to `~/.config/systemd/user/` and do `systemctl --user enable emacs` to enable the server on boot. Start it manually with `systemctl --user start emacs`. Then use `emacsclient -c` instead of `emacs` when editing files. Use `-nw` to not open a GUI.
+
 #### Installation
 - Ensure ~/.emacs does not exist
 - Clone this repository into ~/.emacs.d
