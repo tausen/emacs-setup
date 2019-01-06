@@ -10,6 +10,8 @@ Copy `emacs.service` to `~/.config/systemd/user/` and do `systemctl --user enabl
 - `git submodule update`
 - Install GNU Global from http://www.gnu.org/software/global/
 - Install pep8 and pyflakes (e.g. `sudo apt-get install pep8 pyflakes`)
+- To use pdf-tools, do M-x pdf-tools-install
+- To use mu4e to read mail, follow the directions in init-mu4e.el
 
 #### Configuration
 - For a slightly more emacsy experience, dont load init-godmode.el in init.el

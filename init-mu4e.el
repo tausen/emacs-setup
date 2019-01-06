@@ -17,6 +17,15 @@
 ;;   - Installed via pip3, configure with: khal configure
 
 ;; Also using w3m (installed via apt) to read html mails
+;; To view an email as pdf (in emacs e.g. using pdf-tools), install
+;; maildir-utils-extra via apt. Then press a v in a mu4e-view buffer.
+
+;; To send mail, create a GPG encrypted file with your login credentials in
+;; ~/.authinfo.gpg. Simply saving that file through emacs will prompt for a
+;; passphrase and automatically encrypt it. Syntax:
+;;   machine HOST login USERNAME password PASSWORD port PORT
+;; where HOST, USERNAME and PORT must match those in smtpmail-smtp-server,
+;; smtpmail-smtp-user and smtpmail-smtp-service set later in this file.
 
 ;; no idea why this line is necessary - it should not be
 (add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
