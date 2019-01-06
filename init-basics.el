@@ -134,10 +134,11 @@
 ;; M-- C-c i  relative path
 (global-set-key (kbd "C-c i") 'my-insert-file-name)
 
-;; open pdfs with qpdfview
+;; associate some file types with external applications
 (require 'openwith)
-(setq openwith-associations '(("\\.pdf\\'" "qpdfview" ("--unique" file))
-                              ("\\.eps\\'" "qpdfview" ("--unique" file))))
+(setq openwith-associations '(("\\.eps\\'" "qpdfview" ("--unique" file))))
+;; used to have qpdfview for pdfs - now using pdf-tools
+;;("\\.pdf\\'" "qpdfview" ("--unique" file))
 (openwith-mode t)
 
 ;; I'm getting real tired of your shit, mr window split
