@@ -1,25 +1,18 @@
-; dired+
-(add-to-list 'load-path "~/.emacs.d/lib")
-(require 'dired+)
-
-; dired-details-hide
-(require 'dired-details)
-(dired-details-install)
-; (setq dired-details-initially-hide t)  ; uncomment to not hide details initially
+;(require 'dired+) ;; no longer in MELPA
 
 ;; dired order directories first
 (defun sof/dired-sort ()
   "Dired sort hook to list directories first."
   (save-excursion
-   (let (buffer-read-only)
-     (forward-line 2) ;; beyond dir. header  
-     (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max))))
+    (let (buffer-read-only)
+      (forward-line 2) ;; beyond dir. header  
+      (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max))))
   (and (featurep 'xemacs)
        (fboundp 'dired-insert-set-properties)
        (dired-insert-set-properties (point-min) (point-max)))
   (set-buffer-modified-p nil))
 
- (add-hook 'dired-after-readin-hook 'sof/dired-sort)
+(add-hook 'dired-after-readin-hook 'sof/dired-sort)
 
 ;; dired hide hidden files
 (require 'dired-x)
@@ -35,12 +28,9 @@
   ; was dired-up-directory
  ))
 
-;; dired remote (tramp) default ssh
-(setq tramp-default-method "ssh")
-
-(put 'dired-find-alternate-file 'disabled nil)
-
 (add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "<backspace>") 'dired-kill-subdir)))
+(add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "/") 'dired-narrow)))
+(add-hook 'dired-mode-hook (lambda () (local-set-key (kbd "\\") 'dired-narrow-regexp)))
 
 ;; if two dired buffers are open side-by-side and doing move/rename from one, auto-suggest the location of the other as destination
 (setq dired-dwim-target t)

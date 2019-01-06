@@ -1,7 +1,3 @@
-;; load and configure git-gutter fringe plus
-(add-to-list 'load-path "~/.emacs.d/lib/git-gutter-plus")
-(add-to-list 'load-path "~/.emacs.d/lib/git-gutter-fringe-plus")
-
 (require 'git-gutter+)
 (require 'git-gutter-fringe+)
 

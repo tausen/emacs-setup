@@ -45,12 +45,14 @@
 (add-hook 'markdown-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 (add-hook 'inferior-python-mode-hook (lambda () (local-set-key (kbd "<f12>") 'god-or-newline)))
 (add-hook 'table-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'matlab-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; In vhdl-mode, space is bound to vhdl electric space, 
 ;; so godmode SPC doesn't set mark - this fixes it
 (add-hook 'vhdl-mode-hook (lambda () (define-key god-local-mode-map (kbd "<SPC>") 'set-mark-command)))
 ;; this may be a bad idea
 (add-hook 'vhdl-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
+(add-hook 'verilog-mode-hook (lambda () (local-set-key (kbd "<RET>") 'god-or-newline)))
 
 ;; Should do something like this...
 ;; (define-key god-local-mode-map (kbd "s-j") 'windwmove-down)
@@ -71,6 +73,7 @@
 (add-to-list 'god-exempt-major-modes 'org-agenda-mode)
 (add-to-list 'god-exempt-major-modes 'calc-mode)
 (add-to-list 'god-exempt-major-modes 'ibuffer-mode)
+(add-to-list 'god-exempt-major-modes 'doc-view-mode)
 ;; (add-to-list 'god-exempt-major-modes 'inferior-python-mode)
 
 ;; Remove something from exempt major modes like this:

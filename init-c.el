@@ -1,4 +1,28 @@
 
+;; completion and navigation using gtags
+;; to use, run gtags in root dir of the project (or use any ggtags cmd in emacs to be prompted)
+;; most important:
+;; - start typing for completion, M-n and M-p to choose next/prev candidate, RET to confirm
+;;   while completing, C-s to search or M-o for helm fuzzy search
+;; - jump to definition using C-c C-t C-j
+;;   if multiple matches, navigate to next/prev with C-x n and C-x p
+;; - jump back to where you came from with C-c C-t C-m
+;; - same goes for finding references with C-c C-t C-r
+
+(add-hook 'c++-mode-hook (lambda () (ggtags-mode)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-j") 'ggtags-find-definition)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-r") 'ggtags-find-reference)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-s") 'ggtags-grep)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-m") 'ggtags-prev-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-n") 'ggtags-next-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-p") 'ggtags-prev-mark)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-u") 'ggtags-update-tags)))
+(add-hook 'c++-mode-hook (lambda () (company-mode)))
+(add-hook 'c++-mode-hook (lambda () (local-set-key (kbd "M-o") 'company-gtags)))
+
+
 (add-hook 'c-mode-hook (lambda () (ggtags-mode)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-j") 'ggtags-find-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-r") 'ggtags-find-reference)))
@@ -8,39 +32,35 @@
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-p") 'ggtags-prev-mark)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-d") 'ggtags-show-definition)))
 (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-o") 'ggtags-find-other-symbol)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "C-c C-t C-u") 'ggtags-update-tags)))
 
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-i") 'ac-complete-abbrev)))
-(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-gtags)))
+(add-hook 'c-mode-hook (lambda () (company-mode)))
+(add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'company-gtags)))
 
-;; TODO
-;; from https://www.kernel.org/doc/Documentation/CodingStyle
-;; (defun c-lineup-arglist-tabs-only (ignored)
-;;   "Line up argument lists by tabs, not spaces"
-;;   (let* ((anchor (c-langelem-pos c-syntactic-element))
-;;          (column (c-langelem-2nd-pos c-syntactic-element))
-;;          (offset (- (1+ column) anchor))
-;;          (steps (floor offset c-basic-offset)))
-;;     (* (max steps 1)
-;;        c-basic-offset)))
+;; (remove-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
-;; (add-hook 'c-mode-common-hook
-;;           (lambda ()
-;;             ;; Add kernel style
-;;             (c-add-style
-;;              "linux-tabs-only"
-;;              '("gomspace" (c-offsets-alist
-;;                            (arglist-cont-nonempty
-;;                             c-lineup-gcc-asm-reg
-;;                             c-lineup-arglist-tabs-only))))))
+; testing out company completion...
+;; (add-hook 'c-mode-hook (lambda () (local-set-key (kbd "M-o") 'ac-complete-with-helm)))
+;; (add-hook 'c-mode-hook (lambda () (auto-complete-mode)))
+;; (add-hook 'c-mode-hook (lambda () (setq ac-use-menu-map t)))
+;; (ac-config-default)
 
-;; (add-hook 'c-mode-hook
-;;           (lambda ()
-;;             (let ((filename (buffer-file-name)))
-;;               ;; Enable kernel mode for the appropriate files
-;;               (when (and filename
-;;                          (string-match (expand-file-name "~/src/")
-;;                                        filename))
-;;                 (setq indent-tabs-mode t)
-;;                 (setq show-trailing-whitespace t)
-;;                 (c-set-style "linux-tabs-only")))))
-;; #########################
+;; testing out eldoc mode - not yet added to init-packages
+(add-hook 'c-mode-hook 'c-turn-on-eldoc-mode)
+
+;; do indent after newline
+(add-hook 'c-mode-common-hook (lambda () (electric-indent-mode -1)))
+
+;; gomspace c style
+(load "~/.emacs.d/lib/google-c-style.el")
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook (lambda () (setq fill-column 120)))
+
+(defun gs-old-indent-mode ()
+  "Switch to old GomSpace indent mode: 8-space tabs"
+  (interactive)
+  (setq c-basic-offset 8)
+  (setq indent-tabs-mode t)
+  (setq tab-width 8)
+  (c-set-offset 'case-label nil)
+  )

@@ -44,10 +44,12 @@ default_checkers = 'pep8, pyflakes'
 
 # A list of error codes to ignore.
 # default_ignore_codes = ['E225', 'W114']
-# E501 = line too long
-# E221 = multiple spaces before operator
 # E226 = missing whitespace around arithmetic operator
-default_ignore_codes = ['E226']
+# E221 = multiple spaces before operator
+# E126 = continuation line over-indented for hanging indent
+# E501 = line too long
+# E402 = module level import not at top of file
+default_ignore_codes = ['E226', 'E221', 'E126', 'E501', 'E402']
 
 ## End of customization ##
 

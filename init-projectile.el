@@ -5,23 +5,10 @@
 ;; C-u C-c p c: compile project but prompt for compile command
 ;; C-c p R: recompile TAGS
 
-;; Dependencies
-(add-to-list 'load-path "~/emacs.d/lib/flx")
-(add-to-list 'load-path "~/emacs.d/lib/dash")
-(add-to-list 'load-path "~/emacs.d/lib/s")
-(add-to-list 'load-path "~/emacs.d/lib/f")
-
-(load "~/.emacs.d/lib/flx/flx.el")
-(load "~/.emacs.d/lib/dash/dash.el")
-(load "~/.emacs.d/lib/s/s.el")
-(load "~/.emacs.d/lib/f/f.el")
-
 (require 'flx)
 (require 'dash)
 (require 's)
 
-(add-to-list 'load-path "~/emacs.d/lib/projectile")
-(load "~/.emacs.d/lib/projectile/projectile.el")
 (require 'projectile)
 ;; (projectile-global-mode)
 
@@ -56,4 +43,12 @@
 ;; in case projectile is slow when using tramp, do something like
 ;;(setq projectile-mode-line "P")
 
-(projectile-global-mode)
+(global-set-key (kbd "C-c p a") 'projectile-find-other-file)
+
+(projectile-mode 1)
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+;; workaround for user-error: The value for: compile-command in project-type: generic was neither a function nor a string.
+;; https://github.com/bbatsov/projectile/pull/1269
+(setq projectile-project-compilation-cmd "")

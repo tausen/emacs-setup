@@ -24,15 +24,16 @@
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "M-j") 'org-meta-return)))
 
 ;; languages to allow running from org-mode code blocks
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((python . t) (sh . t)))
+; does not work in emacs 26
+; (org-babel-do-load-languages
+;  'org-babel-load-languages
+;  '((python . t) (sh . t)))
 
 ;; uncomment to initially show latex fragments, inline images and pretty inline entities in org-mode
 ;; (add-hook 'org-mode-hook (lambda () (org-preview-latex-fragment)))
 ;; (add-hook 'org-mode-hook (lambda () (org-display-inline-images)))
 ;; (add-hook 'org-mode-hook (lambda () (org-toggle-pretty-entities)))
-(setq org-latex-preview-ltxpng-directory "/tmp/spotifycache/")
+;;(setq org-latex-preview-ltxpng-directory "/tmp/ramdisk/")
 
 ;; when nil, inline images obey following or fall back on true img width: #+ATTR: :width 400px
 ;; when '(x), width x or overridden with ATTR as above
@@ -41,18 +42,27 @@
 (setq org-image-actual-width '(400))
 
 ;; scale up latex inline math a bit
-(plist-put org-format-latex-options :scale 1.5)
+; does not work in emacs 26
+;(plist-put org-format-latex-options :scale 1.5)
 
 (global-set-key (kbd "C-c o f") 'org-iswitchb)
 (global-set-key (kbd "C-c o a") 'org-agenda)
 
-;; presentations via org-mode
-(when (fboundp 'epresent-mode) ;; only if epresent is installed
-  (add-to-list 'load-path "~/.emacs.d/lib/epresent")
-  (load "~/.emacs.d/lib/epresent/epresent.el"))
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+(setq org-clock-idle-time nil) ; emacs idle time before org-mode will alert of running clock
 
-;; drag n drop image into to org-mode buffer
-(add-to-list 'load-path "~/.emacs.d/lib/org-download")
-(load "~/.emacs.d/lib/org-download/org-download.el")
-(add-hook 'org-mode-hook (lambda () (setq org-download-image-dir "./org-images/")))
+;; org-time-clocksum-format is now deprecated in favor of org-duration-format
+;; (setq org-time-clocksum-format (quote (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
+;; Following is from the org-duration format documentation: format periods >1 day as fractional days, <1 day as
+;; fractional hours. Always two decimals precision.
+(setq org-duration-format '(("d" . nil) ("h" . nil) (special . 2)))
 
+;; doesn't work?
+;; (setq org-time-stamp-rounding-minutes (quote (5 5))) ; round clock times to 5 mins
+
+;; use google-chrome for opening URLs
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "google-chrome")
+
+(require 'ox-confluence)
