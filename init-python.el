@@ -36,6 +36,11 @@
 ;
 ;(add-hook 'post-command-hook 'show-fly-err-at-point)
 
+(load "~/.emacs.d/lib/flymake-diagnostic-at-point.el")
+(require 'flymake-diagnostic-at-point)
+(eval-after-load 'flymake
+  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
+
 (when (load "flymake" t)
   (defun flymake-create-temp-in-system-tempdir (filename prefix)
     (make-temp-file (or prefix "flymake")))
