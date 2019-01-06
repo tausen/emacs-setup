@@ -73,6 +73,7 @@
 (add-to-list 'god-exempt-major-modes 'org-agenda-mode)
 (add-to-list 'god-exempt-major-modes 'calc-mode)
 (add-to-list 'god-exempt-major-modes 'ibuffer-mode)
+(add-to-list 'god-exempt-major-modes 'doc-view-mode)
 ;; (add-to-list 'god-exempt-major-modes 'inferior-python-mode)
 
 ;; Remove something from exempt major modes like this:
