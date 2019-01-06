@@ -16,6 +16,7 @@
 (load "~/.emacs.d/init-undotree.el")
 (load "~/.emacs.d/init-diminish.el")
 (load "~/.emacs.d/init-rst.el")
+(load "~/.emacs.d/init-mu4e.el")
 
 
 ;; consider removing this line for a more emacs-y experience

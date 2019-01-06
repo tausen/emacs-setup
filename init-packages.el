@@ -35,7 +35,8 @@
 		     fill-column-indicator
 		     dired-narrow
 		     org-plus-contrib
-		     pdf-tools))
+		     pdf-tools
+		     mu4e-alert))
 
 
 ;;                     org-plus-contrib))
