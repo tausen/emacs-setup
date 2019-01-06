@@ -29,3 +29,7 @@
 (helm-projectile-on)
 
 (setq helm-split-window-in-side-p t)
+
+(global-set-key (kbd "C-c p p") 'helm-projectile-switch-project)
+(global-set-key (kbd "C-c p f") 'helm-projectile-find-file)
+(ido-mode 1)
