@@ -8,6 +8,7 @@
 ;; - offlineimap to synchronize mail using IMAP
 ;;   - Grab from https://github.com/OfflineIMAP/offlineimap/releases
 ;; - mu4e to view emails
+;;   - First index: mu index -m ~/mail
 ;;   - Installed via apt
 ;; - vdirsyncer to synchronize calendar
 ;;   - Installed via pip3
@@ -18,7 +19,7 @@
 ;; Also using w3m (installed via apt) to read html mails
 
 ;; no idea why this line is necessary - it should not be
-(add-to-list 'load-path "/usr/share/emacs24/site-lisp/mu4e/")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e/")
 
 (require 'mu4e)
 
