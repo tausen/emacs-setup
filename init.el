@@ -17,6 +17,7 @@
 (load "~/.emacs.d/init-diminish.el")
 (load "~/.emacs.d/init-rst.el")
 (load "~/.emacs.d/init-mu4e.el")
+(load "~/.emacs.d/init-pdf.el")
 
 
 ;; consider removing this line for a more emacs-y experience
