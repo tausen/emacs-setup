@@ -63,6 +63,7 @@
     '( (:human-date    .  12)    ;; alternatively, use :human-date
        (:flags         .   6)
        (:from          .  22)
+       (:to            .  22)
        (:subject       .  nil))) ;; alternatively, use :thread-subject
 
 ;; If you get your mail without an explicit command,
