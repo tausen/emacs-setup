@@ -136,7 +136,8 @@
 
 ;; associate some file types with external applications
 (require 'openwith)
-(setq openwith-associations '(("\\.eps\\'" "qpdfview" ("--unique" file))))
+(setq openwith-associations '(("\\.pcapng\\'" "wireshark" (file))
+			      ("\\.eps\\'" "qpdfview" ("--unique" file))))
 ;; used to have qpdfview for pdfs - now using pdf-tools
 ;;("\\.pdf\\'" "qpdfview" ("--unique" file))
 (openwith-mode t)
