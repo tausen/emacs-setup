@@ -29,6 +29,10 @@
 ;  'org-babel-load-languages
 ;  '((python . t) (sh . t)))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+
 ;; uncomment to initially show latex fragments, inline images and pretty inline entities in org-mode
 ;; (add-hook 'org-mode-hook (lambda () (org-preview-latex-fragment)))
 ;; (add-hook 'org-mode-hook (lambda () (org-display-inline-images)))
