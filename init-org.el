@@ -28,10 +28,14 @@
 ; (org-babel-do-load-languages
 ;  'org-babel-load-languages
 ;  '((python . t) (sh . t)))
-
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((python . t)))
+ '((emacs-lisp . t)
+   (python . t)
+   (jupyter . t)))
+
+;; handle python src blocks as if they were jupyter-python blocks
+(org-babel-jupyter-override-src-block "python")
 
 ;; uncomment to initially show latex fragments, inline images and pretty inline entities in org-mode
 ;; (add-hook 'org-mode-hook (lambda () (org-preview-latex-fragment)))

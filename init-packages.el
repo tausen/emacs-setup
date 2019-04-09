@@ -36,7 +36,8 @@
 		     dired-narrow
 		     org-plus-contrib
 		     pdf-tools
-		     mu4e-alert))
+		     mu4e-alert
+		     jupyter))
 
 
 ;;                     org-plus-contrib))
