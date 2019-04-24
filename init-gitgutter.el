@@ -27,3 +27,5 @@
      ;; (define-key git-gutter+-mode-map (kbd "C-c C-v C-C") 'git-gutter+-stage-and-commit)
      (define-key git-gutter+-mode-map (kbd "C-c C-v C-b") 'git-gutter+-stage-and-commit-whole-buffer)
      (define-key git-gutter+-mode-map (kbd "C-c C-v C-u") 'git-gutter+-unstage-whole-buffer)))
+
+(add-to-list 'git-gutter+-disabled-modes 'org-mode)
