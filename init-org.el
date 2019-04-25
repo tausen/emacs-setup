@@ -74,8 +74,23 @@
       browse-url-generic-program "google-chrome")
 
 (require 'ox-confluence)
+
 ;; collapse src code blocks by default (use org-show-block-all to open)
 (add-hook 'org-mode-hook 'org-hide-block-all)
 ;; C-c b s/h to show/hide all blocks
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "C-c b s") 'org-show-block-all)))
 (add-hook 'org-mode-hook (lambda () (local-set-key (kbd "C-c b h") 'org-hide-block-all)))
+
+;; babel: dont ask when executing python code
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (member lang '("jupyter-python"))))
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
+;; insert python src using emacs-jupyter in org-mode with C-c C-, p
+(add-to-list 'org-structure-template-alist
+             '("p" . "src jupyter-python :session py"))
+
+;; after executing code, redisplay images
+;(add-hook 'org-babel-after-execute-hook (lambda () (org-redisplay-inline-images)))
+
+(setq org-image-actual-width 600)
