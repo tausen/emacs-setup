@@ -30,6 +30,7 @@
                      company
                      company-flx
                      vhdl-capf
+                     god-mode
 		     c-eldoc
 		     f
 		     fill-column-indicator
