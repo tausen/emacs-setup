@@ -1,4 +1,0 @@
-[submodule "lib/god-mode"]
-	path = lib/god-mode
-	url = https://github.com/chrisdone/god-mode.git
-	ignore = dirty
